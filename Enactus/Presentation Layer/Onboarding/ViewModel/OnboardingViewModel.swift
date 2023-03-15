@@ -16,7 +16,6 @@ protocol OnBoardingCollectionViewCellViewModelProtocol {
 
 struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewModelProtocol {
     
-    
     typealias Row = OnboardingViewController.Section.Row
     
     //MARK: - Proprties
@@ -30,8 +29,6 @@ struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewMo
             return "backImage1"
         case .second:
             return "backImage2"
-        case .third:
-            return "thirdOnboardingImage"
         }
     }
 }

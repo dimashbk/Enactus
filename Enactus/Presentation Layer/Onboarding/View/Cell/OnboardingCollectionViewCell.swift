@@ -55,7 +55,7 @@ class OnBoardingCollectionViewCell : UICollectionViewCell{
         label.numberOfLines = 0
         label.textAlignment = .left
         label.lineBreakMode = .byWordWrapping
-        label.textColor = UIColor(red: 0.475, green: 0.486, blue: 0.477, alpha: 1)
+        label.textColor = .enGray
         return label
     }()
     

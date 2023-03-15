@@ -23,11 +23,18 @@ extension OnboardingViewController:  UICollectionViewDataSource , UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let viewCell: OnBoardingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-        let rows = sections[indexPath.section].rows[indexPath.row]
-        viewCell.configure(with: OnBoardingCollectionViewCellViewModel(row: rows))
-        viewCell.delegate = self
-
-        return viewCell
+        if indexPath.row <= 1 {
+            let viewCell: OnBoardingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            let rows = sections[indexPath.section].rows[indexPath.row]
+            viewCell.configure(with: OnBoardingCollectionViewCellViewModel(row: rows))
+            viewCell.delegate = self
+            
+            return viewCell
+        }
+        else {
+            let viewCell: WelcomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
+            return viewCell
+            
+        }
     }
 }

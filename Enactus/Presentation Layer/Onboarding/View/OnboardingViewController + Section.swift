@@ -16,7 +16,6 @@ extension OnboardingViewController {
         enum Row {
             case first
             case second
-            case third
         }
         
         let section: Section

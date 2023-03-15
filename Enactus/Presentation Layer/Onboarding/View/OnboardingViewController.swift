@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class OnboardingViewController: UIViewController{
-    var sections: [Section] = [.init(section: .onboarding, rows: [.first, .second, .third])]
+    var sections: [Section] = [.init(section: .onboarding, rows: [.first, .second])]
 
     private lazy var collectionView: UICollectionView = {
         
@@ -18,6 +18,9 @@ final class OnboardingViewController: UIViewController{
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .enBlack
         cv.register(cellClass: OnBoardingCollectionViewCell.self)
+        cv.register(cellClass: WelcomeCollectionViewCell.self)
+        cv.showsHorizontalScrollIndicator = false
+        cv.isScrollEnabled = false
         
         return cv
     }()
@@ -54,11 +57,7 @@ final class OnboardingViewController: UIViewController{
 extension OnboardingViewController: OnBoardingCollectionViewCellDelegate {
     func cell(_ cell: UICollectionViewCell, nextButtonDidTap button: UIButton) {
         guard let index = collectionView.indexPath(for: cell)?.row else { return }
-        if (index < 2) {
-            collectionView.scrollToItem(at: IndexPath(row: index+1, section: 0), at: .right, animated: true)
-        } else {
-            collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: true)
-        }
+        collectionView.scrollToItem(at: IndexPath(row: index+1, section: 0), at: .right, animated: true)
     }
 }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */; };
+		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
+		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
 		1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */; };
 		1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D229C0E9E100D441B6 /* ViewController.swift */; };
 		1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D729C0E9E200D441B6 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
+		1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		1D39B5CB29C0E9E100D441B6 /* Enactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D39B5D229C0E9E100D441B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */,
+				1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -178,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				1DEA247829C1E3590043126A /* Mulish-Regular.ttf */,
+				1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */,
+				1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */,
 				1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */,
 			);
 			path = Fonts;
@@ -250,6 +259,8 @@
 			files = (
 				1D39B5DB29C0E9E200D441B6 /* LaunchScreen.storyboard in Resources */,
 				1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */,
+				1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */,
+				1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */,
 				1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */,
 				1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */,
 			);
@@ -265,6 +276,7 @@
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
+				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
