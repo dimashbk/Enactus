@@ -8,22 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */; };
-		1D39B5D129C0E9E100D441B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D029C0E9E100D441B6 /* SceneDelegate.swift */; };
 		1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D229C0E9E100D441B6 /* ViewController.swift */; };
-		1D39B5D629C0E9E100D441B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D429C0E9E100D441B6 /* Main.storyboard */; };
 		1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D729C0E9E200D441B6 /* Assets.xcassets */; };
 		1D39B5DB29C0E9E200D441B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */; };
+		1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */; };
+		1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */; };
+		1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */; };
+		1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */; };
+		1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5F629C0F27400D441B6 /* OnboardingViewModel.swift */; };
+		1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */; };
+		1DEA247229C1D0400043126A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DEA247129C1D0400043126A /* SnapKit */; };
+		1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA247329C1D7970043126A /* Colors + Extension.swift */; };
+		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
+		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D082DBD29C0F67700E5B959 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D39B5CB29C0E9E100D441B6 /* Enactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D39B5D029C0E9E100D441B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D39B5D229C0E9E100D441B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D39B5D529C0E9E100D441B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D39B5D729C0E9E200D441B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D39B5DA29C0E9E200D441B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D39B5DC29C0E9E200D441B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionView.swift; sourceTree = "<group>"; };
+		1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OnboardingViewController + Section.swift"; sourceTree = "<group>"; };
+		1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		1D39B5F629C0F27400D441B6 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		1DEA247329C1D7970043126A /* Colors + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + Extension.swift"; sourceTree = "<group>"; };
+		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
+		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DEA247229C1D0400043126A /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,7 @@
 			children = (
 				1D39B5CD29C0E9E100D441B6 /* Enactus */,
 				1D39B5CC29C0E9E100D441B6 /* Products */,
+				1DEA247029C1D0400043126A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +86,101 @@
 		1D39B5CD29C0E9E100D441B6 /* Enactus */ = {
 			isa = PBXGroup;
 			children = (
-				1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */,
-				1D39B5D029C0E9E100D441B6 /* SceneDelegate.swift */,
-				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
-				1D39B5D429C0E9E100D441B6 /* Main.storyboard */,
+				1D39B5E229C0E9E700D441B6 /* Application Layer */,
+				1D39B5E329C0E9F400D441B6 /* Presentation Layer */,
+				1D39B5F829C0F43800D441B6 /* Core Layer */,
 				1D39B5D729C0E9E200D441B6 /* Assets.xcassets */,
 				1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */,
 				1D39B5DC29C0E9E200D441B6 /* Info.plist */,
 			);
 			path = Enactus;
+			sourceTree = "<group>";
+		};
+		1D39B5E229C0E9E700D441B6 /* Application Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
+				1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */,
+			);
+			path = "Application Layer";
+			sourceTree = "<group>";
+		};
+		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5E429C0EAFD00D441B6 /* Onboarding */,
+			);
+			path = "Presentation Layer";
+			sourceTree = "<group>";
+		};
+		1D39B5E429C0EAFD00D441B6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5F529C0F24E00D441B6 /* ViewModel */,
+				1D39B5E529C0ED6B00D441B6 /* View */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1D39B5E529C0ED6B00D441B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5F229C0F22900D441B6 /* Cell */,
+				1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */,
+				1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */,
+				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D39B5F229C0F22900D441B6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1D39B5F529C0F24E00D441B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5F629C0F27400D441B6 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D39B5F829C0F43800D441B6 /* Core Layer */ = {
+			isa = PBXGroup;
+			children = (
+				1DEA247529C1E0A60043126A /* Fonts */,
+				1D39B5F929C0F43E00D441B6 /* Extensions */,
+			);
+			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		1D39B5F929C0F43E00D441B6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */,
+				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1DEA247029C1D0400043126A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DEA247529C1E0A60043126A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1DEA247829C1E3590043126A /* Mulish-Regular.ttf */,
+				1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +193,16 @@
 				1D39B5C729C0E9E100D441B6 /* Sources */,
 				1D39B5C829C0E9E100D441B6 /* Frameworks */,
 				1D39B5C929C0E9E100D441B6 /* Resources */,
+				1D082DBD29C0F67700E5B959 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Enactus;
+			packageProductDependencies = (
+				1DEA247129C1D0400043126A /* SnapKit */,
+			);
 			productName = Enactus;
 			productReference = 1D39B5CB29C0E9E100D441B6 /* Enactus.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 1D39B5C229C0E9E100D441B6;
+			packageReferences = (
+				1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 1D39B5CC29C0E9E100D441B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,8 +249,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D39B5DB29C0E9E200D441B6 /* LaunchScreen.storyboard in Resources */,
+				1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */,
 				1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */,
-				1D39B5D629C0E9E100D441B6 /* Main.storyboard in Resources */,
+				1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +263,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
+				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
+				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
-				1D39B5D129C0E9E100D441B6 /* SceneDelegate.swift in Sources */,
+				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
+				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
+				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
+				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1D39B5D429C0E9E100D441B6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D39B5D529C0E9E100D441B6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +414,6 @@
 				INFOPLIST_FILE = Enactus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +441,6 @@
 				INFOPLIST_FILE = Enactus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1DEA247129C1D0400043126A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1D39B5C329C0E9E100D441B6 /* Project object */;
 }
