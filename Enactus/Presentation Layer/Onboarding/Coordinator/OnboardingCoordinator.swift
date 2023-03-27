@@ -23,11 +23,13 @@ class OnboardingCoordinator: Coordinator {
     }
     
     // MARK: - FlowMethods
-    func showLoginFlow() {
-        
+    func showLogInFlow() {
+        let logInCoordinator = LogInCoordinator(navigationController: navigationController)
+        coordinate(to: logInCoordinator)
     }
     
-    func showSignupFlow() {
-        
+    func showSignInFlow() {
+        let signInCoordinator = SignInCoordinator(navigationController: navigationController)
+        coordinate(to: signInCoordinator)
     }
 }
