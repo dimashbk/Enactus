@@ -11,7 +11,7 @@ import UIKit
 extension OnboardingViewController:  UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,7 +34,6 @@ extension OnboardingViewController:  UICollectionViewDataSource , UICollectionVi
         else {
             let viewCell: WelcomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
             return viewCell
-            
         }
     }
 }

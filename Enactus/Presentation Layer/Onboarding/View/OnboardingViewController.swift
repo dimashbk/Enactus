@@ -57,6 +57,7 @@ final class OnboardingViewController: UIViewController{
 extension OnboardingViewController: OnBoardingCollectionViewCellDelegate {
     func cell(_ cell: UICollectionViewCell, nextButtonDidTap button: UIButton) {
         guard let index = collectionView.indexPath(for: cell)?.row else { return }
+        
         collectionView.scrollToItem(at: IndexPath(row: index+1, section: 0), at: .right, animated: true)
     }
 }
