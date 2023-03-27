@@ -20,6 +20,9 @@
 		1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */; };
 		1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5F629C0F27400D441B6 /* OnboardingViewModel.swift */; };
 		1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */; };
+		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
+		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
+		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
 		1DEA247229C1D0400043126A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1DEA247129C1D0400043126A /* SnapKit */; };
 		1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA247329C1D7970043126A /* Colors + Extension.swift */; };
 		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
@@ -55,6 +58,9 @@
 		1D39B5F329C0F23F00D441B6 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D39B5F629C0F27400D441B6 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		1DEA247329C1D7970043126A /* Colors + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + Extension.swift"; sourceTree = "<group>"; };
 		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
@@ -105,6 +111,8 @@
 		1D39B5E229C0E9E700D441B6 /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1DC0503C29D18EB500581D6B /* Protocols */,
+				1DC0503929D18E7800581D6B /* AppCoordinator */,
 				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
 				1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */,
 			);
@@ -122,6 +130,7 @@
 		1D39B5E429C0EAFD00D441B6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				1DC0503F29D18EFB00581D6B /* Coordinator */,
 				1D39B5F529C0F24E00D441B6 /* ViewModel */,
 				1D39B5E529C0ED6B00D441B6 /* View */,
 			);
@@ -172,6 +181,30 @@
 				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		1DC0503C29D18EB500581D6B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1DC0503D29D18EC200581D6B /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1DC0503F29D18EFB00581D6B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		1DEA247029C1D0400043126A /* Frameworks */ = {
@@ -273,13 +306,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
+				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,

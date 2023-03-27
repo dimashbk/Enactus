@@ -11,6 +11,8 @@ import SnapKit
 final class OnboardingViewController: UIViewController{
     var sections: [Section] = [.init(section: .onboarding, rows: [.first, .second])]
 
+    
+    var delegate: OnboardingCoordinator?
     private lazy var collectionView: UICollectionView = {
         
         let layout = UICollectionViewFlowLayout()
@@ -20,8 +22,7 @@ final class OnboardingViewController: UIViewController{
         cv.register(cellClass: OnBoardingCollectionViewCell.self)
         cv.register(cellClass: WelcomeCollectionViewCell.self)
         cv.showsHorizontalScrollIndicator = false
-        cv.isScrollEnabled = false
-        
+//        cv.isScrollEnabled = false        
         return cv
     }()
     
