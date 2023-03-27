@@ -42,7 +42,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var loginButton: UIButton = {
+    lazy var signInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Войти", for: .normal)
         button.backgroundColor = .enBlue
@@ -51,7 +51,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
         
         return button
     }()
-    private lazy var signupButton: UIButton = {
+   lazy var logInButton: UIButton = {
         let button = UIButton()
         button.setTitle("Зарегистрироваться", for: .normal)
         button.setTitleColor(.enBlue, for: .normal)
@@ -59,7 +59,6 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
         button.layer.cornerRadius = 12
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.enBlue.cgColor
-        
         return button
     }()
     override init(frame: CGRect) {
@@ -76,7 +75,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        [imageView, firstLabel, secondLabel, loginButton, signupButton].forEach{
+        [imageView, firstLabel, secondLabel, logInButton, signInButton].forEach{
             self.addSubview($0)
         }
     }
@@ -95,13 +94,13 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
             make.leading.equalTo(24)
             make.trailing.equalToSuperview().inset(112)
         }
-        loginButton.snp.makeConstraints { make in
+        signInButton.snp.makeConstraints { make in
             make.top.equalTo(secondLabel.snp.bottom).offset(54)
             make.left.right.equalToSuperview().inset(24)
             make.height.equalTo(48)
         }
-        signupButton.snp.makeConstraints { make in
-            make.top.equalTo(loginButton.snp.bottom).offset(8)
+        logInButton.snp.makeConstraints { make in
+            make.top.equalTo(signInButton.snp.bottom).offset(8)
             make.left.right.equalToSuperview().inset(24)
             make.height.equalTo(48)
         }
