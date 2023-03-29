@@ -1,12 +1,3 @@
-//
-//  OnboardingViewModel.swift
-//  Enactus
-//
-//  Created by Dinmukhamed on 15.03.2023.
-//
-
-import Foundation
-
 import Foundation
 
 protocol OnBoardingCollectionViewCellViewModelProtocol {
@@ -31,6 +22,8 @@ struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewMo
             return "backImage1"
         case .second:
             return "backImage2"
+        case .third:
+            return ""
         }
     }
     
@@ -40,6 +33,8 @@ struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewMo
             return "Shop and earn points "
         case .second:
             return "Follow the news and schedule"
+        case .third:
+            return ""
         }
     }
     
@@ -49,6 +44,8 @@ struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewMo
             return "and make your student life easier"
         case .second:
             return "from the app"
+        case .third:
+            return ""
         }
     }
     
@@ -58,6 +55,8 @@ struct OnBoardingCollectionViewCellViewModel: OnBoardingCollectionViewCellViewMo
             return "Accumulate bonuses and pay off your debts"
         case .second:
             return "Schedule, news, payment and transfer options - everything you need"
+        case .third:
+            return ""
         }
     }
 }

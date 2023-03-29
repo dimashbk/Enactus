@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class OnboardingViewController: UIViewController{
-    var sections: [Section] = [.init(section: .onboarding, rows: [.first, .second])]
+    var sections: [Section] = [.init(section: .onboarding, rows: [.first, .second, .third])]
 
     private lazy var collectionView: UICollectionView = {
         

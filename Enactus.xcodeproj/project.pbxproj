@@ -124,6 +124,7 @@
 		1D39B5E429C0EAFD00D441B6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F6B129D4D6D8002FDC29 /* Controller */,
 				1D39B5F529C0F24E00D441B6 /* ViewModel */,
 				1D39B5E529C0ED6B00D441B6 /* View */,
 			);
@@ -134,9 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				1D39B5F229C0F22900D441B6 /* Cell */,
-				1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */,
-				1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */,
-				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -193,6 +191,16 @@
 				1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */,
+				1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */,
+				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

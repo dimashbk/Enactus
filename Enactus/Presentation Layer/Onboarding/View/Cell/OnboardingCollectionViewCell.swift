@@ -35,7 +35,6 @@ class OnBoardingCollectionViewCell : UICollectionViewCell{
         label.gradientColors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
         
         return label
-        
     }()
     
     private lazy var firstLabel: UILabel = {
