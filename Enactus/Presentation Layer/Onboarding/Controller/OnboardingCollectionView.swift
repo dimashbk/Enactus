@@ -33,7 +33,8 @@ extension OnboardingViewController:  UICollectionViewDataSource , UICollectionVi
             return viewCell
         case .third:
             let viewCell: WelcomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-                        
+            viewCell.signInButton.addTarget(self, action: #selector(moveToSignIn), for: .touchUpInside)
+            viewCell.logInButton.addTarget(self, action: #selector(moveToLogIn), for: .touchUpInside)
             return viewCell
         }
     }
