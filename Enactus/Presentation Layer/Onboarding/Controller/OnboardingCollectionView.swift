@@ -11,11 +11,11 @@ import UIKit
 extension OnboardingViewController:  UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return sections[section].rows.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -23,20 +23,19 @@ extension OnboardingViewController:  UICollectionViewDataSource , UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row <= 1 {
+        let rows = sections[indexPath.section].rows[indexPath.row]
+        switch rows {
+        case .first, .second:
             let viewCell: OnBoardingCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
-            let rows = sections[indexPath.section].rows[indexPath.row]
             viewCell.configure(with: OnBoardingCollectionViewCellViewModel(row: rows))
             viewCell.delegate = self
             
             return viewCell
-        }
-        else {
+        case .third:
             let viewCell: WelcomeCollectionViewCell = collectionView.dequeueReusableCell(for: indexPath)
             viewCell.signInButton.addTarget(self, action: #selector(moveToSignIn), for: .touchUpInside)
             viewCell.logInButton.addTarget(self, action: #selector(moveToLogIn), for: .touchUpInside)
             return viewCell
-            
         }
     }
 }
