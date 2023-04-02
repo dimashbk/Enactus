@@ -10,10 +10,13 @@ final class AuthorizationTextField: UITextField {
     
     private let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 10)
     
+    var onClick = false
+    
     lazy var eyeButton: UIButton = {
         let eyeButton = UIButton()
         eyeButton.setImage(.init(named: "EyeButton"), for: .normal)
         eyeButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        eyeButton.addTarget(self, action: #selector(showText), for: .touchUpInside)
         return eyeButton
     }()
     
@@ -58,6 +61,14 @@ final class AuthorizationTextField: UITextField {
     private func setupButton() {
         self.rightViewMode = .always
         self.rightView = eyeButton
+    }
+    @objc func showText() {
+        if onClick {
+                self.isSecureTextEntry = false
+            } else {
+                self.isSecureTextEntry = true
+            }
+            onClick = !onClick
     }
     
 }
