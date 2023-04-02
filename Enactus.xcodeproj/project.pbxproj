@@ -24,6 +24,7 @@
 		1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83029D1A8AE00D6610B /* SignInViewController.swift */; };
 		1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83429D1B3E100D6610B /* LogInViewController.swift */; };
 		1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83829D1B41200D6610B /* LogInCoordinator.swift */; };
+		1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -67,6 +68,7 @@
 		1D42C83029D1A8AE00D6610B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1D42C83429D1B3E100D6610B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D42C83829D1B41200D6610B /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
+		1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		1D39B5F829C0F43800D441B6 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1D536D5C29D5D382001BBA51 /* Custom */,
 				1DEA247529C1E0A60043126A /* Fonts */,
 				1D39B5F929C0F43E00D441B6 /* Extensions */,
 			);
@@ -221,8 +224,8 @@
 		1D42C83229D1B3C600D6610B /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				1D42C83329D1B3D300D6610B /* LogIn */,
 				1D42C82B29D1A7AD00D6610B /* SignIn */,
+				1D42C83329D1B3D300D6610B /* LogIn */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -250,6 +253,14 @@
 				1D42C83829D1B41200D6610B /* LogInCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D536D5C29D5D382001BBA51 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -400,6 +411,7 @@
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
+				1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,

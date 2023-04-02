@@ -19,6 +19,7 @@ class SignInCoordinator: Coordinator {
     func start() {
         let signInVC =  SignInViewController()
         signInVC.delegate = self
+        signInVC.navigationItem.hidesBackButton = true
         navigationController.pushViewController(signInVC, animated: true)
     }
 }
