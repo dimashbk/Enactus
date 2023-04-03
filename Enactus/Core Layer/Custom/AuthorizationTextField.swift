@@ -10,6 +10,8 @@ final class AuthorizationTextField: UITextField {
     
     private let edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 10)
     
+    private let rightViewInsets = UIEdgeInsets(top: 0, left: 266, bottom: 16, right: 0)
+    
     var onClick = false
     
     lazy var eyeButton: UIButton = {
@@ -44,6 +46,9 @@ final class AuthorizationTextField: UITextField {
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return  bounds.inset(by: edgeInsets)
+    }
+    override func rightViewRect(forBounds bounds: CGRect) -> CGRect {
+        return  bounds.inset(by: rightViewInsets)
     }
     
     private func setupTF(placeholder: String){
