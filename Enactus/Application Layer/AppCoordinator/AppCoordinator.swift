@@ -22,7 +22,13 @@ class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
-        let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
-        coordinate(to: tabBarCoordinator)
+        if UserDefaults.standard.bool(forKey: "usersSecondLaunch") == true {
+            let tabBarCoordinator = SignInCoordinator(navigationController: navigationController)
+            coordinate(to: tabBarCoordinator)
+        } else {
+            let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
+            coordinate(to: tabBarCoordinator)
+            UserDefaults.standard.set(true, forKey: "usersSecondLaunch")
+        }
     }
 }
