@@ -9,7 +9,7 @@ import UIKit
 
 final class SignInViewController: UIViewController {
     //войти
-    var delegate: SignInCoordinator?
+    var coordinator: SignInCoordinator?
     
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()

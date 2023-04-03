@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 class LogInCoordinator: Coordinator {
-    
+
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -20,7 +20,7 @@ class LogInCoordinator: Coordinator {
     
     func start() {
         let logInVC =  LogInViewController()
-        logInVC.delegate = self
+        logInVC.coordinator = self
         navigationController.pushViewController(logInVC, animated: true)
     }
 }

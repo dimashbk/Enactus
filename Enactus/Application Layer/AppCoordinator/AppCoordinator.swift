@@ -22,7 +22,7 @@ class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
-        let tabBarCoordinator = SignInCoordinator(navigationController: navigationController)
+        let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
         coordinate(to: tabBarCoordinator)
     }
 }

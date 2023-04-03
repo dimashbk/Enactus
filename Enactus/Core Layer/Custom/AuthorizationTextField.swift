@@ -33,12 +33,15 @@ final class AuthorizationTextField: UITextField {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         bounds.inset(by: edgeInsets)
     }
+    
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
         bounds.inset(by: edgeInsets)
     }
+    
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return  bounds.inset(by: edgeInsets)
     }
@@ -51,6 +54,7 @@ final class AuthorizationTextField: UITextField {
         setupButton()
         
     }
+    
     private func setupUnderline() {
         let bottomLayer = CALayer()
         bottomLayer.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width - 48, height: 1)
@@ -58,10 +62,12 @@ final class AuthorizationTextField: UITextField {
         self.borderStyle = .none
         self.layer.addSublayer(bottomLayer)
     }
+    
     private func setupButton() {
         self.rightViewMode = .always
         self.rightView = eyeButton
     }
+    
     @objc func showText() {
         if onClick {
                 self.isSecureTextEntry = false

@@ -24,6 +24,7 @@
 		1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83029D1A8AE00D6610B /* SignInViewController.swift */; };
 		1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83429D1B3E100D6610B /* LogInViewController.swift */; };
 		1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83829D1B41200D6610B /* LogInCoordinator.swift */; };
+		1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531429DAA7010007D1C6 /* OTPViewController.swift */; };
 		1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
@@ -68,6 +69,7 @@
 		1D42C83029D1A8AE00D6610B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1D42C83429D1B3E100D6610B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D42C83829D1B41200D6610B /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
+		1D4D531429DAA7010007D1C6 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				1D42C82B29D1A7AD00D6610B /* SignIn */,
 				1D42C83329D1B3D300D6610B /* LogIn */,
+				1D4D531129DAA5E80007D1C6 /* OTP */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -252,6 +255,30 @@
 			isa = PBXGroup;
 			children = (
 				1D42C83829D1B41200D6610B /* LogInCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D4D531129DAA5E80007D1C6 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				1D4D531329DAA5FF0007D1C6 /* Coordinator */,
+				1D4D531229DAA5FB0007D1C6 /* View */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		1D4D531229DAA5FB0007D1C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D4D531429DAA7010007D1C6 /* OTPViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D4D531329DAA5FF0007D1C6 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -404,6 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */,
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
