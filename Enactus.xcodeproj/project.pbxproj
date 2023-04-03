@@ -31,6 +31,7 @@
 		1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA247329C1D7970043126A /* Colors + Extension.swift */; };
 		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
 		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
+		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		1DEA247329C1D7970043126A /* Colors + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + Extension.swift"; sourceTree = "<group>"; };
 		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				1DC0503F29D18EFB00581D6B /* Coordinator */,
+				70A1F6B129D4D6D8002FDC29 /* Controller */,
 				1D39B5F529C0F24E00D441B6 /* ViewModel */,
 				1D39B5E529C0ED6B00D441B6 /* View */,
 			);
@@ -150,9 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				1D39B5F229C0F22900D441B6 /* Cell */,
-				1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */,
-				1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */,
-				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +188,7 @@
 			children = (
 				1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */,
 				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
+				7036D09B29D19B7C00E62230 /* GradientLabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -293,6 +294,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */,
+				1D39B5E929C0EE4D00D441B6 /* OnboardingCollectionView.swift */,
+				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -380,6 +391,7 @@
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
+				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
@@ -536,6 +548,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,6 +576,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
