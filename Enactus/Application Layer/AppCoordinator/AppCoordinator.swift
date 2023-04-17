@@ -5,7 +5,6 @@
 //  Created by Dinmukhamed on 27.03.2023.
 //
 
-import Foundation
 import UIKit
 
 class AppCoordinator: Coordinator {
@@ -22,7 +21,7 @@ class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
-        let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
-        coordinate(to: tabBarCoordinator)
+        let mainCoordinator = OnboardingCoordinator(navigationController: navigationController)
+        coordinate(to: mainCoordinator)
     }
 }

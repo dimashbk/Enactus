@@ -23,7 +23,8 @@ final class AuthorizationTextField: UITextField {
     }()
     
     init(placeholder: String){
-        super.init(frame: .zero)
+        super.init(frame
+                   : .zero)
         setupTF(placeholder: placeholder)
         
     }

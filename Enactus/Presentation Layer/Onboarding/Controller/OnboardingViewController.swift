@@ -23,6 +23,7 @@ final class OnboardingViewController: UIViewController{
         cv.register(cellClass: WelcomeCollectionViewCell.self)
         cv.showsHorizontalScrollIndicator = false
         cv.isScrollEnabled = false
+        
         return cv
     }()
     

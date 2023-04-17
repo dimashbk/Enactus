@@ -72,6 +72,7 @@ class LogInViewController: UIViewController {
         signInButton.backgroundColor = .enBlue
         signInButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         signInButton.layer.cornerRadius = 8
+        signInButton.addTarget(self, action: #selector(showOtp), for: .touchUpInside)
         return signInButton
     }()
     
@@ -184,5 +185,8 @@ class LogInViewController: UIViewController {
             make.top.equalTo(registerButton.snp.bottom).inset(view.bounds.width / 4 + 2)
         }
     }
-
+    
+    @objc func showOtp() {
+        coordinator?.showOTPFlow()
+    }
 }

@@ -11,7 +11,6 @@
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
 		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
 		1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */; };
-		1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D229C0E9E100D441B6 /* ViewController.swift */; };
 		1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D729C0E9E200D441B6 /* Assets.xcassets */; };
 		1D39B5DB29C0E9E200D441B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */; };
 		1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */; };
@@ -25,6 +24,10 @@
 		1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83429D1B3E100D6610B /* LogInViewController.swift */; };
 		1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83829D1B41200D6610B /* LogInCoordinator.swift */; };
 		1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531429DAA7010007D1C6 /* OTPViewController.swift */; };
+		1D4D531729DAA7880007D1C6 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */; };
+		1D4D531A29DADE660007D1C6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531929DADE660007D1C6 /* OTPTextField.swift */; };
+		1D4D531C29DADE940007D1C6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531B29DADE940007D1C6 /* OTPStackView.swift */; };
+		1D4D531E29DAEEEA0007D1C6 /* TextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */; };
 		1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
@@ -55,7 +58,6 @@
 		1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		1D39B5CB29C0E9E100D441B6 /* Enactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D39B5D229C0E9E100D441B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D39B5D729C0E9E200D441B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D39B5DA29C0E9E200D441B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D39B5DC29C0E9E200D441B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +72,10 @@
 		1D42C83429D1B3E100D6610B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D42C83829D1B41200D6610B /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
 		1D4D531429DAA7010007D1C6 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
+		1D4D531929DADE660007D1C6 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		1D4D531B29DADE940007D1C6 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
+		1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField + Extension.swift"; sourceTree = "<group>"; };
 		1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -128,7 +134,6 @@
 			children = (
 				1DC0503C29D18EB500581D6B /* Protocols */,
 				1DC0503929D18E7800581D6B /* AppCoordinator */,
-				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
 				1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */,
 			);
 			path = "Application Layer";
@@ -195,6 +200,7 @@
 				1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */,
 				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
 				7036D09B29D19B7C00E62230 /* GradientLabel.swift */,
+				1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,8 +268,8 @@
 		1D4D531129DAA5E80007D1C6 /* OTP */ = {
 			isa = PBXGroup;
 			children = (
-				1D4D531329DAA5FF0007D1C6 /* Coordinator */,
 				1D4D531229DAA5FB0007D1C6 /* View */,
+				1D4D531329DAA5FF0007D1C6 /* Coordinator */,
 			);
 			path = OTP;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 		1D4D531329DAA5FF0007D1C6 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -287,6 +294,8 @@
 			isa = PBXGroup;
 			children = (
 				1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */,
+				1D4D531929DADE660007D1C6 /* OTPTextField.swift */,
+				1D4D531B29DADE940007D1C6 /* OTPStackView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -432,11 +441,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */,
+				1D4D531729DAA7880007D1C6 /* OTPCoordinator.swift in Sources */,
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
-				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
+				1D4D531A29DADE660007D1C6 /* OTPTextField.swift in Sources */,
+				1D4D531C29DADE940007D1C6 /* OTPStackView.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
@@ -451,6 +462,7 @@
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,
+				1D4D531E29DAEEEA0007D1C6 /* TextField + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
