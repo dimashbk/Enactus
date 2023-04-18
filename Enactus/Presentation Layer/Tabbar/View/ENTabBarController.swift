@@ -20,7 +20,7 @@ final class ENTabBarController: UITabBarController {
                        title: "Расписание",
                        image: UIImage(named: "schedule")),
             generateVC(viewController: ProfileViewController(),
-                       title: "Профиль",
+                       title: "Профил",
                        image: UIImage(named: "profile"))
         ]
     }

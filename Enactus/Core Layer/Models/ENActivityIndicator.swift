@@ -41,11 +41,10 @@ class ENCustomLoaderView: UIView {
     
     func startAnimating() {
         imageView.rotate(duration: 1)
-        imageView.isHidden = false
     }
     
     func stopAnimating() {
         imageView.layer.removeAllAnimations()
-        imageView.isHidden = true
+        removeFromSuperview()
     }
 }
