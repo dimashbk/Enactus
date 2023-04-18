@@ -5,6 +5,7 @@
 //  Created by Dinmukhamed on 27.03.2023.
 //
 
+import Foundation
 import UIKit
 
 class AppCoordinator: Coordinator {
@@ -21,18 +22,13 @@ class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
-
-        let mainCoordinator = OnboardingCoordinator(navigationController: navigationController)
-        coordinate(to: mainCoordinator)
-
         if UserDefaults.standard.bool(forKey: "usersSecondLaunch") == true {
-            let tabBarCoordinator = SignInCoordinator(navigationController: navigationController)
+            let tabBarCoordinator = ENTabBarCoordinator(navigationController: navigationController)
             coordinate(to: tabBarCoordinator)
         } else {
             let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
             coordinate(to: tabBarCoordinator)
             UserDefaults.standard.set(true, forKey: "usersSecondLaunch")
         }
-
     }
 }

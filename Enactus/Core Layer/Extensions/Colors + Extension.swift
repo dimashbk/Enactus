@@ -34,4 +34,16 @@ extension UIColor{
     static var enSecondGradient: UIColor {
         UIColor(red: 96/255, green: 201/255, blue: 222/255, alpha: 1)
     }
+    static var enWhite: UIColor {
+        UIColor(red: 246/255, green: 246/255, blue: 246/255, alpha: 1)
+    }
+    static var enTextGray: UIColor {
+        UIColor(red: 130/255, green: 130/255, blue: 130/255, alpha: 1)
+    }
+    static var enTextDarkBlue: UIColor {
+        UIColor(red: 16/255, green: 19/255, blue: 35/255, alpha: 1)
+    }
+    static var enWhiteBlue: UIColor {
+        UIColor(red: 102/255, green: 176/255, blue: 220/255, alpha: 1)
+    }
 }

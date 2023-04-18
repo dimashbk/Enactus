@@ -11,6 +11,7 @@
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
 		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
 		1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */; };
+		1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D229C0E9E100D441B6 /* ViewController.swift */; };
 		1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D729C0E9E200D441B6 /* Assets.xcassets */; };
 		1D39B5DB29C0E9E200D441B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */; };
 		1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5E729C0ED8B00D441B6 /* OnboardingViewController.swift */; };
@@ -23,12 +24,6 @@
 		1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83029D1A8AE00D6610B /* SignInViewController.swift */; };
 		1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83429D1B3E100D6610B /* LogInViewController.swift */; };
 		1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83829D1B41200D6610B /* LogInCoordinator.swift */; };
-		1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531429DAA7010007D1C6 /* OTPViewController.swift */; };
-		1D4D531729DAA7880007D1C6 /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */; };
-		1D4D531A29DADE660007D1C6 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531929DADE660007D1C6 /* OTPTextField.swift */; };
-		1D4D531C29DADE940007D1C6 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531B29DADE940007D1C6 /* OTPStackView.swift */; };
-		1D4D531E29DAEEEA0007D1C6 /* TextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */; };
-		1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -37,6 +32,24 @@
 		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
 		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
+		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
+		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
+		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
+		70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71F29EB52A3002FDC29 /* ScheduleViewController.swift */; };
+		70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72129EB52E5002FDC29 /* ProfileViewController.swift */; };
+		70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72329EB5365002FDC29 /* ENTabBarCoordinator.swift */; };
+		70A1F72929EB64BE002FDC29 /* MainImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72829EB64BE002FDC29 /* MainImageView.swift */; };
+		70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72A29EB84F3002FDC29 /* ActionsViewCell.swift */; };
+		70A1F72D29EB863A002FDC29 /* MainViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72C29EB863A002FDC29 /* MainViewController+CollectionView.swift */; };
+		70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F72F29EB88D6002FDC29 /* ActionsViewCellViewModel.swift */; };
+		70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F73129EB89A1002FDC29 /* MainViewController+ActionSection.swift */; };
+		70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F73329EBEBB8002FDC29 /* ReminderView.swift */; };
+		70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F73F29EDF3CE002FDC29 /* ENHTTPMethods.swift */; };
+		70A1F74429EDF491002FDC29 /* ENNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74329EDF491002FDC29 /* ENNetworkService.swift */; };
+		70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */; };
+		70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74729EDF6C6002FDC29 /* MainViewModel.swift */; };
+		70A1F74B29EE0478002FDC29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 70A1F74A29EE0478002FDC29 /* Alamofire */; };
+		70A1F74D29EEBA3F002FDC29 /* OrganizationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74C29EEBA3F002FDC29 /* OrganizationHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +71,7 @@
 		1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		1D39B5CB29C0E9E100D441B6 /* Enactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D39B5D229C0E9E100D441B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D39B5D729C0E9E200D441B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D39B5DA29C0E9E200D441B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D39B5DC29C0E9E200D441B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,12 +85,6 @@
 		1D42C83029D1A8AE00D6610B /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1D42C83429D1B3E100D6610B /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		1D42C83829D1B41200D6610B /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
-		1D4D531429DAA7010007D1C6 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
-		1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
-		1D4D531929DADE660007D1C6 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
-		1D4D531B29DADE940007D1C6 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
-		1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField + Extension.swift"; sourceTree = "<group>"; };
-		1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -84,6 +92,23 @@
 		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
+		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
+		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		70A1F71F29EB52A3002FDC29 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		70A1F72129EB52E5002FDC29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		70A1F72329EB5365002FDC29 /* ENTabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarCoordinator.swift; sourceTree = "<group>"; };
+		70A1F72829EB64BE002FDC29 /* MainImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainImageView.swift; sourceTree = "<group>"; };
+		70A1F72A29EB84F3002FDC29 /* ActionsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewCell.swift; sourceTree = "<group>"; };
+		70A1F72C29EB863A002FDC29 /* MainViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		70A1F72F29EB88D6002FDC29 /* ActionsViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewCellViewModel.swift; sourceTree = "<group>"; };
+		70A1F73129EB89A1002FDC29 /* MainViewController+ActionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ActionSection.swift"; sourceTree = "<group>"; };
+		70A1F73329EBEBB8002FDC29 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
+		70A1F73F29EDF3CE002FDC29 /* ENHTTPMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENHTTPMethods.swift; sourceTree = "<group>"; };
+		70A1F74329EDF491002FDC29 /* ENNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENNetworkService.swift; sourceTree = "<group>"; };
+		70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENOrganizationModel.swift; sourceTree = "<group>"; };
+		70A1F74729EDF6C6002FDC29 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		70A1F74C29EEBA3F002FDC29 /* OrganizationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +117,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEA247229C1D0400043126A /* SnapKit in Frameworks */,
+				70A1F74B29EE0478002FDC29 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +144,6 @@
 		1D39B5CD29C0E9E100D441B6 /* Enactus */ = {
 			isa = PBXGroup;
 			children = (
-				1DFF8D5B29D9915B00463803 /* Network Layer */,
 				1D39B5E229C0E9E700D441B6 /* Application Layer */,
 				1D39B5E329C0E9F400D441B6 /* Presentation Layer */,
 				1D39B5F829C0F43800D441B6 /* Core Layer */,
@@ -134,6 +159,7 @@
 			children = (
 				1DC0503C29D18EB500581D6B /* Protocols */,
 				1DC0503929D18E7800581D6B /* AppCoordinator */,
+				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
 				1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */,
 			);
 			path = "Application Layer";
@@ -142,6 +168,7 @@
 		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F71229EB4F9C002FDC29 /* Tabbar */,
 				1D42C83229D1B3C600D6610B /* Authorization */,
 				1D39B5E429C0EAFD00D441B6 /* Onboarding */,
 			);
@@ -187,7 +214,8 @@
 		1D39B5F829C0F43800D441B6 /* Core Layer */ = {
 			isa = PBXGroup;
 			children = (
-				1D536D5C29D5D382001BBA51 /* Custom */,
+				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
+				70A1F6CD29DAFF55002FDC29 /* Models */,
 				1DEA247529C1E0A60043126A /* Fonts */,
 				1D39B5F929C0F43E00D441B6 /* Extensions */,
 			);
@@ -200,7 +228,6 @@
 				1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */,
 				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
 				7036D09B29D19B7C00E62230 /* GradientLabel.swift */,
-				1D4D531D29DAEEEA0007D1C6 /* TextField + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -233,9 +260,8 @@
 		1D42C83229D1B3C600D6610B /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
-				1D42C82B29D1A7AD00D6610B /* SignIn */,
 				1D42C83329D1B3D300D6610B /* LogIn */,
-				1D4D531129DAA5E80007D1C6 /* OTP */,
+				1D42C82B29D1A7AD00D6610B /* SignIn */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -263,41 +289,6 @@
 				1D42C83829D1B41200D6610B /* LogInCoordinator.swift */,
 			);
 			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		1D4D531129DAA5E80007D1C6 /* OTP */ = {
-			isa = PBXGroup;
-			children = (
-				1D4D531229DAA5FB0007D1C6 /* View */,
-				1D4D531329DAA5FF0007D1C6 /* Coordinator */,
-			);
-			path = OTP;
-			sourceTree = "<group>";
-		};
-		1D4D531229DAA5FB0007D1C6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1D4D531429DAA7010007D1C6 /* OTPViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1D4D531329DAA5FF0007D1C6 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				1D4D531629DAA7880007D1C6 /* OTPCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		1D536D5C29D5D382001BBA51 /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				1D536D5D29D5D41A001BBA51 /* AuthorizationTextField.swift */,
-				1D4D531929DADE660007D1C6 /* OTPTextField.swift */,
-				1D4D531B29DADE940007D1C6 /* OTPStackView.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -342,13 +333,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		1DFF8D5B29D9915B00463803 /* Network Layer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Network Layer";
-			sourceTree = "<group>";
-		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +341,140 @@
 				1D39B5F029C0F1C800D441B6 /* OnboardingViewController + Section.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		70A1F6CD29DAFF55002FDC29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
+				70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		70A1F71229EB4F9C002FDC29 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71529EB4FD9002FDC29 /* Coordinator */,
+				70A1F71329EB4FC5002FDC29 /* View */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		70A1F71329EB4FC5002FDC29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71429EB4FD3002FDC29 /* Modules */,
+				70A1F71729EB5019002FDC29 /* ENTabBarController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70A1F71429EB4FD3002FDC29 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71A29EB526E002FDC29 /* Profile */,
+				70A1F71929EB5261002FDC29 /* Schedule */,
+				70A1F71629EB500C002FDC29 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		70A1F71529EB4FD9002FDC29 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F72329EB5365002FDC29 /* ENTabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70A1F71629EB500C002FDC29 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F72E29EB874D002FDC29 /* ViewModel */,
+				70A1F72629EB54A6002FDC29 /* Controller */,
+				70A1F72529EB549F002FDC29 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		70A1F71929EB5261002FDC29 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71F29EB52A3002FDC29 /* ScheduleViewController.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		70A1F71A29EB526E002FDC29 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F72129EB52E5002FDC29 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		70A1F72529EB549F002FDC29 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F73529EBF788002FDC29 /* Cell */,
+				70A1F72829EB64BE002FDC29 /* MainImageView.swift */,
+				70A1F73329EBEBB8002FDC29 /* ReminderView.swift */,
+				70A1F74C29EEBA3F002FDC29 /* OrganizationHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70A1F72629EB54A6002FDC29 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71D29EB529C002FDC29 /* MainViewController.swift */,
+				70A1F72C29EB863A002FDC29 /* MainViewController+CollectionView.swift */,
+				70A1F73129EB89A1002FDC29 /* MainViewController+ActionSection.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70A1F72E29EB874D002FDC29 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F72F29EB88D6002FDC29 /* ActionsViewCellViewModel.swift */,
+				70A1F74729EDF6C6002FDC29 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70A1F73529EBF788002FDC29 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F72A29EB84F3002FDC29 /* ActionsViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		70A1F73D29EDF3AE002FDC29 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F74129EDF411002FDC29 /* NetworkService */,
+				70A1F73E29EDF3BB002FDC29 /* HTTPMethods */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		70A1F73E29EDF3BB002FDC29 /* HTTPMethods */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F73F29EDF3CE002FDC29 /* ENHTTPMethods.swift */,
+			);
+			path = HTTPMethods;
+			sourceTree = "<group>";
+		};
+		70A1F74129EDF411002FDC29 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F74329EDF491002FDC29 /* ENNetworkService.swift */,
+			);
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +496,7 @@
 			name = Enactus;
 			packageProductDependencies = (
 				1DEA247129C1D0400043126A /* SnapKit */,
+				70A1F74A29EE0478002FDC29 /* Alamofire */,
 			);
 			productName = Enactus;
 			productReference = 1D39B5CB29C0E9E100D441B6 /* Enactus.app */;
@@ -409,6 +528,7 @@
 			mainGroup = 1D39B5C229C0E9E100D441B6;
 			packageReferences = (
 				1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1D39B5CC29C0E9E100D441B6 /* Products */;
 			projectDirPath = "";
@@ -440,29 +560,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D4D531529DAA7010007D1C6 /* OTPViewController.swift in Sources */,
-				1D4D531729DAA7880007D1C6 /* OTPCoordinator.swift in Sources */,
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
+				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
+				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
+				70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
-				1D4D531A29DADE660007D1C6 /* OTPTextField.swift in Sources */,
-				1D4D531C29DADE940007D1C6 /* OTPStackView.swift in Sources */,
+				70A1F72929EB64BE002FDC29 /* MainImageView.swift in Sources */,
+				70A1F74D29EEBA3F002FDC29 /* OrganizationHeaderView.swift in Sources */,
+				70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */,
+				70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */,
+				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
+				70A1F72D29EB863A002FDC29 /* MainViewController+CollectionView.swift in Sources */,
+				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
+				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
+				70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
+				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
-				1D536D5E29D5D41A001BBA51 /* AuthorizationTextField.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
+				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
+				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
+				70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,
-				1D4D531E29DAEEEA0007D1C6 /* TextField + Extension.swift in Sources */,
+				70A1F74429EDF491002FDC29 /* ENNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +740,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +768,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -682,6 +814,14 @@
 				kind = branch;
 			};
 		};
+		70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -689,6 +829,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		70A1F74A29EE0478002FDC29 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
