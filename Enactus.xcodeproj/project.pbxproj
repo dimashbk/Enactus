@@ -36,6 +36,11 @@
 		70208ACE29EECB320044500E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACB29EECB320044500E /* OTPTextField.swift */; };
 		70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AD129EECB800044500E /* OTPCoordinator.swift */; };
 		70208AD529EECB800044500E /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AD329EECB800044500E /* OTPViewController.swift */; };
+		70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AD629EF224B0044500E /* MainViewController+TableView.swift */; };
+		70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AD829EF259D0044500E /* OrganizationTableViewCell.swift */; };
+		70208ADB29EF26E80044500E /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADA29EF26E80044500E /* TableView.swift */; };
+		70208ADF29EF42B20044500E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADE29EF42B20044500E /* String.swift */; };
+		70208AE129EF497D0044500E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AE029EF497D0044500E /* View.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
@@ -101,6 +106,11 @@
 		70208ACB29EECB320044500E /* OTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		70208AD129EECB800044500E /* OTPCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPCoordinator.swift; sourceTree = "<group>"; };
 		70208AD329EECB800044500E /* OTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		70208AD629EF224B0044500E /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
+		70208AD829EF259D0044500E /* OrganizationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationTableViewCell.swift; sourceTree = "<group>"; };
+		70208ADA29EF26E80044500E /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		70208ADE29EF42B20044500E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		70208AE029EF497D0044500E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
@@ -154,6 +164,7 @@
 		1D39B5CD29C0E9E100D441B6 /* Enactus */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				1D39B5E229C0E9E700D441B6 /* Application Layer */,
 				1D39B5E329C0E9F400D441B6 /* Presentation Layer */,
 				1D39B5F829C0F43800D441B6 /* Core Layer */,
@@ -225,7 +236,6 @@
 			isa = PBXGroup;
 			children = (
 				70208AC829EECB320044500E /* Custom */,
-				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				70A1F6CD29DAFF55002FDC29 /* Models */,
 				1DEA247529C1E0A60043126A /* Fonts */,
 				1D39B5F929C0F43E00D441B6 /* Extensions */,
@@ -239,6 +249,9 @@
 				1D39B5FA29C0F44A00D441B6 /* CollectionView.swift */,
 				1DEA247329C1D7970043126A /* Colors + Extension.swift */,
 				7036D09B29D19B7C00E62230 /* GradientLabel.swift */,
+				70208ADA29EF26E80044500E /* TableView.swift */,
+				70208ADE29EF42B20044500E /* String.swift */,
+				70208AE029EF497D0044500E /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,6 +393,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		70208AE229EF49A10044500E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,7 +415,6 @@
 			isa = PBXGroup;
 			children = (
 				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
-				70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -438,6 +458,7 @@
 		70A1F71629EB500C002FDC29 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				70208AE229EF49A10044500E /* Model */,
 				70A1F72E29EB874D002FDC29 /* ViewModel */,
 				70A1F72629EB54A6002FDC29 /* Controller */,
 				70A1F72529EB549F002FDC29 /* View */,
@@ -478,6 +499,7 @@
 				70A1F71D29EB529C002FDC29 /* MainViewController.swift */,
 				70A1F72C29EB863A002FDC29 /* MainViewController+CollectionView.swift */,
 				70A1F73129EB89A1002FDC29 /* MainViewController+ActionSection.swift */,
+				70208AD629EF224B0044500E /* MainViewController+TableView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -495,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				70A1F72A29EB84F3002FDC29 /* ActionsViewCell.swift */,
+				70208AD829EF259D0044500E /* OrganizationTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -628,6 +651,7 @@
 				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
 				70208ACD29EECB320044500E /* OTPStackView.swift in Sources */,
 				70208AD529EECB800044500E /* OTPViewController.swift in Sources */,
+				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
 				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
@@ -636,8 +660,12 @@
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
 				70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
+				70208AE129EF497D0044500E /* View.swift in Sources */,
+				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
+				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,

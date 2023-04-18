@@ -1,107 +1,51 @@
 import UIKit
-import QuartzCore
+import SnapKit
 
-public class SYActivityIndicatorView: UIView {
+class ENCustomLoaderView: UIView {
     
-    // MARK - Variables
-    
-    lazy private var animationLayer : CALayer = {
-        return CALayer()
+    //MARK: - View
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "loading")
+        return imageView
     }()
     
-    var isAnimating : Bool = false
-    var hidesWhenStopped : Bool = true
-    
-    // MARK - Init
-    
-    public init(image : UIImage?) {
-        
-        var frame : CGRect
-        var loadingImage: UIImage?
-        
-        if let image = image {
-            loadingImage = image
-            frame = CGRect(x: 0.0, y: 0.0, width: image.size.width, height: image.size.height)
-        }
-        else {
-            let bundle = Bundle(for: SYActivityIndicatorView.self)
-            let image = UIImage(named: "loading", in: bundle, compatibleWith: nil)!
-            loadingImage = image
-            frame = CGRect(x: 0.0, y: 0.0, width: image.size.width, height: image.size.height)
-        }
-        
-
+    //MARK: - Init
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
-        guard let loadingImage = loadingImage else { return }
-        animationLayer.frame = frame
-        animationLayer.contents = loadingImage.cgImage
-        animationLayer.masksToBounds = true
-        
-        self.layer.addSublayer(animationLayer)
-        
-        addRotation(forLayer: animationLayer)
-        pause(layer: animationLayer)
-        self.isHidden = true
+        setup()
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK - Func
-    
-    public func addRotation(forLayer layer : CALayer) {
-        let rotation : CABasicAnimation = CABasicAnimation(keyPath:"transform.rotation.z")
-        
-        rotation.duration = 1.0
-        rotation.isRemovedOnCompletion = false
-        rotation.repeatCount = HUGE
-        rotation.fillMode = CAMediaTimingFillMode.forwards
-        rotation.fromValue = NSNumber(value: 0.0)
-        rotation.toValue = NSNumber(value: 3.14 * 2.0)
-        
-        layer.add(rotation, forKey: "rotate")
+    //MARK: - Methods
+    private func setup() {
+        setupViews()
+        makeConstriants()
     }
     
-    public func pause(layer : CALayer) {
-        let pausedTime = layer.convertTime(CACurrentMediaTime(), from: nil)
-        
-        layer.speed = 0.0
-        layer.timeOffset = pausedTime
-        
-        isAnimating = false
-    }
-    
-    public func resume(layer : CALayer) {
-        let pausedTime : CFTimeInterval = layer.timeOffset
-        
-        layer.speed = 1.0
-        layer.timeOffset = 0.0
-        layer.beginTime = 0.0
-        
-        let timeSincePause = layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
-        layer.beginTime = timeSincePause
-        
-        isAnimating = true
-    }
-    
-    public func startAnimating () {
-        
-        if isAnimating {
-            return
+    private func setupViews() {
+        [imageView].forEach {
+            addSubview($0)
         }
-        
-        if hidesWhenStopped {
-            self.isHidden = false
-        }
-        resume(layer: animationLayer)
     }
     
-    public func stopAnimating () {
-        if hidesWhenStopped {
-            self.isHidden = true
+    private func makeConstriants() {
+        imageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
         }
-        pause(layer: animationLayer)
+    }
+    
+    func startAnimating() {
+        imageView.rotate(duration: 1)
+        imageView.isHidden = false
+    }
+    
+    func stopAnimating() {
+        imageView.layer.removeAllAnimations()
+        imageView.isHidden = true
     }
 }

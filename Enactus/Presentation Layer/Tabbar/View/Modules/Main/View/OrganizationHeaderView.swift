@@ -2,7 +2,8 @@ import UIKit
 import SnapKit
 
 final class OrganizationHeaderView: UIView {
-    //MARK: - UI
+    
+    //MARK: - View
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Получить коины"
@@ -24,6 +25,7 @@ final class OrganizationHeaderView: UIView {
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -44,7 +46,10 @@ final class OrganizationHeaderView: UIView {
     
     private func makeConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.bottom.leading.equalToSuperview()
+        }
+        subtitleLabel.snp.makeConstraints { make in
+            make.top.bottom.trailing.equalToSuperview()
         }
     }
 }

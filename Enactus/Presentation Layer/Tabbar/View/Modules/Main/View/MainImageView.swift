@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 final class MainImageView: UIImageView {
+    
     //MARK: - View
     private lazy var profileStackView: UIStackView = {
         let view = UIStackView()

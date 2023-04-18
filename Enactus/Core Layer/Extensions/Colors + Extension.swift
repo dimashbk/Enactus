@@ -40,10 +40,13 @@ extension UIColor{
     static var enTextGray: UIColor {
         UIColor(red: 130/255, green: 130/255, blue: 130/255, alpha: 1)
     }
-    static var enTextDarkBlue: UIColor {
+    static var enTitle: UIColor {
         UIColor(red: 16/255, green: 19/255, blue: 35/255, alpha: 1)
     }
     static var enWhiteBlue: UIColor {
         UIColor(red: 102/255, green: 176/255, blue: 220/255, alpha: 1)
+    }
+    static var enSubtitle: UIColor {
+        UIColor(red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
     }
 }

@@ -57,7 +57,7 @@ class ActionsViewCell: UICollectionViewCell {
     
     private func setupColors() {
         backgroundColor = .white
-        titleLabel.textColor = .enTextDarkBlue
+        titleLabel.textColor = .enTitle
         iconImageVIew.backgroundColor = .enBlue.withAlphaComponent(0.2)
     }
     

@@ -4,9 +4,9 @@ import SnapKit
 final class MainViewController: UIViewController {
     
     //MARK: - Properties
-    let actionSections: [Action] = [.init(section: .action, rows: [.remittance, .shop, .credits, .faq])]
-    
     let mainViewModel = MainViewModel()
+    
+    let actionSections: [Action] = [.init(section: .action, rows: [.remittance, .shop, .credits, .faq])]
     
     //MARK: - View
     private lazy var mainImageView = MainImageView()
@@ -23,6 +23,18 @@ final class MainViewController: UIViewController {
     }()
     
     private lazy var reminderView = ReminderView()
+    
+    private lazy var organizationHeaderView = OrganizationHeaderView()
+    
+    private lazy var organizationsTableView: UITableView = {
+        let view = UITableView()
+        view.delegate = self
+        view.dataSource = self
+        view.regiter(cellClass: OrganizationTableViewCell.self)
+        return view
+    }()
+    
+    private lazy var loaderView = ENCustomLoaderView()
     
     //MARK: - LifeCycle
     override func loadView() {
@@ -44,7 +56,7 @@ final class MainViewController: UIViewController {
     }
     
     private func setupViews() {
-        [mainImageView, actionsView, reminderView].forEach {
+        [mainImageView, actionsView, reminderView, organizationHeaderView, organizationsTableView, loaderView].forEach {
             view.addSubview($0)
         }
     }
@@ -59,12 +71,30 @@ final class MainViewController: UIViewController {
             make.leading.equalToSuperview().inset(16)
             make.trailing.equalToSuperview().inset(16)
             make.height.equalTo(UIScreen.main.bounds.height / 7.8)
-    }
+        }
         
         reminderView.snp.makeConstraints { make in
             make.top.equalTo(actionsView.snp.bottom).offset(8)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(UIScreen.main.bounds.height / 8.9)
+        }
+        
+        organizationHeaderView.snp.makeConstraints { make in
+            make.top.equalTo(reminderView.snp.bottom).offset(16)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(18)
+        }
+        
+        organizationsTableView.snp.makeConstraints { make in
+            make.top.equalTo(organizationHeaderView.snp.bottom).offset(12)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview()
+        }
+        
+        loaderView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(organizationsTableView)
+            make.width.equalTo(UIScreen.main.bounds.width / 3.75)
+            make.height.equalTo(UIScreen.main.bounds.height / 8.44)
         }
     }
     
@@ -74,11 +104,20 @@ final class MainViewController: UIViewController {
     
     private func setupColors() {
         view.backgroundColor = .enWhite
+        organizationsTableView.backgroundColor = .enWhite
     }
 }
 
+//MARK: - MainViewModel
 extension MainViewController {
     func fetchOrganizationList() {
+        loaderView.startAnimating()
         mainViewModel.fetchOrganizationsList()
+        mainViewModel.updateViewData = { [weak self] in
+            DispatchQueue.main.async {
+                self?.loaderView.stopAnimating()
+                self?.organizationsTableView.reloadData()
+            }
+        }
     }
 }
