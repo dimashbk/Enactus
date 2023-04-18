@@ -19,14 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setCoordinator()
         
         return true
-
     }
     private func setCoordinator() {
         appCoordinate = AppCoordinator(window: window!)
         appCoordinate?.start()
-        
     }
-
 
 }
 
