@@ -21,10 +21,10 @@ class AppCoordinator: Coordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
-<<<<<<< dimash
+
         let mainCoordinator = OnboardingCoordinator(navigationController: navigationController)
         coordinate(to: mainCoordinator)
-=======
+
         if UserDefaults.standard.bool(forKey: "usersSecondLaunch") == true {
             let tabBarCoordinator = SignInCoordinator(navigationController: navigationController)
             coordinate(to: tabBarCoordinator)
@@ -33,6 +33,6 @@ class AppCoordinator: Coordinator {
             coordinate(to: tabBarCoordinator)
             UserDefaults.standard.set(true, forKey: "usersSecondLaunch")
         }
->>>>>>> main
+
     }
 }
