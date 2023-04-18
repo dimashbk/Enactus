@@ -5,10 +5,9 @@
 //  Created by Dinmukhamed on 27.03.2023.
 //
 
-import Foundation
 import UIKit
 
-class SignInCoordinator: Coordinator {
+final class SignInCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     
@@ -18,7 +17,8 @@ class SignInCoordinator: Coordinator {
     
     func start() {
         let signInVC =  SignInViewController()
-        signInVC.delegate = self
+        signInVC.coordinator = self
+//        signInVC.navigationItem.hidesBackButton = true
         navigationController.pushViewController(signInVC, animated: true)
     }
 }

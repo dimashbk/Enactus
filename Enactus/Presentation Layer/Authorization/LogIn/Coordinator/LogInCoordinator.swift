@@ -5,13 +5,16 @@
 //  Created by Dinmukhamed on 27.03.2023.
 //
 
-import Foundation
-
-import Foundation
 import UIKit
 
-class LogInCoordinator: Coordinator {
-    
+protocol OTPFlow: AnyObject {
+    func showOTPFlow()
+}
+
+typealias LoginCoordinatorProtocol = OTPFlow
+
+final class LogInCoordinator: Coordinator, LoginCoordinatorProtocol{
+
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -20,7 +23,14 @@ class LogInCoordinator: Coordinator {
     
     func start() {
         let logInVC =  LogInViewController()
-        logInVC.delegate = self
+        logInVC.coordinator = self
         navigationController.pushViewController(logInVC, animated: true)
     }
+    
+    // MARK: - FlowMethods
+    func showOTPFlow() {
+        let otpCoordinator = OTPCoordinator(navigationController: navigationController)
+        coordinate(to: otpCoordinator)
+    }
+    
 }

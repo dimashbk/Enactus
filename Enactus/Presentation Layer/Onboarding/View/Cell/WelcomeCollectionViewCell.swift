@@ -48,7 +48,6 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
         button.backgroundColor = .enBlue
         button.layer.cornerRadius = 12
 
-        
         return button
     }()
    lazy var logInButton: UIButton = {
@@ -59,6 +58,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
         button.layer.cornerRadius = 12
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.enBlue.cgColor
+       
         return button
     }()
     override init(frame: CGRect) {

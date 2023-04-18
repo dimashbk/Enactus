@@ -19,6 +19,12 @@ extension UIColor{
     static var enBlue: UIColor {
         UIColor(red: 0.4, green: 0.69, blue: 0.863, alpha: 1)
     }
+    static var enYellow: UIColor {
+        UIColor(red: 0.765, green: 0.604, blue: 0.192, alpha: 1)
+    }
+    static var enHalfGray: UIColor {
+        UIColor(red: 130/255, green: 130/255, blue: 130/255, alpha: 1)
+    }
     static var enDark: UIColor {
         UIColor(red: 30/255, green: 36/255, blue: 50/255, alpha: 1)
     }
