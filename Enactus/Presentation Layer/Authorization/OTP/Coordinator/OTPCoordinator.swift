@@ -7,15 +7,15 @@
 
 import UIKit
 
-final class OTPCoordinator: Coordinator {
-
+final class OTPCoordinator: BaseCoordinator {
+    
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    override func start() {
         let otpVC = OTPViewController()
         otpVC.coordinator = self
         navigationController.pushViewController(otpVC, animated: true)

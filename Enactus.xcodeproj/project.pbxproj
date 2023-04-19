@@ -10,6 +10,7 @@
 		1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */; };
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
 		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
+		1D28D7F029EFDA9C002D6A4B /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D28D7EF29EFDA9B002D6A4B /* BaseCoordinator.swift */; };
 		1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */; };
 		1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D39B5D229C0E9E100D441B6 /* ViewController.swift */; };
 		1D39B5D829C0E9E200D441B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D39B5D729C0E9E200D441B6 /* Assets.xcassets */; };
@@ -79,6 +80,7 @@
 		1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
+		1D28D7EF29EFDA9B002D6A4B /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		1D39B5CB29C0E9E100D441B6 /* Enactus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enactus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D39B5CE29C0E9E100D441B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D39B5D229C0E9E100D441B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D28D7EE29EFDA83002D6A4B /* BaseCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D28D7EF29EFDA9B002D6A4B /* BaseCoordinator.swift */,
+			);
+			path = BaseCoordinator;
+			sourceTree = "<group>";
+		};
 		1D39B5C229C0E9E100D441B6 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		1D39B5E229C0E9E700D441B6 /* Application Layer */ = {
 			isa = PBXGroup;
 			children = (
+				1D28D7EE29EFDA83002D6A4B /* BaseCoordinator */,
 				1DC0503C29D18EB500581D6B /* Protocols */,
 				1DC0503929D18E7800581D6B /* AppCoordinator */,
 				1D39B5D229C0E9E100D441B6 /* ViewController.swift */,
@@ -639,6 +650,9 @@
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
+				1D4D531A29DADE660007D1C6 /* OTPTextField.swift in Sources */,
+				1D28D7F029EFDA9C002D6A4B /* BaseCoordinator.swift in Sources */,
+				1D4D531C29DADE940007D1C6 /* OTPStackView.swift in Sources */,
 				70A1F72929EB64BE002FDC29 /* MainImageView.swift in Sources */,
 				70A1F74D29EEBA3F002FDC29 /* OrganizationHeaderView.swift in Sources */,
 				70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */,
