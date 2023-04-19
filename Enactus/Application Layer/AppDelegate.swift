@@ -9,7 +9,6 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     private var appCoordinate: AppCoordinator?
 
@@ -20,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
     private func setCoordinator() {
         appCoordinate = AppCoordinator(window: window!)
         appCoordinate?.start()
     }
-
 }
 
