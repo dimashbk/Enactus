@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-class OnboardingCoordinator: Coordinator {
-    
+class OnboardingCoordinator: BaseCoordinator {
+        
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
     
-    func start() {
+    override func start() {
         let onboardingVC = OnboardingViewController()
         onboardingVC.delegate = self
         navigationController.pushViewController(onboardingVC, animated: true)

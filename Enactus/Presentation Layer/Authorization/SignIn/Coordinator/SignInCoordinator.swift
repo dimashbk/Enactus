@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SignInCoordinator: Coordinator {
+final class SignInCoordinator: BaseCoordinator {
     
     private let navigationController: UINavigationController
     
@@ -15,7 +15,7 @@ final class SignInCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start() {
+    override func start() {
         let signInVC =  SignInViewController()
         signInVC.coordinator = self
 //        signInVC.navigationItem.hidesBackButton = true

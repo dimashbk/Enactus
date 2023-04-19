@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
+class AppCoordinator: BaseCoordinator {
     
     private var window: UIWindow?
     
@@ -15,7 +15,7 @@ class AppCoordinator: Coordinator {
         self.window = window
     }
     
-    func start() {
+    override func start() {
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
