@@ -11,10 +11,14 @@ protocol OTPFlow: AnyObject {
     func showOTPFlow()
 }
 
-typealias LoginCoordinatorProtocol = OTPFlow
+protocol SigninFlow: AnyObject {
+    func showSigninFlow()
+}
 
-final class LogInCoordinator: BaseCoordinator, LoginCoordinatorProtocol{
+typealias LoginCoordinatorProtocol = OTPFlow & SigninFlow
 
+final class LogInCoordinator: BaseCoordinator{
+    
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -22,15 +26,23 @@ final class LogInCoordinator: BaseCoordinator, LoginCoordinatorProtocol{
     }
     
     override func start() {
-        let logInVC =  LogInViewController()
-        logInVC.coordinator = self
+        let viewModel = LoginViewModel()
+        let logInVC = LogInViewController()
+        logInVC.viewModel = viewModel
+        logInVC.viewModel?.coordinatorDelegate = self
         navigationController.pushViewController(logInVC, animated: true)
     }
-    
+}
+
+extension LogInCoordinator: LoginCoordinatorProtocol {
     // MARK: - FlowMethods
     func showOTPFlow() {
         let otpCoordinator = OTPCoordinator(navigationController: navigationController)
         coordinate(to: otpCoordinator)
+    }
+    func showSigninFlow() {
+        let signinCoordinator = SignInCoordinator(navigationController: navigationController)
+        coordinate(to: signinCoordinator)
     }
     
 }

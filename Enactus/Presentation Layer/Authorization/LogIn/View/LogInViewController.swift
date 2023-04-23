@@ -7,10 +7,10 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
 
     //регистрация
-    var coordinator: LogInCoordinator?
+    var viewModel: LoginViewModel?
     
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -30,6 +30,7 @@ class LogInViewController: UIViewController {
         label.font = UIFont(name: "Mulish-Bold", size: 32)
         return label
     }()
+    
     private lazy var orLabel: UILabel = {
         let orLabel = UILabel()
         orLabel.text = "или"
@@ -54,6 +55,7 @@ class LogInViewController: UIViewController {
     private lazy var forgetPassword: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "forgetImageText"), for: .normal)
+        button.isHidden = true
         return button
     }()
     
@@ -84,6 +86,7 @@ class LogInViewController: UIViewController {
         registerInButton.layer.borderColor = UIColor.enGray.cgColor
         registerInButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         registerInButton.layer.cornerRadius = 8
+        registerInButton.addTarget(self, action: #selector(showSignin), for: .touchUpInside)
         return registerInButton
     }()
     
@@ -111,18 +114,10 @@ class LogInViewController: UIViewController {
     }
     
     private func setupViews() {
-        [backgroundImageView,
-         signInLabel,
-         emailTextField,
-         passwordTextField,
-         forgetPassword,
-         errorLabel,
-         logoImageView,
-         signInButton,
-         registerButton,
-         firstLineView,
-         secondLineView,
-         orLabel].forEach {
+        [backgroundImageView, signInLabel, emailTextField,
+         passwordTextField, forgetPassword, errorLabel,
+         logoImageView, signInButton, registerButton,
+         firstLineView, secondLineView, orLabel].forEach {
             view.addSubview($0)
         }
     }
@@ -187,6 +182,9 @@ class LogInViewController: UIViewController {
     }
     
     @objc func showOtp() {
-        coordinator?.showOTPFlow()
+        viewModel?.moveToOTP()
+    }
+    @objc func showSignin() {
+        viewModel?.moveToSignIn()
     }
 }

@@ -11,9 +11,11 @@ final class OTPViewController: UIViewController {
     
     var coordinator: OTPCoordinator?
     
+    var email = AuthorizationService.shared.authorizationModel.email
+    
     private lazy var headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Введите код из СМС, отправленный на почту outlook@iitu.edu.kz"
+        label.text = "Введите код из СМС, отправленный на почту \(email ?? "")"
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish-Medium", size: 16)
@@ -32,6 +34,7 @@ final class OTPViewController: UIViewController {
         button.layer.borderColor = UIColor.enGray.cgColor
         button.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(checkCorrectness), for: .touchUpInside)
         return button
     }()
     
@@ -41,12 +44,10 @@ final class OTPViewController: UIViewController {
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish", size: 16)
         label.numberOfLines = 0
+        label.isHidden = true
         label.gradientColors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
-        
         return label
     }()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,4 +93,8 @@ final class OTPViewController: UIViewController {
         
     }
 
+    @objc func checkCorrectness() {
+        AuthorizationService.shared.authorizationModel.code = otpStackView.getOTP()
+        AuthorizationService.shared.login()
+    }
 }
