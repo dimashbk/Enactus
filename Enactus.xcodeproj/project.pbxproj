@@ -41,6 +41,9 @@
 		70208ADB29EF26E80044500E /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADA29EF26E80044500E /* TableView.swift */; };
 		70208ADF29EF42B20044500E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADE29EF42B20044500E /* String.swift */; };
 		70208AE129EF497D0044500E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AE029EF497D0044500E /* View.swift */; };
+		70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AEB29F2742C0044500E /* OrganizationController.swift */; };
+		70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AED29F2744E0044500E /* OrganizationCoordinator.swift */; };
+		70208AF129F550210044500E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF029F550210044500E /* MainCoordinator.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
@@ -111,6 +114,9 @@
 		70208ADA29EF26E80044500E /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		70208ADE29EF42B20044500E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		70208AE029EF497D0044500E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		70208AEB29F2742C0044500E /* OrganizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationController.swift; sourceTree = "<group>"; };
+		70208AED29F2744E0044500E /* OrganizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCoordinator.swift; sourceTree = "<group>"; };
+		70208AF029F550210044500E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70208AE529F273F70044500E /* Organization */,
 				70A1F71229EB4F9C002FDC29 /* Tabbar */,
 				1D42C83229D1B3C600D6610B /* Authorization */,
 				1D39B5E429C0EAFD00D441B6 /* Onboarding */,
@@ -401,6 +408,63 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		70208AE529F273F70044500E /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				70208AE829F2740B0044500E /* Coordinator */,
+				70208AE629F273FF0044500E /* View */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
+		70208AE629F273FF0044500E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70208AEA29F274150044500E /* ViewModels */,
+				70208AE929F274110044500E /* Views */,
+				70208AE729F274060044500E /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70208AE729F274060044500E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70208AEB29F2742C0044500E /* OrganizationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70208AE829F2740B0044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208AED29F2744E0044500E /* OrganizationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70208AE929F274110044500E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70208AEA29F274150044500E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70208AEF29F54FF10044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208AF029F550210044500E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -458,6 +522,7 @@
 		70A1F71629EB500C002FDC29 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				70208AEF29F54FF10044500E /* Coordinator */,
 				70208AE229EF49A10044500E /* Model */,
 				70A1F72E29EB874D002FDC29 /* ViewModel */,
 				70A1F72629EB54A6002FDC29 /* Controller */,
@@ -631,6 +696,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
+				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
@@ -654,6 +720,7 @@
 				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
 				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
+				70208AF129F550210044500E /* MainCoordinator.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
@@ -668,6 +735,7 @@
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
+				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
