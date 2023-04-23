@@ -13,7 +13,7 @@ protocol OTPFlow: AnyObject {
 
 typealias LoginCoordinatorProtocol = OTPFlow
 
-final class LogInCoordinator: Coordinator, LoginCoordinatorProtocol{
+final class LogInCoordinator: BaseCoordinator, LoginCoordinatorProtocol{
 
     private let navigationController: UINavigationController
     
@@ -21,7 +21,7 @@ final class LogInCoordinator: Coordinator, LoginCoordinatorProtocol{
         self.navigationController = navigationController
     }
     
-    func start() {
+    override func start() {
         let logInVC =  LogInViewController()
         logInVC.coordinator = self
         navigationController.pushViewController(logInVC, animated: true)

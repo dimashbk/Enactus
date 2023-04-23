@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AppCoordinator: Coordinator {
+class AppCoordinator: BaseCoordinator {
     
     private var window: UIWindow?
     
@@ -16,19 +16,13 @@ class AppCoordinator: Coordinator {
         self.window = window
     }
     
-    func start() {
+    override func start() {
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
-        
-        if UserDefaults.standard.bool(forKey: "usersSecondLaunch") == true {
-            let tabBarCoordinator = ENTabBarCoordinator(navigationController: navigationController)
-            coordinate(to: tabBarCoordinator)
-        } else {
-            let tabBarCoordinator = OnboardingCoordinator(navigationController: navigationController)
-            coordinate(to: tabBarCoordinator)
-            UserDefaults.standard.set(true, forKey: "usersSecondLaunch")
-        }
+
+        let mainCoordinator = OnboardingCoordinator(navigationController: navigationController)
+        coordinate(to: mainCoordinator)
     }
 }
