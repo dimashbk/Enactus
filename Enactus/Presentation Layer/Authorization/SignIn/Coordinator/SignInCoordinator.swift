@@ -10,8 +10,11 @@ import UIKit
 protocol LoginFlow: AnyObject {
     func showLoginFlow()
 }
+protocol EmailResetFlow: AnyObject {
+    func showEmailResetFlow()
+}
 
-typealias SigninCoordinatorProtocol = OTPFlow & LoginFlow
+typealias SigninCoordinatorProtocol = OTPFlow & LoginFlow & EmailResetFlow
 
 final class SignInCoordinator: BaseCoordinator {
     
@@ -31,6 +34,11 @@ final class SignInCoordinator: BaseCoordinator {
 }
 
 extension SignInCoordinator: SigninCoordinatorProtocol{
+    func showEmailResetFlow() {
+        let emailResetCoordinator = EmailResetCoordinator(navigationController: navigationController)
+        coordinate(to: emailResetCoordinator)
+    }
+    
     func showOTPFlow() {
         let otpCoordinator = OTPCoordinator(navigationController: navigationController)
         coordinate(to: otpCoordinator)

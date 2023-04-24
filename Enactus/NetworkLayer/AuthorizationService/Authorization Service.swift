@@ -7,13 +7,24 @@
 
 import Foundation
 
+enum AuthorizationPath {
+    case SignIn
+    case SignUp
+    case ResetPassword
+    case none
+}
+
 final class AuthorizationService {
     
     static let shared = AuthorizationService()
     
     let networkService = ENNetworkService()
     
+    var authorizationPath: AuthorizationPath = .none
+    
     var accessToken = String()
+    
+    var correctCode = String()
     
     var authorizationModel = Authorization(email: nil,
                                            code: nil,
@@ -24,5 +35,15 @@ final class AuthorizationService {
             self?.accessToken = result?.token.original.accessToken ?? ""
             print(self?.accessToken)
         }
+    }
+    
+    func sendCode() {
+        networkService.sendCode(param: authorizationModel.email) { [weak self] result in
+            self?.correctCode = result?.code.code ?? ""
+            print(self?.correctCode)
+        }
+    }
+    func resetPassword() {
+    
     }
 }

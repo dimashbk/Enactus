@@ -13,7 +13,25 @@ struct Authorization: Codable {
 }
 // MARK: - SendCode
 struct SendCode: Codable {
-    let email: String
+    let email: String?
+}
+// MARK: - SendCode
+struct SendCodeResponse: Codable {
+    let message: String
+    let code: Code
+}
+
+// MARK: - Code
+struct Code: Codable {
+    let email, code, updatedAt, createdAt: String
+    let id: Int
+
+    enum CodingKeys: String, CodingKey {
+        case email, code
+        case updatedAt = "updated_at"
+        case createdAt = "created_at"
+        case id
+    }
 }
 struct Login: Codable {
     let message: String
@@ -40,4 +58,8 @@ struct Original: Codable {
         case tokenType = "token_type"
         case expiresIn = "expires_in"
     }
+}
+// MARK: - ResetPassword
+struct ResetPassword: Codable {
+    let message: String
 }

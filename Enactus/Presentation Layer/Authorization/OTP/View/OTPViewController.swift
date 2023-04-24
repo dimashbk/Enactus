@@ -9,7 +9,7 @@ import UIKit
 
 final class OTPViewController: UIViewController {
     
-    var coordinator: OTPCoordinator?
+    var viewModel: OTPViewModel?
     
     var email = AuthorizationService.shared.authorizationModel.email
     
@@ -95,6 +95,6 @@ final class OTPViewController: UIViewController {
 
     @objc func checkCorrectness() {
         AuthorizationService.shared.authorizationModel.code = otpStackView.getOTP()
-        AuthorizationService.shared.login()
+        AuthorizationService.shared.resetPassword()
     }
 }

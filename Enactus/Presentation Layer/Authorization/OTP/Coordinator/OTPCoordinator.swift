@@ -7,6 +7,15 @@
 
 import UIKit
 
+protocol CreatePasswordFlow {
+    func showCreatePasswordFlow()
+}
+protocol TabBarFlow {
+    func showTabBarFlow()
+}
+
+typealias OTPCoordinatorProtocol = CreatePasswordFlow & TabBarFlow
+
 final class OTPCoordinator: BaseCoordinator {
     
     private let navigationController: UINavigationController
@@ -17,7 +26,21 @@ final class OTPCoordinator: BaseCoordinator {
     
     override func start() {
         let otpVC = OTPViewController()
-        otpVC.coordinator = self
+        otpVC.viewModel = OTPViewModel()
+        otpVC.viewModel?.coordinatorDelegate = self
         navigationController.pushViewController(otpVC, animated: true)
     }
+}
+extension OTPCoordinator: OTPCoordinatorProtocol {
+    func showTabBarFlow() {
+        let tabbarCoordinator = ENTabBarCoordinator(navigationController: navigationController)
+    }
+    
+    func showCreatePasswordFlow() {
+        let createPasswordCoordinator = CreatePasswordCoordinator(navigationController: navigationController)
+        coordinate(to: createPasswordCoordinator)
+    }
+    
+    
+    
 }

@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+typealias EmailResetCoordinatorProtocol = OTPFlow
+
 final class EmailResetCoordinator: BaseCoordinator {
     
     private let navigationController: UINavigationController
@@ -17,7 +20,17 @@ final class EmailResetCoordinator: BaseCoordinator {
     
     override func start() {
         let emailResetVC = EmailResetViewController()
-        emailResetVC.coordinator = self
+        emailResetVC.viewModel = EmailResetViewModel()
+        emailResetVC.viewModel?.coordinatorDelegate = self
         navigationController.pushViewController(emailResetVC, animated: true)
     }
+}
+
+extension EmailResetCoordinator: EmailResetCoordinatorProtocol {
+    func showOTPFlow() {
+        let otpCoordinator = OTPCoordinator(navigationController: navigationController)
+        coordinate(to: otpCoordinator)
+    }
+    
+    
 }

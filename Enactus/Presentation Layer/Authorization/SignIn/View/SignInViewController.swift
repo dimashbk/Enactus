@@ -53,7 +53,7 @@ final class SignInViewController: UIViewController {
     private lazy var forgetPassword: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "forgetImageText"), for: .normal)
-        button.addTarget(self, action: #selector(showOtp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showEmailReset  ), for: .touchUpInside)
         return button
     }()
     
@@ -202,6 +202,9 @@ final class SignInViewController: UIViewController {
     }
     @objc func showLogin() {
         viewModel?.moveToLogin()
+    }
+    @objc func showEmailReset() {
+        viewModel?.forgotPassword()
     }
 
 }

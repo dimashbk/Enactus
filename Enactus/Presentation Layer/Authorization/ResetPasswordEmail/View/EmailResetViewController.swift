@@ -9,7 +9,7 @@ import UIKit
 
 final class EmailResetViewController: UIViewController {
     
-    var coordinator: EmailResetCoordinator?
+    var viewModel: EmailResetViewModel?
     
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -51,7 +51,7 @@ final class EmailResetViewController: UIViewController {
         let button = TwoStateButton()
         button.changeState(state: .disabled)
         button.setTitle("Отправить ссылку", for: .normal)
-//        button.addTarget(self, action: #selector(changeState), for: .touchUpInside)
+        button.addTarget(self, action: #selector(moveToOTP), for: .touchUpInside)
         return button
     }()
     
@@ -99,5 +99,7 @@ final class EmailResetViewController: UIViewController {
             make.height.equalTo(48)
         }
     }
-
+    @objc func moveToOTP() {
+        viewModel?.moveToOTP(email: emailTextField.text ?? "")
+    }
 }

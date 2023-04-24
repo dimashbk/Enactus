@@ -34,6 +34,8 @@
 		1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D42C83829D1B41200D6610B /* LogInCoordinator.swift */; };
 		1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3BD29F5891500B6F3E2 /* Authorization Service.swift */; };
 		1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */; };
+		1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C529F680C000B6F3E2 /* EmailResetViewModel.swift */; };
+		1D7BA3CA29F683C800B6F3E2 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -115,6 +117,8 @@
 		1D42C83829D1B41200D6610B /* LogInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCoordinator.swift; sourceTree = "<group>"; };
 		1D7BA3BD29F5891500B6F3E2 /* Authorization Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Authorization Service.swift"; sourceTree = "<group>"; };
 		1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		1D7BA3C529F680C000B6F3E2 /* EmailResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResetViewModel.swift; sourceTree = "<group>"; };
+		1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		1D28D7FB29F1A53F002D6A4B /* ResetPasswordEmail */ = {
 			isa = PBXGroup;
 			children = (
+				1D7BA3C329F6806200B6F3E2 /* ViewModel */,
 				1D28D7FC29F1A58A002D6A4B /* View */,
 				1D28D7FF29F1A7F0002D6A4B /* Coordinator */,
 			);
@@ -431,6 +436,22 @@
 			path = AuthorizationService;
 			sourceTree = "<group>";
 		};
+		1D7BA3C329F6806200B6F3E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3C529F680C000B6F3E2 /* EmailResetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D7BA3C729F683A900B6F3E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +508,7 @@
 		70208ACF29EECB800044500E /* OTP */ = {
 			isa = PBXGroup;
 			children = (
+				1D7BA3C729F683A900B6F3E2 /* ViewModel */,
 				70208AD229EECB800044500E /* View */,
 				70208AD029EECB800044500E /* Coordinator */,
 			);
@@ -759,6 +781,7 @@
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
+				1D7BA3CA29F683C800B6F3E2 /* OTPViewModel.swift in Sources */,
 				1D28D7F029EFDA9C002D6A4B /* BaseCoordinator.swift in Sources */,
 				70A1F72929EB64BE002FDC29 /* MainImageView.swift in Sources */,
 				1D28D7FE29F1A5B6002D6A4B /* EmailResetViewController.swift in Sources */,
@@ -799,6 +822,7 @@
 				1D28D80629F29B6A002D6A4B /* LoginViewModel.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
+				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,
