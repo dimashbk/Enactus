@@ -45,7 +45,7 @@ final class LogInViewController: UIViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: AuthorizationTextField = {
+    private lazy var loginTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Логин")
         textField.eyeButton.isHidden = true
         return textField
@@ -107,6 +107,10 @@ final class LogInViewController: UIViewController {
         view.backgroundColor = .red
         setup()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthorizationService.shared.authorizationPath = .signUp
+    }
     
     private func setup(){
         setupViews()
@@ -115,7 +119,7 @@ final class LogInViewController: UIViewController {
     
     private func setupViews() {
         [backgroundImageView, signInLabel, emailTextField,
-         passwordTextField, forgetPassword, errorLabel,
+         loginTextField, forgetPassword, errorLabel,
          logoImageView, signInButton, registerButton,
          firstLineView, secondLineView, orLabel].forEach {
             view.addSubview($0)
@@ -139,17 +143,17 @@ final class LogInViewController: UIViewController {
             make.height.equalTo(36)
             make.left.right.equalToSuperview().offset(24)
         }
-        passwordTextField.snp.makeConstraints { make in
+        loginTextField.snp.makeConstraints { make in
             make.top.equalTo(emailTextField.snp.bottom).offset(32)
             make.height.equalTo(36)
             make.left.right.equalToSuperview().offset(24)
         }
         errorLabel.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            make.top.equalTo(loginTextField.snp.bottom).offset(16)
             make.left.equalToSuperview().inset(24)
         }
         forgetPassword.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            make.top.equalTo(loginTextField.snp.bottom).offset(16)
             make.right.equalToSuperview().inset(24)
         }
         signInButton.snp.makeConstraints { make in
@@ -182,7 +186,7 @@ final class LogInViewController: UIViewController {
     }
     
     @objc func showOtp() {
-        viewModel?.moveToOTP()
+        viewModel?.register(email: loginTextField.text ?? "")
     }
     @objc func showSignin() {
         viewModel?.moveToSignIn()

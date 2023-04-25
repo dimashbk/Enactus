@@ -8,9 +8,9 @@
 import Foundation
 
 enum AuthorizationPath {
-    case SignIn
-    case SignUp
-    case ResetPassword
+    case signIn
+    case signUp
+    case resetPassword
     case none
 }
 
@@ -33,7 +33,6 @@ final class AuthorizationService {
     func login() {
         networkService.postLogin(param: authorizationModel) { [weak self] result in
             self?.accessToken = result?.token.original.accessToken ?? ""
-            print(self?.accessToken)
         }
     }
     
@@ -44,6 +43,13 @@ final class AuthorizationService {
         }
     }
     func resetPassword() {
-    
+        networkService.resetPassword(param: authorizationModel) { [weak self] result in
+            print(result)
+        }
+    }
+    func register() {
+        networkService.postRegister(param: authorizationModel) { [weak self] result in
+            print(result)
+        }
     }
 }

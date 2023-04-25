@@ -5,9 +5,13 @@
 //  Created by Dinmukhamed on 19.04.2023.
 //
 
-import Foundation
-
 import UIKit
+
+protocol RootFlow {
+    func showRootFlow()
+}
+
+typealias CreatePasswordCoordinatorProtocol = SigninFlow & RootFlow
 
 final class CreatePasswordCoordinator: BaseCoordinator {
     
@@ -19,7 +23,22 @@ final class CreatePasswordCoordinator: BaseCoordinator {
     
     override func start() {
         let createPasswordVC = CreatePasswordViewController()
-        createPasswordVC.coordinator = self
+        createPasswordVC.viewModel = CreatePasswordViewModel()
+        createPasswordVC.viewModel?.coordinatorDelegate = self
         navigationController.pushViewController(createPasswordVC, animated: true)
     }
+}
+
+extension CreatePasswordCoordinator: CreatePasswordCoordinatorProtocol {
+    func showRootFlow() {
+        navigationController.popToRootViewController(animated: true)
+    }
+    
+    func showSigninFlow() {
+        let signinCoordinator = SignInCoordinator(navigationController: navigationController)
+        coordinate(to: signinCoordinator)
+    }
+    
+    
+    
 }

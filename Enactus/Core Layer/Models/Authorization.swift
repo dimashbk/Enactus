@@ -63,3 +63,22 @@ struct Original: Codable {
 struct ResetPassword: Codable {
     let message: String
 }
+// MARK: - RegisterResponse
+struct RegisterResponse: Codable {
+    let message: String
+    let user: User
+}
+
+// MARK: - User
+struct User: Codable {
+    let email, updatedAt, createdAt: String
+    let id: Int
+
+    enum CodingKeys: String, CodingKey {
+        case email
+        case updatedAt = "updated_at"
+        case createdAt = "created_at"
+        case id
+    }
+}
+

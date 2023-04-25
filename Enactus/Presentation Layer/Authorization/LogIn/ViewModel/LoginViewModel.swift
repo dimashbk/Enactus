@@ -11,7 +11,9 @@ final class LoginViewModel{
     
    var coordinatorDelegate: LoginCoordinatorProtocol?
     
-    func moveToOTP() {
+    func register(email: String) {
+        AuthorizationService.shared.authorizationModel.email = email
+        AuthorizationService.shared.sendCode()
         self.coordinatorDelegate?.showOTPFlow()
     }
     func moveToSignIn() {

@@ -106,6 +106,11 @@ final class SignInViewController: UIViewController {
         setup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthorizationService.shared.authorizationPath = .signIn
+    }
+    
     private func setup(){
         setupViews()
         makeConstraints()

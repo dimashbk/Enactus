@@ -9,7 +9,7 @@ import UIKit
 
 final class CreatePasswordViewController: UIViewController {
     
-    var coordinator: CreatePasswordCoordinator?
+    var viewModel: CreatePasswordViewModel?
     
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -42,19 +42,19 @@ final class CreatePasswordViewController: UIViewController {
 
     private lazy var firstTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Введите пароль")
+        textField.isSecureTextEntry = true
         return textField
     }()
     
     private lazy var secondTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Повторите пароль")
+        textField.isSecureTextEntry = true
         return textField
     }()
     
     private lazy var errorLabel: GradientLabel = {
         let label = GradientLabel()
-        label.text = "Пароли не совпадают"
         label.font = UIFont(name: "Mulish-Regular", size: 12)
-        label.isHidden = false
         label.gradientColors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
         return label
     }()
@@ -62,7 +62,7 @@ final class CreatePasswordViewController: UIViewController {
     private lazy var changePasswordButton: TwoStateButton = {
         let button = TwoStateButton()
         button.changeState(state: .disabled)
-        button.setTitle("Изменить пароль", for: .normal)
+        button.setTitle("Далее", for: .normal)
         button.addTarget(self, action: #selector(changeState), for: .touchUpInside)
         return button
     }()
@@ -76,6 +76,7 @@ final class CreatePasswordViewController: UIViewController {
     private func setup() {
         setupSubviews()
         setupConstraints()
+        bindStatusText()
     }
     
     private func setupSubviews() {
@@ -123,8 +124,17 @@ final class CreatePasswordViewController: UIViewController {
         }
     }
     
+    func bindStatusText() {
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.errorLabel.text = statusText
+            }
+        })
+    }
+    
     @objc func changeState(button: TwoStateButton) {
-        button.changeState(state: .enabled)
+        viewModel?.checkIdentity(first: firstTextField.text ?? "",
+                                 second: secondTextField.text ?? "")
     }
 
 }

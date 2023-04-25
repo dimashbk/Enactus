@@ -40,11 +40,9 @@ final class OTPViewController: UIViewController {
     
     private lazy var alertLabel: GradientLabel = {
         let label = GradientLabel()
-        label.text = "Введеный код неверен. Попробуйте еще раз."
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish", size: 16)
         label.numberOfLines = 0
-        label.isHidden = true
         label.gradientColors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
         return label
     }()
@@ -58,6 +56,7 @@ final class OTPViewController: UIViewController {
         setupViews()
         setupColors()
         setupConstraints()
+        bindStatusText()
     }
     
     private func setupViews() {
@@ -92,9 +91,16 @@ final class OTPViewController: UIViewController {
         }
         
     }
+    func bindStatusText() {
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.alertLabel.text = statusText
+            }
+        })
+    }
 
     @objc func checkCorrectness() {
         AuthorizationService.shared.authorizationModel.code = otpStackView.getOTP()
-        AuthorizationService.shared.resetPassword()
+        viewModel?.nextStep()
     }
 }

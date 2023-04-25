@@ -36,6 +36,7 @@
 		1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */; };
 		1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C529F680C000B6F3E2 /* EmailResetViewModel.swift */; };
 		1D7BA3CA29F683C800B6F3E2 /* OTPViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */; };
+		1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3CC29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -119,6 +120,7 @@
 		1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		1D7BA3C529F680C000B6F3E2 /* EmailResetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailResetViewModel.swift; sourceTree = "<group>"; };
 		1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewModel.swift; sourceTree = "<group>"; };
+		1D7BA3CC29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordViewModel.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		1D28D7F129EFF609002D6A4B /* CreatePassword */ = {
 			isa = PBXGroup;
 			children = (
+				1D7BA3CB29F7BDC300B6F3E2 /* ViewModel */,
 				1D28D7F229EFF612002D6A4B /* View */,
 				1D28D7F529EFFA11002D6A4B /* Coordinator */,
 			);
@@ -271,9 +274,9 @@
 		1D39B5CD29C0E9E100D441B6 /* Enactus */ = {
 			isa = PBXGroup;
 			children = (
-				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				1D39B5E229C0E9E700D441B6 /* Application Layer */,
 				1D39B5E329C0E9F400D441B6 /* Presentation Layer */,
+				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				1D39B5F829C0F43800D441B6 /* Core Layer */,
 				1D39B5D729C0E9E200D441B6 /* Assets.xcassets */,
 				1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */,
@@ -448,6 +451,14 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3C929F683C800B6F3E2 /* OTPViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D7BA3CB29F7BDC300B6F3E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3CC29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -809,6 +820,7 @@
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
 				1D28D7F429EFF642002D6A4B /* CreatePasswordViewController.swift in Sources */,
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
+				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,

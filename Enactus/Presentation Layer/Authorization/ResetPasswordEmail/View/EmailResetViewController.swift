@@ -54,10 +54,14 @@ final class EmailResetViewController: UIViewController {
         button.addTarget(self, action: #selector(moveToOTP), for: .touchUpInside)
         return button
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthorizationService.shared.authorizationPath = .resetPassword
     }
     
     private func setup() {

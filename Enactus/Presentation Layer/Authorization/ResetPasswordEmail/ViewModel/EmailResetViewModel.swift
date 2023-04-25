@@ -13,6 +13,7 @@ final class EmailResetViewModel {
     
     func moveToOTP(email: String) {
         AuthorizationService.shared.authorizationModel.email = email
+        AuthorizationService.shared.sendCode()
         coordinatorDelegate?.showOTPFlow()
     }
     
