@@ -34,6 +34,7 @@ final class OTPCoordinator: BaseCoordinator {
 extension OTPCoordinator: OTPCoordinatorProtocol {
     func showTabBarFlow() {
         let tabbarCoordinator = ENTabBarCoordinator(navigationController: navigationController)
+        coordinate(to: tabbarCoordinator)
     }
     
     func showCreatePasswordFlow() {
