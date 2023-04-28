@@ -40,6 +40,10 @@
 		1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3D729FB6A4500B6F3E2 /* InfoTableViewCell.swift */; };
 		1D7BA3DA29FB9C0100B6F3E2 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3D929FB9C0100B6F3E2 /* ButtonTableViewCell.swift */; };
 		1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3DD29FBA44400B6F3E2 /* ProfileViewModel.swift */; };
+		1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E029FBBAF100B6F3E2 /* ProfileModel.swift */; };
+		1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E229FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift */; };
+		1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */; };
+		1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -127,6 +131,10 @@
 		1D7BA3D729FB6A4500B6F3E2 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		1D7BA3D929FB9C0100B6F3E2 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		1D7BA3DD29FBA44400B6F3E2 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		1D7BA3E029FBBAF100B6F3E2 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		1D7BA3E229FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewViewModel.swift; sourceTree = "<group>"; };
+		1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + Extension.swift"; sourceTree = "<group>"; };
+		1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -474,6 +482,7 @@
 			children = (
 				1D7BA3D629FB6A1800B6F3E2 /* Cell */,
 				70A1F72129EB52E5002FDC29 /* ProfileViewController.swift */,
+				1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -491,8 +500,18 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3DD29FBA44400B6F3E2 /* ProfileViewModel.swift */,
+				1D7BA3E229FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift */,
+				1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D7BA3DF29FBBADB00B6F3E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3E029FBBAF100B6F3E2 /* ProfileModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -659,6 +678,7 @@
 		70A1F71A29EB526E002FDC29 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1D7BA3DF29FBBADB00B6F3E2 /* Model */,
 				1D7BA3DB29FBA34F00B6F3E2 /* ViewModel */,
 				1D7BA3D529FB6A1200B6F3E2 /* View */,
 			);
@@ -860,16 +880,20 @@
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
+				1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
+				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D28D80629F29B6A002D6A4B /* LoginViewModel.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
+				1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
+				1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */,
 				1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */,

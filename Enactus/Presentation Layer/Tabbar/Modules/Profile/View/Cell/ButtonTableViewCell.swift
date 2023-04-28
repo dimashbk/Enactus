@@ -25,12 +25,11 @@ class ButtonTableViewCell: UITableViewCell {
     
     private lazy var label: UILabel = {
        let label = UILabel()
-        label.text = "Кошелек"
         label.font = UIFont(name: "Mulish", size: 14)
         return label
     }()
     
-    private lazy var button: UIButton = {
+    lazy var button: UIButton = {
        let button = UIButton()
         button.setImage(.init(named: "ic_next"), for: .normal)
         return button
@@ -39,7 +38,7 @@ class ButtonTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setup()
-        contentView.backgroundColor = .enWhite
+        contentView.backgroundColor = .none
     }
     
     required init?(coder: NSCoder) {
@@ -90,6 +89,10 @@ class ButtonTableViewCell: UITableViewCell {
             make.height.width.equalTo(24)
             make.right.equalToSuperview().inset(16)
         }
+    }
+    
+    public func configure(with viewModel: ProfileButtonTableViewCellViewModel) {
+        label.text = viewModel.cellName
     }
 
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InfoTableViewCell: UITableViewCell {
+final class InfoTableViewCell: UITableViewCell {
     
     private lazy var infoView: UIView = {
         let view = UIView()
@@ -42,7 +42,7 @@ class InfoTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setup()
-        contentView.backgroundColor = .enWhite
+        contentView.backgroundColor = .none
     }
     
     required init?(coder: NSCoder) {
@@ -74,6 +74,11 @@ class InfoTableViewCell: UITableViewCell {
             make.centerY.equalToSuperview()
             make.right.equalToSuperview().inset(16)
         }
+    }
+    
+    public func configure(with viewModel: ProfileInfoTableViewCellViewModel) {
+        dateLabel.text = viewModel.cellName
+        dateInfoLabel.text = viewModel.cellInfo
     }
 
 }

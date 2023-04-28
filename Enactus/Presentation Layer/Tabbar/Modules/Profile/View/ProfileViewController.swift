@@ -2,6 +2,8 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
+    let sections: [Profile] = [.init(section: .info , rows: [.first,.second,.third]), .init(section: .button, rows: [.first,.second,.third])]
+    
     private lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
@@ -9,6 +11,14 @@ final class ProfileViewController: UIViewController {
         imageView.image = .init(named: "avatar")
         return imageView
     }()
+    
+    private lazy var backgroundImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = .init(named: "profileBackground")
+        return imageView
+    }()
+    
+    
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -26,7 +36,7 @@ final class ProfileViewController: UIViewController {
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.backgroundColor = .enWhite
+        tableView.backgroundColor = .none
         tableView.dataSource = self
         tableView.delegate = self
         tableView.regiter(cellClass: InfoTableViewCell.self)
@@ -34,6 +44,7 @@ final class ProfileViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.isScrollEnabled = false
+        tableView.allowsSelection = false
         return tableView
     }()
     
@@ -53,17 +64,20 @@ final class ProfileViewController: UIViewController {
     }
     
     private func setupSubviews() {
-        [avatarImageView, nameLabel, emailLabel,
-         tableView].forEach {
+        [backgroundImage, avatarImageView, nameLabel,
+         emailLabel, tableView].forEach {
             view.addSubview($0)
         }
     }
     
     private func setupConstraints() {
+        backgroundImage.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         avatarImageView.snp.makeConstraints { make in
             make.height.width.equalTo(100)
             make.centerX.equalToSuperview()
-            make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(8)
         }
         nameLabel.snp.makeConstraints { make in
             make.top.equalTo(avatarImageView.snp.bottom).offset(16)
@@ -78,26 +92,48 @@ final class ProfileViewController: UIViewController {
             make.left.right.bottom.equalToSuperview()
         }
     }
+    @objc func nextPage(sender: UIButton) {
+        let indexPath = IndexPath(row: sender.tag, section: 0)
+        switch indexPath.row {
+        case 0:
+            print("move to Wallet")
+        case 1:
+            print("Move to notifications")
+        case 2:
+            print("Sign out")
+        default:
+            return
+        }
+    }
     
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        self.sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return sections[section].rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0{
-            return InfoTableViewCell()
+        if indexPath.section == 0 {
+            let row = sections[indexPath.section].rows[indexPath.row]
+            let cell: InfoTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.configure(with: ProfileInfoTableViewCellViewModel(row: row))
+            return cell
         } else {
-            return ButtonTableViewCell()
+            let row = sections[indexPath.section].rows[indexPath.row]
+            let cell: ButtonTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.button.tag = indexPath.row
+            cell.button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
+            cell.configure(with: ProfileButtonTableViewCellViewModel(row: row))
+            return cell
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -106,14 +142,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 16
-        } else {
             return 12
+        } else {
+            return 8
         }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "   "
+        " "
     }
     
 }
