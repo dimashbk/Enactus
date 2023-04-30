@@ -44,6 +44,12 @@
 		1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E229FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift */; };
 		1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */; };
 		1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */; };
+		1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */; };
+		1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */; };
+		1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */; };
+		1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */; };
+		1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */; };
+		1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -135,6 +141,12 @@
 		1D7BA3E229FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewViewModel.swift; sourceTree = "<group>"; };
 		1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + Extension.swift"; sourceTree = "<group>"; };
 		1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
+		1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCoordinator.swift; sourceTree = "<group>"; };
+		1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellView.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -514,6 +526,90 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1D7BA3E829FBF17B00B6F3E2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3F929FEA2BD00B6F3E2 /* Edit */,
+				1D7BA3EA29FBF18900B6F3E2 /* Notifications */,
+				1D7BA3E929FBF18400B6F3E2 /* Wallet */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1D7BA3E929FBF18400B6F3E2 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		1D7BA3EA29FBF18900B6F3E2 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3F429FE8C7100B6F3E2 /* Coordinator */,
+				1D7BA3F329FE8C6200B6F3E2 /* View */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		1D7BA3F029FE897600B6F3E2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D7BA3F329FE8C6200B6F3E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D7BA3F429FE8C7100B6F3E2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D7BA3F929FEA2BD00B6F3E2 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3FD29FEA61000B6F3E2 /* Custom */,
+				1D7BA3FC29FEA60A00B6F3E2 /* View */,
+				1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1D7BA3FC29FEA60A00B6F3E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D7BA3FD29FEA61000B6F3E2 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +655,7 @@
 		70208AC829EECB320044500E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 				70208AC929EECB320044500E /* AuthorizationTextField.swift */,
 				70208ACA29EECB320044500E /* OTPStackView.swift */,
 				70208ACB29EECB320044500E /* OTPTextField.swift */,
@@ -614,7 +711,6 @@
 		70A1F6CD29DAFF55002FDC29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 				1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */,
 			);
 			path = Models;
@@ -678,6 +774,8 @@
 		70A1F71A29EB526E002FDC29 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				1D7BA3E829FBF17B00B6F3E2 /* Modules */,
+				1D7BA3F029FE897600B6F3E2 /* Coordinator */,
 				1D7BA3DF29FBBADB00B6F3E2 /* Model */,
 				1D7BA3DB29FBA34F00B6F3E2 /* ViewModel */,
 				1D7BA3D529FB6A1200B6F3E2 /* View */,
@@ -838,6 +936,7 @@
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
+				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
 				1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */,
 				1D28D7F829EFFA34002D6A4B /* CreatePasswordCoordinator.swift in Sources */,
 				70208ACE29EECB320044500E /* OTPTextField.swift in Sources */,
@@ -855,6 +954,7 @@
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
+				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				1D28D80929F2AD76002D6A4B /* SigninViewModel.swift in Sources */,
@@ -880,9 +980,11 @@
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
+				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,
 				1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
+				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
@@ -892,7 +994,9 @@
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
 				1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
+				1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */,
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
+				1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */,
 				1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */,
 				1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */,
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,

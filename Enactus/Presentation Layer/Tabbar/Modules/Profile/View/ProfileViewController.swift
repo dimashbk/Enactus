@@ -4,6 +4,8 @@ final class ProfileViewController: UIViewController {
     
     let sections: [Profile] = [.init(section: .info , rows: [.first,.second,.third]), .init(section: .button, rows: [.first,.second,.third])]
     
+    var viewModel: ProfileViewModel?
+    
     private lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
@@ -57,6 +59,7 @@ final class ProfileViewController: UIViewController {
         setupSubviews()
         setupConstraints()
         setupColors()
+        setupNavController()
     }
     
     private func setupColors() {
@@ -92,13 +95,19 @@ final class ProfileViewController: UIViewController {
             make.left.right.bottom.equalToSuperview()
         }
     }
+    
+    private func setupNavController() {
+        let barButton = UIBarButtonItem(image: .init(named: "pencil"), style: .done, target: self, action: #selector(editProfile))
+        barButton.tintColor = .black
+        navigationItem.rightBarButtonItem = barButton
+    }
     @objc func nextPage(sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         switch indexPath.row {
         case 0:
-            print("move to Wallet")
+            viewModel?.moveToWallet()
         case 1:
-            print("Move to notifications")
+            viewModel?.moveToNotification()
         case 2:
             print("Sign out")
         default:
@@ -106,6 +115,10 @@ final class ProfileViewController: UIViewController {
         }
     }
     
+    @objc func editProfile() {
+        print("Edit")
+        navigationController?.pushViewController(EditProfileViewController(), animated: true)
+    }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {

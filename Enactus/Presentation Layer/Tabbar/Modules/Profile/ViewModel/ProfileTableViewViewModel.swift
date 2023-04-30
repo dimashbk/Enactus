@@ -13,7 +13,6 @@ protocol ProfileInfoTableViewCellViewModelProtocol {
 struct ProfileInfoTableViewCellViewModel: ProfileInfoTableViewCellViewModelProtocol {
     
     typealias Row = ProfileViewController.Profile.Row
-    
     var row: Row
     
     var cellName: String {
