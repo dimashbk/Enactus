@@ -1,6 +1,6 @@
 import UIKit
 
-final class OrganizationCoordinator: Coordinator {
+final class OrganizationCoordinator: BaseCoordinator {
 
     var navigationController: UINavigationController
     
@@ -8,9 +8,9 @@ final class OrganizationCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    func start() {
+    override func start() {
         let organizationController = OrganizationController()
+        organizationController.coordinator = self
         navigationController.pushViewController(organizationController, animated: true)
     }
-    
 }
