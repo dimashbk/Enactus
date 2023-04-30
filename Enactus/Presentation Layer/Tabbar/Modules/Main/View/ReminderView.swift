@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-final class ReminderView: UIView {
+class ReminderView: UIView {
     
     //MARK: - View
     private lazy var titleLabel: UILabel = {

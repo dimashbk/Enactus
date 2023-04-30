@@ -1,23 +1,16 @@
 import UIKit
-import Foundation
 
 //MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let mainViewModel = mainViewModel else {return 0}
-        
         return mainViewModel.organizations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let mainViewModel = mainViewModel else {return UITableViewCell()}
-        
         let organization = mainViewModel.organizations[indexPath.row]
         
         let cell: OrganizationTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-        DispatchQueue.main.async {
-            cell.configure(with: organization)
-        }
+        cell.configure(with: organization)
         
         return cell
     }
@@ -30,6 +23,7 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.coordinator?.showOrgDetailFlow()
+        let organization = mainViewModel.organizations[indexPath.row]
+        print(organization.id)
     }
 }
