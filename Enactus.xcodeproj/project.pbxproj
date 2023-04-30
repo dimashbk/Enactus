@@ -67,6 +67,15 @@
 		70208ADB29EF26E80044500E /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADA29EF26E80044500E /* TableView.swift */; };
 		70208ADF29EF42B20044500E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ADE29EF42B20044500E /* String.swift */; };
 		70208AE129EF497D0044500E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AE029EF497D0044500E /* View.swift */; };
+		70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AEB29F2742C0044500E /* OrganizationController.swift */; };
+		70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AED29F2744E0044500E /* OrganizationCoordinator.swift */; };
+		70208AF129F550210044500E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF029F550210044500E /* MainCoordinator.swift */; };
+		70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF429F788900044500E /* ScheduleCoordinator.swift */; };
+		70208B1929FBF9890044500E /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1829FBF9890044500E /* ProfileCoordinator.swift */; };
+		70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1A29FC1A340044500E /* OrgsGradientView.swift */; };
+		70208B1D29FC1EE00044500E /* OrgsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1C29FC1EE00044500E /* OrgsTitleView.swift */; };
+		70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */; };
+		70208B2829FEAB220044500E /* RemittanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2729FEAB220044500E /* RemittanceController.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
@@ -163,6 +172,15 @@
 		70208ADA29EF26E80044500E /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		70208ADE29EF42B20044500E /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		70208AE029EF497D0044500E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		70208AEB29F2742C0044500E /* OrganizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationController.swift; sourceTree = "<group>"; };
+		70208AED29F2744E0044500E /* OrganizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCoordinator.swift; sourceTree = "<group>"; };
+		70208AF029F550210044500E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		70208AF429F788900044500E /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
+		70208B1829FBF9890044500E /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		70208B1A29FC1A340044500E /* OrgsGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsGradientView.swift; sourceTree = "<group>"; };
+		70208B1C29FC1EE00044500E /* OrgsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsTitleView.swift; sourceTree = "<group>"; };
+		70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceCoordinator.swift; sourceTree = "<group>"; };
+		70208B2729FEAB220044500E /* RemittanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceController.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
@@ -325,6 +343,8 @@
 		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70208B2029FEAA940044500E /* Action */,
+				70208AE529F273F70044500E /* Organization */,
 				70A1F71229EB4F9C002FDC29 /* Tabbar */,
 				1D42C83229D1B3C600D6610B /* Authorization */,
 				1D39B5E429C0EAFD00D441B6 /* Onboarding */,
@@ -698,6 +718,137 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		70208AE529F273F70044500E /* Organization */ = {
+			isa = PBXGroup;
+			children = (
+				70208AE829F2740B0044500E /* Coordinator */,
+				70208AE629F273FF0044500E /* View */,
+			);
+			path = Organization;
+			sourceTree = "<group>";
+		};
+		70208AE629F273FF0044500E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70208AEA29F274150044500E /* ViewModels */,
+				70208AE929F274110044500E /* Views */,
+				70208AE729F274060044500E /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70208AE729F274060044500E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70208AEB29F2742C0044500E /* OrganizationController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70208AE829F2740B0044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208AED29F2744E0044500E /* OrganizationCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70208AE929F274110044500E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				70208B1A29FC1A340044500E /* OrgsGradientView.swift */,
+				70208B1C29FC1EE00044500E /* OrgsTitleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70208AEA29F274150044500E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		70208AEF29F54FF10044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208AF029F550210044500E /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70208AF229F7886F0044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208AF429F788900044500E /* ScheduleCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70208AF329F7887A0044500E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70A1F71F29EB52A3002FDC29 /* ScheduleViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70208B1629FBF9720044500E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70208B1729FBF9770044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208B1829FBF9890044500E /* ProfileCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70208B2029FEAA940044500E /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2129FEAA980044500E /* Modules */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		70208B2129FEAA980044500E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2229FEAA9E0044500E /* Remittance */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		70208B2229FEAA9E0044500E /* Remittance */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2429FEAAB60044500E /* Coordinator */,
+				70208B2329FEAAB20044500E /* View */,
+			);
+			path = Remittance;
+			sourceTree = "<group>";
+		};
+		70208B2329FEAAB20044500E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2729FEAB220044500E /* RemittanceController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70208B2429FEAAB60044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -935,6 +1086,7 @@
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
+				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
 				1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */,
@@ -977,6 +1129,8 @@
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
+				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
+				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
