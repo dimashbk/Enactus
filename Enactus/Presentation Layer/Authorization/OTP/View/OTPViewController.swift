@@ -9,11 +9,13 @@ import UIKit
 
 final class OTPViewController: UIViewController {
     
-    var coordinator: OTPCoordinator?
+    var viewModel: OTPViewModel?
+    
+    var email = AuthorizationService.shared.authorizationModel.email
     
     private lazy var headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "Введите код из СМС, отправленный на почту outlook@iitu.edu.kz"
+        label.text = "Введите код из СМС, отправленный на почту \(email ?? "")"
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish-Medium", size: 16)
@@ -32,21 +34,18 @@ final class OTPViewController: UIViewController {
         button.layer.borderColor = UIColor.enGray.cgColor
         button.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         button.layer.cornerRadius = 8
+        button.addTarget(self, action: #selector(checkCorrectness), for: .touchUpInside)
         return button
     }()
     
     private lazy var alertLabel: GradientLabel = {
         let label = GradientLabel()
-        label.text = "Введеный код неверен. Попробуйте еще раз."
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish", size: 16)
         label.numberOfLines = 0
         label.gradientColors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
-        
         return label
     }()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +56,7 @@ final class OTPViewController: UIViewController {
         setupViews()
         setupColors()
         setupConstraints()
+        bindStatusText()
     }
     
     private func setupViews() {
@@ -91,5 +91,16 @@ final class OTPViewController: UIViewController {
         }
         
     }
+    func bindStatusText() {
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.alertLabel.text = statusText
+            }
+        })
+    }
 
+    @objc func checkCorrectness() {
+        AuthorizationService.shared.authorizationModel.code = otpStackView.getOTP()
+        viewModel?.nextStep()
+    }
 }

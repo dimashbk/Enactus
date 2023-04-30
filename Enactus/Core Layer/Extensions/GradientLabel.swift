@@ -38,6 +38,4 @@ class GradientLabel: UILabel {
         guard let image = gradientImage else { return nil }
         return UIColor(patternImage: image)
     }
-    
-    
 }

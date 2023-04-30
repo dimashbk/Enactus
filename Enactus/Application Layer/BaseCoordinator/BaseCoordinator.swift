@@ -8,10 +8,10 @@
 import Foundation
 
 class BaseCoordinator: Coordinator {
+  
+  var childCoordinators: [Coordinator] = []
+  
+  func start() {
     
-    var childCoordinators: [Coordinator] = []
-    
-    func start() {
-        
-    }
+  }
 }
