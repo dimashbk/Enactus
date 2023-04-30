@@ -9,7 +9,7 @@ import UIKit
 
 final class SignInViewController: UIViewController {
     //войти
-    var coordinator: SignInCoordinator?
+    var viewModel: SigninViewModel?
     
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -53,6 +53,7 @@ final class SignInViewController: UIViewController {
     private lazy var forgetPassword: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "forgetImageText"), for: .normal)
+        button.addTarget(self, action: #selector(showEmailReset  ), for: .touchUpInside)
         return button
     }()
     
@@ -71,6 +72,7 @@ final class SignInViewController: UIViewController {
         signInButton.backgroundColor = .enBlue
         signInButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         signInButton.layer.cornerRadius = 8
+        signInButton.addTarget(self, action: #selector(showOtp), for: .touchUpInside)
         return signInButton
     }()
     
@@ -81,6 +83,7 @@ final class SignInViewController: UIViewController {
         registerInButton.layer.borderWidth = 1
         registerInButton.layer.borderColor = UIColor.enGray.cgColor
         registerInButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
+        registerInButton.addTarget(self, action: #selector(showLogin), for: .touchUpInside)
         registerInButton.layer.cornerRadius = 8
         return registerInButton
     }()
@@ -101,6 +104,11 @@ final class SignInViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         setup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthorizationService.shared.authorizationPath = .signIn
     }
     
     private func setup(){
@@ -182,6 +190,26 @@ final class SignInViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalTo(registerButton.snp.bottom).inset(view.bounds.width / 4 + 2)
         }
+    }
+    
+    func bindViewModel(){
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.errorLabel.text = statusText
+            }
+        })
+        
+    }
+    
+    @objc func showOtp() {
+        viewModel?.signIn(email: emailTextField.text ?? "",
+                          password: passwordTextField.text ?? "")
+    }
+    @objc func showLogin() {
+        viewModel?.moveToLogin()
+    }
+    @objc func showEmailReset() {
+        viewModel?.forgotPassword()
     }
 
 }

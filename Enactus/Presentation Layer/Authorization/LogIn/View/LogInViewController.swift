@@ -7,10 +7,10 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+final class LogInViewController: UIViewController {
 
     //регистрация
-    var coordinator: LogInCoordinator?
+    var viewModel: LoginViewModel?
     
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -30,6 +30,7 @@ class LogInViewController: UIViewController {
         label.font = UIFont(name: "Mulish-Bold", size: 32)
         return label
     }()
+    
     private lazy var orLabel: UILabel = {
         let orLabel = UILabel()
         orLabel.text = "или"
@@ -44,7 +45,7 @@ class LogInViewController: UIViewController {
         return textField
     }()
     
-    private lazy var passwordTextField: AuthorizationTextField = {
+    private lazy var loginTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Логин")
         textField.eyeButton.isHidden = true
         return textField
@@ -54,6 +55,7 @@ class LogInViewController: UIViewController {
     private lazy var forgetPassword: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(named: "forgetImageText"), for: .normal)
+        button.isHidden = true
         return button
     }()
     
@@ -84,6 +86,7 @@ class LogInViewController: UIViewController {
         registerInButton.layer.borderColor = UIColor.enGray.cgColor
         registerInButton.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 16)
         registerInButton.layer.cornerRadius = 8
+        registerInButton.addTarget(self, action: #selector(showSignin), for: .touchUpInside)
         return registerInButton
     }()
     
@@ -104,6 +107,10 @@ class LogInViewController: UIViewController {
         view.backgroundColor = .red
         setup()
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        AuthorizationService.shared.authorizationPath = .signUp
+    }
     
     private func setup(){
         setupViews()
@@ -111,18 +118,10 @@ class LogInViewController: UIViewController {
     }
     
     private func setupViews() {
-        [backgroundImageView,
-         signInLabel,
-         emailTextField,
-         passwordTextField,
-         forgetPassword,
-         errorLabel,
-         logoImageView,
-         signInButton,
-         registerButton,
-         firstLineView,
-         secondLineView,
-         orLabel].forEach {
+        [backgroundImageView, signInLabel, emailTextField,
+         loginTextField, forgetPassword, errorLabel,
+         logoImageView, signInButton, registerButton,
+         firstLineView, secondLineView, orLabel].forEach {
             view.addSubview($0)
         }
     }
@@ -144,17 +143,17 @@ class LogInViewController: UIViewController {
             make.height.equalTo(36)
             make.left.right.equalToSuperview().offset(24)
         }
-        passwordTextField.snp.makeConstraints { make in
+        loginTextField.snp.makeConstraints { make in
             make.top.equalTo(emailTextField.snp.bottom).offset(32)
             make.height.equalTo(36)
             make.left.right.equalToSuperview().offset(24)
         }
         errorLabel.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            make.top.equalTo(loginTextField.snp.bottom).offset(16)
             make.left.equalToSuperview().inset(24)
         }
         forgetPassword.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(16)
+            make.top.equalTo(loginTextField.snp.bottom).offset(16)
             make.right.equalToSuperview().inset(24)
         }
         signInButton.snp.makeConstraints { make in
@@ -187,6 +186,9 @@ class LogInViewController: UIViewController {
     }
     
     @objc func showOtp() {
-        coordinator?.showOTPFlow()
+        viewModel?.register(email: loginTextField.text ?? "")
+    }
+    @objc func showSignin() {
+        viewModel?.moveToSignIn()
     }
 }

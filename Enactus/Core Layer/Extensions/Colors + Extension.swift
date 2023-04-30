@@ -49,7 +49,4 @@ extension UIColor{
     static var enSubtitle: UIColor {
         UIColor(red: 163/255, green: 163/255, blue: 163/255, alpha: 1)
     }
-    static var enTextDarkBlue: UIColor {
-        UIColor(red: 34/255, green: 50/255, blue: 65/255, alpha: 1)
-    }
 }
