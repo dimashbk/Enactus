@@ -49,6 +49,8 @@
 		70208B1929FBF9890044500E /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1829FBF9890044500E /* ProfileCoordinator.swift */; };
 		70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1A29FC1A340044500E /* OrgsGradientView.swift */; };
 		70208B1D29FC1EE00044500E /* OrgsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1C29FC1EE00044500E /* OrgsTitleView.swift */; };
+		70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */; };
+		70208B2829FEAB220044500E /* RemittanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2729FEAB220044500E /* RemittanceController.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
@@ -127,6 +129,8 @@
 		70208B1829FBF9890044500E /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		70208B1A29FC1A340044500E /* OrgsGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsGradientView.swift; sourceTree = "<group>"; };
 		70208B1C29FC1EE00044500E /* OrgsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsTitleView.swift; sourceTree = "<group>"; };
+		70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceCoordinator.swift; sourceTree = "<group>"; };
+		70208B2729FEAB220044500E /* RemittanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceController.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70208B2029FEAA940044500E /* Action */,
 				70208AE529F273F70044500E /* Organization */,
 				70A1F71229EB4F9C002FDC29 /* Tabbar */,
 				1D42C83229D1B3C600D6610B /* Authorization */,
@@ -517,6 +522,47 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		70208B2029FEAA940044500E /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2129FEAA980044500E /* Modules */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		70208B2129FEAA980044500E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2229FEAA9E0044500E /* Remittance */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		70208B2229FEAA9E0044500E /* Remittance */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2429FEAAB60044500E /* Coordinator */,
+				70208B2329FEAAB20044500E /* View */,
+			);
+			path = Remittance;
+			sourceTree = "<group>";
+		};
+		70208B2329FEAAB20044500E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2729FEAB220044500E /* RemittanceController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70208B2429FEAAB60044500E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -756,6 +802,7 @@
 				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
 				70208B1929FBF9890044500E /* ProfileCoordinator.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
+				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				70208ACE29EECB320044500E /* OTPTextField.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
@@ -789,6 +836,7 @@
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
+				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
