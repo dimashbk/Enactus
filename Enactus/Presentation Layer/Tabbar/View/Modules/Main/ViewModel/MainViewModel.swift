@@ -45,6 +45,23 @@ extension MainViewModel {
             }
         }
     }
+    
+    func sendRequest() {
+        guard let url = URL(string: "http://studc-api.kz/api/orgs/get-by-id/1") else {return}
+        
+        let token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vc3R1ZGMtYXBpLmt6L2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNjgyMjg0ODA3LCJleHAiOjE2ODIyODg0MDcsIm5iZiI6MTY4MjI4NDgwNywianRpIjoibFliTUVVMEswU2R3bWdTZCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.JCly2WFxzJQhazUMLQ_pIWoXkQPKCE45wBr8OGn1P4U"
+        
+        let headers = ["Authorization": "Bearer \(token)"]
+        
+        networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<[ENOrganizationModel],Error>) in
+            switch result {
+            case .success(let data):
+                print("Response: \(data)")
+            case .failure(let error):
+                print("Error:", error.localizedDescription)
+            }
+        }
+    }
 }
 
 

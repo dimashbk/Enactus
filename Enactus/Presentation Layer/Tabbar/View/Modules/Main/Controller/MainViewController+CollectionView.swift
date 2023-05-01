@@ -16,20 +16,6 @@ extension MainViewController: UICollectionViewDataSource {
         cell.configure(with: ActionsViewCellViewModel(row: row))
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let row = actionSections[indexPath.section].rows[indexPath.row]
-        switch row {
-        case .remittance:
-            coordinator?.showRemittanceFlow()
-        case .shop:
-            print(1)
-        case .credits:
-            print(2)
-        case .faq:
-            print(3)
-        }
-    }
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout

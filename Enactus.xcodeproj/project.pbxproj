@@ -71,7 +71,6 @@
 		70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AED29F2744E0044500E /* OrganizationCoordinator.swift */; };
 		70208AF129F550210044500E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF029F550210044500E /* MainCoordinator.swift */; };
 		70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF429F788900044500E /* ScheduleCoordinator.swift */; };
-		70208B1929FBF9890044500E /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1829FBF9890044500E /* ProfileCoordinator.swift */; };
 		70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1A29FC1A340044500E /* OrgsGradientView.swift */; };
 		70208B1D29FC1EE00044500E /* OrgsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1C29FC1EE00044500E /* OrgsTitleView.swift */; };
 		70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */; };
@@ -304,6 +303,7 @@
 				1D39B5CD29C0E9E100D441B6 /* Enactus */,
 				1D39B5CC29C0E9E100D441B6 /* Products */,
 				1DEA247029C1D0400043126A /* Frameworks */,
+				709790FA29FFB339006FBC4E /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -318,9 +318,9 @@
 		1D39B5CD29C0E9E100D441B6 /* Enactus */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				1D39B5E229C0E9E700D441B6 /* Application Layer */,
 				1D39B5E329C0E9F400D441B6 /* Presentation Layer */,
-				70A1F73D29EDF3AE002FDC29 /* NetworkLayer */,
 				1D39B5F829C0F43800D441B6 /* Core Layer */,
 				1D39B5D729C0E9E200D441B6 /* Assets.xcassets */,
 				1D39B5D929C0E9E200D441B6 /* LaunchScreen.storyboard */,
@@ -675,7 +675,6 @@
 		70208AC829EECB320044500E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 				70208AC929EECB320044500E /* AuthorizationTextField.swift */,
 				70208ACA29EECB320044500E /* OTPStackView.swift */,
 				70208ACB29EECB320044500E /* OTPTextField.swift */,
@@ -793,21 +792,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		70208B1629FBF9720044500E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		70208B1729FBF9770044500E /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				70208B1829FBF9890044500E /* ProfileCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		70208B2029FEAA940044500E /* Action */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,6 +833,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		709790FA29FFB339006FBC4E /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				70208B1829FBF9890044500E /* ProfileCoordinator.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,6 +855,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */,
+				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -870,7 +863,6 @@
 		70A1F71229EB4F9C002FDC29 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				70A1F71429EB4FD3002FDC29 /* Modules */,
 				70A1F71529EB4FD9002FDC29 /* Coordinator */,
 				70A1F71329EB4FC5002FDC29 /* View */,
 			);
@@ -880,6 +872,7 @@
 		70A1F71329EB4FC5002FDC29 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F71429EB4FD3002FDC29 /* Modules */,
 				70A1F71729EB5019002FDC29 /* ENTabBarController.swift */,
 			);
 			path = View;
@@ -906,6 +899,7 @@
 		70A1F71629EB500C002FDC29 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				70208AEF29F54FF10044500E /* Coordinator */,
 				70208AE229EF49A10044500E /* Model */,
 				70A1F72E29EB874D002FDC29 /* ViewModel */,
 				70A1F72629EB54A6002FDC29 /* Controller */,
@@ -1085,9 +1079,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
+				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
-				1D39B5D329C0E9E100D441B6 /* ViewController.swift in Sources */,
-				70208B1929FBF9890044500E /* ProfileCoordinator.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
@@ -1124,6 +1117,7 @@
 				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
 				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
 				1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */,
+				70208AF129F550210044500E /* MainCoordinator.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
@@ -1148,6 +1142,7 @@
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
+				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D28D80629F29B6A002D6A4B /* LoginViewModel.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
@@ -1305,7 +1300,8 @@
 				INFOPLIST_FILE = Enactus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1332,7 +1328,8 @@
 				INFOPLIST_FILE = Enactus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
