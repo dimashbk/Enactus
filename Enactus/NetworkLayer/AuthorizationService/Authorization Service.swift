@@ -39,6 +39,7 @@ final class AuthorizationService {
     func sendCode() {
         networkService.sendCode(param: authorizationModel.email) { [weak self] result in
             self?.correctCode = result?.code.code ?? ""
+            print(result)
             print(self?.correctCode)
         }
     }

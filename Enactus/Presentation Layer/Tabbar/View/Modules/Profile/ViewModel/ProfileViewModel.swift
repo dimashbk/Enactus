@@ -16,21 +16,5 @@ final class ProfileViewModel {
     func moveToWallet() {
         coordinatorDelegate?.showWalletFlow()
     }
-    
-    struct Profile {
-        enum Section {
-            case info
-            case button
-        }
-        
-        enum Row {
-            case first
-            case second
-            case third
-        }
-        
-        let section: Section
-        var rows: [Row]
-    }
      
 }

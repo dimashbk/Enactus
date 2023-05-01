@@ -37,7 +37,7 @@ final class ProfileCoordinator: BaseCoordinator{
 
 extension ProfileCoordinator: ProfileCoordinatorProtocol {
     func showWalletFlow() {
-        print("Move to Wallet")
+        
     }
     
     func showNotificationFlow() {
