@@ -4,7 +4,8 @@ import SnapKit
 final class MainViewController: UIViewController {
     
     //MARK: - Properties
-    let mainViewModel = MainViewModel()
+    public var mainViewModel: MainViewModelProtocol?
+    public var coordinator: MainCoordinator?
     
     let actionSections: [Action] = [.init(section: .action, rows: [.remittance, .shop, .credits, .faq])]
     
@@ -35,6 +36,15 @@ final class MainViewController: UIViewController {
     }()
     
     private lazy var loaderView = ENCustomLoaderView()
+    
+    init(viewModel: MainViewModelProtocol) {
+        self.mainViewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - LifeCycle
     override func loadView() {
@@ -111,9 +121,9 @@ final class MainViewController: UIViewController {
 //MARK: - MainViewModel
 extension MainViewController {
     func fetchOrganizationList() {
-        loaderView.startAnimating()
-        mainViewModel.fetchOrganizationsList()
-        mainViewModel.updateViewData = { [weak self] in
+        loaderView.startAnimating()        
+        mainViewModel?.fetchOrganizationsList()
+        mainViewModel?.updateViewData = { [weak self] in
             DispatchQueue.main.async {
                 self?.loaderView.stopAnimating()
                 self?.organizationsTableView.reloadData()
