@@ -5,15 +5,25 @@
 //  Created by Dinmukhamed on 28.04.2023.
 //
 
+import Foundation
+
 protocol ProfileInfoTableViewCellViewModelProtocol {
     var cellName: String { get }
     var cellInfo: String { get }
     
 }
-struct ProfileInfoTableViewCellViewModel: ProfileInfoTableViewCellViewModelProtocol {
+
+final class ProfileInfoTableViewCellViewModel: ProfileInfoTableViewCellViewModelProtocol {
     
     typealias Row = ProfileViewController.Profile.Row
     var row: Row
+    let storage = UserDefaults.standard
+    
+    init(row: Row) {
+        self.row = row
+    }
+
+    var networkService = ENNetworkService()
     
     var cellName: String {
         switch row {
@@ -29,11 +39,12 @@ struct ProfileInfoTableViewCellViewModel: ProfileInfoTableViewCellViewModelProto
     var cellInfo: String {
         switch row {
         case .first:
-            return "28.09.2022"
+            return profileInfo.birthday ?? ""
         case .second:
-            return "ITIS-1916R"
+            return profileInfo.group ?? ""
         case .third:
-            return "282828"
+            return String(profileInfo.id)
+            
         }
     }
 }

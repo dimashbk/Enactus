@@ -9,7 +9,7 @@ import UIKit
 
 final class EditProfileViewController: UIViewController {
     
-    var viewModel: ProfileViewModel?
+    var viewModel: EditProfileViewModel?
     
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -27,7 +27,7 @@ final class EditProfileViewController: UIViewController {
     
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
-        textField.text = "Амарова Карина"
+        textField.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
         textField.font = UIFont(name: "Mulish", size: 24)
         textField.textAlignment = .center
         return textField
@@ -35,7 +35,7 @@ final class EditProfileViewController: UIViewController {
     
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "27477@iitu.edu.kz"
+        label.text = AuthorizationService.shared.authorizationModel.email
         label.font = UIFont(name: "Mulish", size: 16)
         return label
     }()
@@ -43,12 +43,14 @@ final class EditProfileViewController: UIViewController {
     private lazy var dateOfBirth: EditCellView = {
         let editCell = EditCellView()
         editCell.label.text = "Дата рождения"
+        editCell.textField.text = profileInfo.birthday
         return editCell
     }()
     
     private lazy var groupId: EditCellView = {
         let editCell = EditCellView()
         editCell.label.text = "Группа"
+        editCell.textField.text = profileInfo.group
         return editCell
     }()
     
@@ -118,11 +120,16 @@ final class EditProfileViewController: UIViewController {
     }
     
     private func setupNavController() {
-        let barButton = UIBarButtonItem(title: "Cохранить", style: .plain, target: self, action: #selector(editProfile))
+        let barButton = UIBarButtonItem(title: "Cохранить", style: .plain, target: self, action: #selector(saveProfile))
         barButton.tintColor = .enBlack
         navigationItem.rightBarButtonItem = barButton
     }
-    @objc func editProfile() {
+    @objc func saveProfile() {
+        viewModel?.updateInfo(name: "Davlat",
+                              surname: "Ushurbakiyev",
+                              patronymic: "Alimzhanovich",
+                              birthday: "2000-03-19",
+                              group: "ITSE1909R")
         navigationController?.popViewController(animated: true)
     }
 }
