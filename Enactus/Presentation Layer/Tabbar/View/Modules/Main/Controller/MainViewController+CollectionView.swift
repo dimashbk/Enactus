@@ -24,7 +24,7 @@ extension MainViewController: UICollectionViewDataSource {
         case .remittance:
             coordinator?.showRemittanceFlow()
         case .shop:
-            print(1)
+            coordinator?.showShopFlow()
         case .credits:
             print(2)
         case .faq:

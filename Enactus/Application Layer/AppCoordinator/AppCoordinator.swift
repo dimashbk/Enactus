@@ -22,7 +22,7 @@ class AppCoordinator: BaseCoordinator {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
 
-        let mainCoordinator = OnboardingCoordinator(navigationController: navigationController)
+        let mainCoordinator = OrganizationCoordinator(navigationController: navigationController)
         coordinate(to: mainCoordinator)
     }
 }

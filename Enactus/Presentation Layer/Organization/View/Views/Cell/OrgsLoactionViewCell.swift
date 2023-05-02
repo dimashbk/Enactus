@@ -68,14 +68,14 @@ final class OrgsLocationViewCell: UITableViewCell {
             make.top.equalToSuperview().offset(16)
             make.leading.equalToSuperview()
             make.height.equalTo(32)
-            make.width.equalTo(93)
+            make.width.equalTo(UIScreen.main.bounds.width / 4.03)
         }
         
         secondFilterView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
             make.leading.equalTo(filterView.snp.trailing).offset(4)
             make.height.equalTo(32)
-            make.width.equalTo(75)
+            make.width.equalTo(UIScreen.main.bounds.width / 5)
         }
         
         locationImageView.snp.makeConstraints { make in
@@ -85,7 +85,7 @@ final class OrgsLocationViewCell: UITableViewCell {
         
         locationLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().inset(24)
+            make.trailing.equalToSuperview()
         }
         
         separatorView.snp.makeConstraints { make in

@@ -83,6 +83,8 @@
 		7097910529FFEDEA006FBC4E /* OrgsLoactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910429FFEDEA006FBC4E /* OrgsLoactionViewCell.swift */; };
 		709791072A001E5F006FBC4E /* OrgsDescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */; };
 		709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791082A00206D006FBC4E /* OrgsViewModel.swift */; };
+		7097910E2A0164A1006FBC4E /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910D2A0164A1006FBC4E /* ShopController.swift */; };
+		709791102A0164C9006FBC4E /* ShopCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910F2A0164C9006FBC4E /* ShopCoordinator.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -195,6 +197,8 @@
 		7097910429FFEDEA006FBC4E /* OrgsLoactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsLoactionViewCell.swift; sourceTree = "<group>"; };
 		709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsDescriptionViewCell.swift; sourceTree = "<group>"; };
 		709791082A00206D006FBC4E /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
+		7097910D2A0164A1006FBC4E /* ShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
+		7097910F2A0164C9006FBC4E /* ShopCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCoordinator.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -822,6 +826,7 @@
 		70208B2129FEAA980044500E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7097910A2A01646E006FBC4E /* Shop */,
 				70208B2229FEAA9E0044500E /* Remittance */,
 			);
 			path = Modules;
@@ -869,6 +874,31 @@
 				709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		7097910A2A01646E006FBC4E /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				7097910B2A016472006FBC4E /* Coordinator */,
+				7097910C2A016478006FBC4E /* View */,
+			);
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		7097910B2A016472006FBC4E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7097910F2A0164C9006FBC4E /* ShopCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7097910C2A016478006FBC4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7097910D2A0164A1006FBC4E /* ShopController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
@@ -1137,6 +1167,7 @@
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
+				709791102A0164C9006FBC4E /* ShopCoordinator.swift in Sources */,
 				1D28D80929F2AD76002D6A4B /* SigninViewModel.swift in Sources */,
 				70208B1D29FC1EE00044500E /* OrgsTitleViewCell.swift in Sources */,
 				70A1F72D29EB863A002FDC29 /* MainViewController+CollectionView.swift in Sources */,
@@ -1186,6 +1217,7 @@
 				1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */,
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
 				709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */,
+				7097910E2A0164A1006FBC4E /* ShopController.swift in Sources */,
 				1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */,
 				1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */,
 				1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */,

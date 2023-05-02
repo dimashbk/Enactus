@@ -23,4 +23,9 @@ final class MainCoordinator: BaseCoordinator {
         let remittanceCoordinator = RemittanceCoordinator(navigationController: navigationController)
         coordinate(to: remittanceCoordinator)
     }
+    
+    func showShopFlow() {
+        let shopCoordinator = ShopCoordinator(navigationController: navigationController)
+        coordinate(to: shopCoordinator)
+    }
 }
