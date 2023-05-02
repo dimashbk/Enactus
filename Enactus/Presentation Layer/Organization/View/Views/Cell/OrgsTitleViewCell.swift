@@ -1,14 +1,13 @@
 import UIKit
 import SnapKit
 
-final class OrgsTitleView: UIView {
+final class OrgsTitleViewCell: UITableViewCell {
     
     //MARK: - View
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .enTextDarkBlue
         label.font = UIFont(name: "Mulish-ExtraBold", size: 18)
-        label.text = "fadsklnfklasdf"
         return label
     }()
     
@@ -16,7 +15,6 @@ final class OrgsTitleView: UIView {
         let label = UILabel()
         label.textColor = .enTextDarkBlue
         label.font = UIFont(name: "Mulish-Regular", size: 16)
-        label.text = "fadsklnfklasdf"
         return label
     }()
     
@@ -32,13 +30,13 @@ final class OrgsTitleView: UIView {
         let label = UILabel()
         label.textColor = .enTextDarkBlue
         label.font = UIFont(name: "Mulish-Regular", size: 16)
-        label.text = "fadsklnfklasdf" 
         return label
     }()
 
     //MARK: - Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setup()
     }
     
@@ -61,7 +59,8 @@ final class OrgsTitleView: UIView {
     
     private func makeConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview()
+            make.top.equalToSuperview().offset(16)
+            make.leading.equalToSuperview()
             make.height.equalTo(24)
         }
         
@@ -82,5 +81,11 @@ final class OrgsTitleView: UIView {
             make.leading.equalTo(priceLabel.snp.trailing)
             make.height.equalTo(20)
         }
+    }
+    
+    public func configure(with model: ENOrganizationModel) {
+        titleLabel.text = model.title
+        subtitleLabel.text = model.titleDesc
+        priceAmountLabel.text = model.salaryAmount.addTenge()
     }
 }

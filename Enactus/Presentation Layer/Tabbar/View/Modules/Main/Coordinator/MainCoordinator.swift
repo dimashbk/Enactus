@@ -14,8 +14,13 @@ final class MainCoordinator: BaseCoordinator {
         navigationController.pushViewController(mainController, animated: true)
     }
     
-    func showOrgDetailFlow() {
+    func showOrgDetailFlow(model: ENOrganizationModel) {
         let organizationCoordinator = OrganizationCoordinator(navigationController: navigationController)
-        coordinate(to: organizationCoordinator)
+        organizationCoordinator.start(model: model)
+    }
+    
+    func showRemittanceFlow() {
+        let remittanceCoordinator = RemittanceCoordinator(navigationController: navigationController)
+        coordinate(to: remittanceCoordinator)
     }
 }

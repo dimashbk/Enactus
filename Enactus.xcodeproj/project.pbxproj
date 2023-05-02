@@ -72,10 +72,17 @@
 		70208AF129F550210044500E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF029F550210044500E /* MainCoordinator.swift */; };
 		70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AF429F788900044500E /* ScheduleCoordinator.swift */; };
 		70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1A29FC1A340044500E /* OrgsGradientView.swift */; };
-		70208B1D29FC1EE00044500E /* OrgsTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1C29FC1EE00044500E /* OrgsTitleView.swift */; };
+		70208B1D29FC1EE00044500E /* OrgsTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B1C29FC1EE00044500E /* OrgsTitleViewCell.swift */; };
 		70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */; };
 		70208B2829FEAB220044500E /* RemittanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2729FEAB220044500E /* RemittanceController.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
+		709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709790FB29FFE49F006FBC4E /* OrganizationController+TableView.swift */; };
+		709790FE29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709790FD29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift */; };
+		7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910029FFE630006FBC4E /* OrgsImageViewCell.swift */; };
+		7097910329FFEACA006FBC4E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910229FFEACA006FBC4E /* UIImageView.swift */; };
+		7097910529FFEDEA006FBC4E /* OrgsLoactionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910429FFEDEA006FBC4E /* OrgsLoactionViewCell.swift */; };
+		709791072A001E5F006FBC4E /* OrgsDescriptionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */; };
+		709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791082A00206D006FBC4E /* OrgsViewModel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -177,11 +184,18 @@
 		70208AF429F788900044500E /* ScheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCoordinator.swift; sourceTree = "<group>"; };
 		70208B1829FBF9890044500E /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		70208B1A29FC1A340044500E /* OrgsGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsGradientView.swift; sourceTree = "<group>"; };
-		70208B1C29FC1EE00044500E /* OrgsTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsTitleView.swift; sourceTree = "<group>"; };
+		70208B1C29FC1EE00044500E /* OrgsTitleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsTitleViewCell.swift; sourceTree = "<group>"; };
 		70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceCoordinator.swift; sourceTree = "<group>"; };
 		70208B2729FEAB220044500E /* RemittanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceController.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
-		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENActivityIndicator.swift; sourceTree = "<group>"; };
+		709790FB29FFE49F006FBC4E /* OrganizationController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrganizationController+TableView.swift"; sourceTree = "<group>"; };
+		709790FD29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrganizaitonConrtroller+Section.swift"; sourceTree = "<group>"; };
+		7097910029FFE630006FBC4E /* OrgsImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsImageViewCell.swift; sourceTree = "<group>"; };
+		7097910229FFEACA006FBC4E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		7097910429FFEDEA006FBC4E /* OrgsLoactionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsLoactionViewCell.swift; sourceTree = "<group>"; };
+		709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsDescriptionViewCell.swift; sourceTree = "<group>"; };
+		709791082A00206D006FBC4E /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
+		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		70A1F71F29EB52A3002FDC29 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +423,7 @@
 				70208ADA29EF26E80044500E /* TableView.swift */,
 				70208ADE29EF42B20044500E /* String.swift */,
 				70208AE029EF497D0044500E /* View.swift */,
+				7097910229FFEACA006FBC4E /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -675,6 +690,7 @@
 		70208AC829EECB320044500E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 				70208AC929EECB320044500E /* AuthorizationTextField.swift */,
 				70208ACA29EECB320044500E /* OTPStackView.swift */,
 				70208ACB29EECB320044500E /* OTPTextField.swift */,
@@ -740,6 +756,8 @@
 			isa = PBXGroup;
 			children = (
 				70208AEB29F2742C0044500E /* OrganizationController.swift */,
+				709790FB29FFE49F006FBC4E /* OrganizationController+TableView.swift */,
+				709790FD29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -755,8 +773,8 @@
 		70208AE929F274110044500E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				709790FF29FFE59B006FBC4E /* Cell */,
 				70208B1A29FC1A340044500E /* OrgsGradientView.swift */,
-				70208B1C29FC1EE00044500E /* OrgsTitleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -764,6 +782,7 @@
 		70208AEA29F274150044500E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				709791082A00206D006FBC4E /* OrgsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -841,6 +860,17 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		709790FF29FFE59B006FBC4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				70208B1C29FC1EE00044500E /* OrgsTitleViewCell.swift */,
+				7097910029FFE630006FBC4E /* OrgsImageViewCell.swift */,
+				7097910429FFEDEA006FBC4E /* OrgsLoactionViewCell.swift */,
+				709791062A001E5F006FBC4E /* OrgsDescriptionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -855,7 +885,6 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3C129F58A0700B6F3E2 /* Authorization.swift */,
-				70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1091,6 +1120,7 @@
 				1D28D7FA29F12D66002D6A4B /* TwoStateButton.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */,
+				709790FE29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift in Sources */,
 				70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */,
 				1D42C82E29D1A82900D6610B /* SignInCoordinator.swift in Sources */,
 				1D7BA3CA29F683C800B6F3E2 /* OTPViewModel.swift in Sources */,
@@ -1101,13 +1131,14 @@
 				70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */,
 				70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */,
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
+				7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				1D28D80929F2AD76002D6A4B /* SigninViewModel.swift in Sources */,
-				70208B1D29FC1EE00044500E /* OrgsTitleView.swift in Sources */,
+				70208B1D29FC1EE00044500E /* OrgsTitleViewCell.swift in Sources */,
 				70A1F72D29EB863A002FDC29 /* MainViewController+CollectionView.swift in Sources */,
 				1D28D80C29F2B9EB002D6A4B /* Dynamic.swift in Sources */,
 				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
@@ -1120,6 +1151,7 @@
 				70208AF129F550210044500E /* MainCoordinator.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
+				7097910529FFEDEA006FBC4E /* OrgsLoactionViewCell.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
 				70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */,
@@ -1130,6 +1162,8 @@
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
 				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
+				7097910329FFEACA006FBC4E /* UIImageView.swift in Sources */,
+				709791072A001E5F006FBC4E /* OrgsDescriptionViewCell.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
@@ -1140,6 +1174,7 @@
 				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
+				709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
 				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
@@ -1150,6 +1185,7 @@
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
 				1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */,
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
+				709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */,
 				1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */,
 				1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */,
 				1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */,

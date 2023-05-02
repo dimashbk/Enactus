@@ -1,6 +1,6 @@
 import Foundation
 
-protocol MainViewModelImput {
+protocol MainViewModelInput {
     var organizations: [ENOrganizationModel] { get set }
     var updateViewData: (() -> ())? {get set}
     var onOrganizationDidTap: (() -> ())? {get set}
@@ -12,7 +12,7 @@ protocol MainViewModelOutput {
     func sendRequest()
 }
 
-typealias MainViewModelProtocol = MainViewModelImput & MainViewModelOutput
+typealias MainViewModelProtocol = MainViewModelInput & MainViewModelOutput
 
 final class MainViewModel: MainViewModelProtocol {
     private let networkService: ENNetworkService

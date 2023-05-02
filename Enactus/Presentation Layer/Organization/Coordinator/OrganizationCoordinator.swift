@@ -8,8 +8,9 @@ final class OrganizationCoordinator: BaseCoordinator {
         self.navigationController = navigationController
     }
     
-    override func start() {
-        let organizationController = OrganizationController()
+    func start(model: ENOrganizationModel) {
+        let orgsViewModel = OrgsViewModel(model: model)
+        let organizationController = OrganizationController(viewModel: orgsViewModel)
         organizationController.coordinator = self
         navigationController.pushViewController(organizationController, animated: true)
     }

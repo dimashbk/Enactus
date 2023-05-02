@@ -10,11 +10,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let mainViewModel = mainViewModel else {return UITableViewCell()}
-        
-        let organization = mainViewModel.organizations[indexPath.row]
+        guard let organization = mainViewModel?.organizations[indexPath.row] else {return UITableViewCell()}
         
         let cell: OrganizationTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.selectionStyle = .none
         DispatchQueue.main.async {
             cell.configure(with: organization)
         }
@@ -30,6 +29,8 @@ extension MainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.coordinator?.showOrgDetailFlow()
+        guard let organization = mainViewModel?.organizations[indexPath.row] else {return}
+        
+        coordinator?.showOrgDetailFlow(model: organization)
     }
 }

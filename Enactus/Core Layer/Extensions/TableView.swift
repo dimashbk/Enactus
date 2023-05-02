@@ -10,7 +10,7 @@ extension UITableView {
         return cell
     }
     
-    func regiter(cellClass: AnyClass) {
+    func register(cellClass: AnyClass) {
         register(cellClass, forCellReuseIdentifier: "\(cellClass)")
     }
 }
