@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0037232A01202600735E53 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037222A01202600735E53 /* EditViewModel.swift */; };
+		1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037262A01206400735E53 /* EditCoordinator.swift */; };
 		1D1121E52A000B1700D278DF /* WalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1121E42A000B1700D278DF /* WalletCoordinator.swift */; };
 		1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */; };
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
@@ -111,6 +113,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0037222A01202600735E53 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		1D0037262A01206400735E53 /* EditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCoordinator.swift; sourceTree = "<group>"; };
 		1D1121E42A000B1700D278DF /* WalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCoordinator.swift; sourceTree = "<group>"; };
 		1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
@@ -215,6 +219,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0037252A01205100735E53 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D0037262A01206400735E53 /* EditCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		1D1121E22A000AF400D278DF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3FD29FEA61000B6F3E2 /* Custom */,
+				1D0037252A01205100735E53 /* Coordinator */,
 				1D7BA3FC29FEA60A00B6F3E2 /* View */,
 				1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */,
 			);
@@ -629,6 +642,7 @@
 		1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D0037222A01202600735E53 /* EditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1101,6 +1115,7 @@
 				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
+				1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
@@ -1148,6 +1163,7 @@
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
+				1D0037232A01202600735E53 /* EditViewModel.swift in Sources */,
 				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,

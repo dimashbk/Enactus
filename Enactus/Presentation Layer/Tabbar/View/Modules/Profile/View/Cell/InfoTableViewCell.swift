@@ -9,6 +9,8 @@ import UIKit
 
 final class InfoTableViewCell: UITableViewCell {
     
+    var viewModel: ProfileInfoTableViewCellViewModel?
+    
     private lazy var infoView: UIView = {
         let view = UIView()
         view.layer.cornerRadius = 12
@@ -52,6 +54,7 @@ final class InfoTableViewCell: UITableViewCell {
     private func setup() {
         setupSubviews()
         setupConstraints()
+        
     }
     private func setupSubviews() {
         [infoView].forEach {

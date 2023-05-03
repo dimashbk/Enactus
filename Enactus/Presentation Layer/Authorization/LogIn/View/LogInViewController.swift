@@ -42,12 +42,14 @@ final class LogInViewController: UIViewController {
     private lazy var emailTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "ID")
         textField.eyeButton.isHidden = true
+        textField.textColor = .enWhite
         return textField
     }()
     
     private lazy var loginTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Логин")
         textField.eyeButton.isHidden = true
+        textField.textColor = .enWhite
         return textField
     }()
     

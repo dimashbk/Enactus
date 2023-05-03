@@ -17,6 +17,7 @@ final class OTPViewController: UIViewController {
         let label = UILabel()
         label.text = "Введите код из СМС, отправленный на почту \(email ?? "")"
         label.numberOfLines = 0
+        label.textColor = .enWhite
         label.textAlignment = .center
         label.font = UIFont(name: "Mulish-Medium", size: 16)
         return label

@@ -24,14 +24,15 @@ final class ProfileViewController: UIViewController {
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Амарова Карина"
         label.font = UIFont(name: "Mulish", size: 24)
+        label.text = (viewModel?.profileInfo.name ?? "") + " " + (viewModel?.profileInfo.surname ?? "")
         return label
     }()
     
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "27477@iitu.edu.kz"
+        label.text = AuthorizationService.shared.authorizationModel.email
+        
         label.font = UIFont(name: "Mulish", size: 16)
         return label
     }()
@@ -116,12 +117,14 @@ final class ProfileViewController: UIViewController {
     }
     
     @objc func editProfile() {
-        print("Edit")
-        navigationController?.pushViewController(EditProfileViewController(), animated: true)
+        viewModel?.moveToEdit()
     }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func updateViewData() {
+        self.tableView.reloadData()
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         self.sections.count
@@ -136,7 +139,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             let row = sections[indexPath.section].rows[indexPath.row]
             let cell: InfoTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configure(with: ProfileInfoTableViewCellViewModel(row: row))
+            cell.viewModel = ProfileInfoTableViewCellViewModel(row: row)
+            cell.configure(with: cell.viewModel!)
             return cell
         } else {
             let row = sections[indexPath.section].rows[indexPath.row]

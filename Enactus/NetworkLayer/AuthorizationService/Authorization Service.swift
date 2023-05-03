@@ -33,6 +33,8 @@ final class AuthorizationService {
     func login() {
         networkService.postLogin(param: authorizationModel) { [weak self] result in
             self?.accessToken = result?.token.original.accessToken ?? ""
+            self?.getProfileInfo()
+            print(self?.accessToken)
         }
     }
     
@@ -51,6 +53,23 @@ final class AuthorizationService {
     func register() {
         networkService.postRegister(param: authorizationModel) { [weak self] result in
             print(result)
+        }
+    }
+    func getProfileInfo() {
+        guard let url = URL(string: "http://studc-api.kz/api/auth/profile/get") else { return }
+        
+        let token = AuthorizationService.shared.accessToken
+        
+        let headers = ["Authorization": "Bearer \(token)"]
+        
+        networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<Profile,Error>) in
+            switch result {
+            case .success(let data):
+                profileInfo = data
+                print(profileInfo)
+            case .failure(let error):
+                print("Error:", error.localizedDescription)
+            }
         }
     }
 }
