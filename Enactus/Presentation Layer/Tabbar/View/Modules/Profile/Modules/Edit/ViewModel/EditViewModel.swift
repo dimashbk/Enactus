@@ -28,7 +28,11 @@ final class EditProfileViewModel {
     
     let networkService = ENNetworkService()
     
-    func updateInfo(user: UpdatedUser) {
+    func updateInfo(name: String,
+                    surname: String,
+                    patronymic: String,
+                    birthday: String,
+                    group: String) {
         
         guard let url = URL(string: "http://studc-api.kz/api/auth/profile/update") else { return }
         
@@ -42,7 +46,8 @@ final class EditProfileViewModel {
         
         do {
             let encoder = JSONEncoder()
-            let body = try encoder.encode(user)
+            
+            let body = try encoder.encode(ProfilePatch(name: name, surname: surname, patronymic: patronymic, birthday: birthday, group: group))
             networkService.sendRequest(url: url, method: "PATCH", headers: headers, body: body) { (result: Result<ResetPassword,Error>) in
                 switch result {
                 case .success(let data):
