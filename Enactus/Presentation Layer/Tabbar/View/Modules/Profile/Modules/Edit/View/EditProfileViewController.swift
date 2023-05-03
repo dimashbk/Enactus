@@ -140,7 +140,7 @@ final class EditProfileViewController: UIViewController {
         }
         var surname = {
             if separated?.count ?? 0 > 1 {
-                     return String(separated?[0] ?? "")
+                     return String(separated?[1] ?? "")
             } else {
                     return ""
                 }

@@ -8,13 +8,37 @@
 import UIKit
 
 final class WalletViewController: UIViewController {
+    
+    private lazy var gradientCard: CardGradientView = {
+        let view = CardGradientView()
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .enYellow
-        // Do any additional setup after loading the view.
+        
+        
     }
     
+    private func setup() {
+        self.title = "Кошелек"
+        view.backgroundColor = .white
+        setupSubviews()
+        setupConstraints()
+    }
+    private func setupSubviews() {
+        [gradientCard].forEach {
+            view.addSubview($0)
+        }
+    }
+    private func setupConstraints() {
+        gradientCard.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide).inset(24)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(220)
+        }
+    }
 
     /*
     // MARK: - Navigation
