@@ -82,3 +82,8 @@ struct User: Codable {
     }
 }
 
+//MARK: - UpdatedUser
+
+struct UpdatedUser: Codable {
+    let name, surname, patronymic, birthday, group: String
+}
