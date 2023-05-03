@@ -10,7 +10,6 @@ final class OrganizationCoordinator: BaseCoordinator {
     
     override func start() {
         let organizationController = OrganizationController()
-        organizationController.coordinator = self
         navigationController.pushViewController(organizationController, animated: true)
     }
 }

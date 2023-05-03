@@ -14,9 +14,11 @@ protocol WalletFlow: AnyObject {
 protocol NotificationFlow: AnyObject {
     func showNotificationFlow()
 }
+
 protocol EditFlow: AnyObject {
     func showEditFlow()
 }
+
 typealias ProfileCoordinatorProtocol = WalletFlow & NotificationFlow & EditFlow
 
 final class ProfileCoordinator: BaseCoordinator{

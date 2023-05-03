@@ -21,7 +21,7 @@ final class EditProfileViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
         imageView.backgroundColor = .black
-        imageView.image = .init(named: "avatar")
+        imageView.image = .init(named: "AppIcon")
         return imageView
     }()
     
@@ -54,9 +54,10 @@ final class EditProfileViewController: UIViewController {
         return editCell
     }()
     
-    private lazy var id: EditCellView = {
+    private lazy var patronymic: EditCellView = {
         let editCell = EditCellView()
-        editCell.label.text = "ID"
+        editCell.label.text = "Отчество"
+        editCell.textField.text = profileInfo.patronymic
         return editCell
     }()
     
@@ -82,7 +83,7 @@ final class EditProfileViewController: UIViewController {
     
     private func setupSubviews() {
         [backgroundImage, avatarImageView, emailLabel,
-         nameTextField, dateOfBirth, groupId, id].forEach {
+         nameTextField, dateOfBirth, groupId, patronymic].forEach {
             view.addSubview($0)
         }
     }
@@ -113,7 +114,7 @@ final class EditProfileViewController: UIViewController {
             make.top.equalTo(dateOfBirth.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
-        id.snp.makeConstraints { make in
+        patronymic.snp.makeConstraints { make in
             make.top.equalTo(groupId.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
@@ -125,11 +126,17 @@ final class EditProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButton
     }
     @objc func saveProfile() {
-        viewModel?.updateInfo(name: "Davlat",
-                              surname: "Ushurbakiyev",
-                              patronymic: "Alimzhanovich",
-                              birthday: "2000-03-19",
-                              group: "ITSE1909R")
+        var separated = nameTextField.text?.split(separator: " ")
+        var name = String(separated?[0] ?? "")
+        var surname = String(separated?[1] ?? "")
+        
+        viewModel?.updateInfo(name: name,
+                              surname: surname,
+                              patronymic: patronymic.textField.text,
+                              birthday: dateOfBirth.textField.text,
+                              group: groupId.textField.text)
+        
+        
         navigationController?.popViewController(animated: true)
     }
 }

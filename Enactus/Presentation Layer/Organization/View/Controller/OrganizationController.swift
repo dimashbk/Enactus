@@ -3,8 +3,6 @@ import SnapKit
 
 final class OrganizationController: UIViewController {
     
-    public weak var coordinator: BaseCoordinator?
-    
     //MARK: - View
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()

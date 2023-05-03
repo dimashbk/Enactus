@@ -13,7 +13,7 @@ var profileInfo: Profile {
             return try! PropertyListDecoder().decode(Profile.self, from: data)
         }
         else{
-            return .init(id: 0, name: nil, surname: nil, patronymic: nil, birthday: nil, group: nil, walletAddress: "")
+            return .init(id: 0, name: "", surname: "", patronymic: "", birthday: "", group: "", walletAddress: "")
         }
     }
     set{
@@ -28,30 +28,42 @@ final class EditProfileViewModel {
     
     let networkService = ENNetworkService()
     
-    func updateInfo(name: String,
-                    surname: String,
-                    patronymic: String,
-                    birthday: String,
-                    group: String) {
+    func updateInfo(name: String?,
+                    surname: String?,
+                    patronymic: String?,
+                    birthday: String?,
+                    group: String?) {
         
         guard let url = URL(string: "http://studc-api.kz/api/auth/profile/update") else { return }
         
         let token = AuthorizationService.shared.accessToken
-        print(token)
+        
         let headers = [
             "Authorization": "Bearer \(token)",
             "Accept": "application/json",
             "Content-Type": "application/json"
         ]
         
+        var patchBody = ProfilePatch(name: (name ?? profileInfo.name)!,
+                                     surname: surname ?? profileInfo.surname,
+                                     patronymic: patronymic ?? profileInfo.patronymic,
+                                     birthday: birthday ?? profileInfo.birthday,
+                                     group: group ?? profileInfo.group)
+        
+        profileInfo.birthday = patchBody.birthday
+        profileInfo.name = patchBody.name
+        profileInfo.surname = patchBody.surname
+        profileInfo.group = patchBody.group
+        
         do {
             let encoder = JSONEncoder()
+            let body = try encoder.encode(patchBody)
             
-            let body = try encoder.encode(ProfilePatch(name: name, surname: surname, patronymic: patronymic, birthday: birthday, group: group))
             networkService.sendRequest(url: url, method: "PATCH", headers: headers, body: body) { (result: Result<ResetPassword,Error>) in
                 switch result {
                 case .success(let data):
                     print("Response: \(data)")
+                    AuthorizationService.shared.getProfileInfo()
                 case .failure(let error):
                     print("Error:", error.localizedDescription)
                 }
