@@ -130,7 +130,9 @@ final class EditProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButton
     }
     @objc func saveProfile() {
+        
         var separated = nameTextField.text?.split(separator: " ")
+        
         var name =  {
             if  separated?.count ?? 0 > 0{
                 return String(separated?[0] ?? "")
@@ -138,6 +140,7 @@ final class EditProfileViewController: UIViewController {
                 return ""
             }
         }
+        
         var surname = {
             if separated?.count ?? 0 > 1 {
                      return String(separated?[1] ?? "")
@@ -145,6 +148,7 @@ final class EditProfileViewController: UIViewController {
                     return ""
                 }
             }
+        
         self.viewModel?.updateInfo(name: name(),
                               surname: surname(),
                                        patronymic: self.patronymic.textField.text,

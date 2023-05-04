@@ -13,10 +13,27 @@ final class WalletViewController: UIViewController {
         let view = CardGradientView()
         return view
     }()
+    
+    private lazy var paymentsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "История Платежей"
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        return label
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.regiter(cellClass: PaymentTableViewCell.self)
+        tableView.allowsSelection = false
+        tableView.separatorStyle = .none
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setup()
         
     }
     
@@ -27,7 +44,7 @@ final class WalletViewController: UIViewController {
         setupConstraints()
     }
     private func setupSubviews() {
-        [gradientCard].forEach {
+        [gradientCard, paymentsLabel, tableView].forEach {
             view.addSubview($0)
         }
     }
@@ -36,18 +53,34 @@ final class WalletViewController: UIViewController {
             make.left.right.equalToSuperview().inset(16)
             make.top.equalTo(view.safeAreaLayoutGuide).inset(24)
             make.centerX.equalToSuperview()
-            make.height.equalTo(220)
+            make.height.equalTo(view.bounds.height / 4 + 10)
+        }
+        paymentsLabel.snp.makeConstraints { make in
+            make.top.equalTo(gradientCard.snp.bottom).offset(32)
+            make.left.equalToSuperview().inset(32)
+        }
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(paymentsLabel.snp.bottom).offset(8)
+            make.left.right.equalToSuperview().inset(16)
+            make.bottom.equalToSuperview()
         }
     }
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = PaymentTableViewCell()
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    
+    
 }

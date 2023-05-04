@@ -9,11 +9,27 @@ import UIKit
 
 final class CardGradientView: UIView {
     //MARK: - View
-    public lazy var titleLabel: UILabel = {
+    public lazy var walletNumber: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.font = UIFont(name: "Mulish-Regular", size: 14)
+        label.text = profileInfo.walletAddress
+        label.font = UIFont(name: "Mulish-Regular", size: 12)
         return label
+    }()
+    public lazy var nameLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.text = profileInfo.name + " " + profileInfo.surname
+        label.font = UIFont(name: "Mulish-Regular", size: 16)
+        return label
+    }()
+    
+    private lazy var imageView: UIImageView = {
+       let imageView = UIImageView()
+        imageView.image = .init(named: "AppIcon")
+        imageView.layer.cornerRadius = 26
+        imageView.layer.masksToBounds = true
+        return imageView
     }()
     
     //MARK: - Init
@@ -46,14 +62,25 @@ final class CardGradientView: UIView {
     }
     
     private func setupViews() {
-        [titleLabel].forEach {
+        [walletNumber, nameLabel, imageView].forEach {
             addSubview($0)
         }
     }
     
     private func makeConstraints() {
-        titleLabel.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        walletNumber.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(150)
+            make.left.right.equalToSuperview().inset(24)
         }
+        nameLabel.snp.makeConstraints { make in
+            make.top.equalTo(walletNumber.snp.bottom).offset(8)
+            make.left.equalToSuperview().inset(24)
+        }
+        imageView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(24)
+            make.right.equalToSuperview().inset(24)
+            make.height.width.equalTo(52)
+        }
+        
     }
 }

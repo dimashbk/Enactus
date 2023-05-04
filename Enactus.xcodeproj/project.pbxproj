@@ -61,6 +61,7 @@
 		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
 		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
 		1DF909AA2A02FD0A00FC2E2F /* CardGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */; };
+		1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */; };
 		70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AC929EECB320044500E /* AuthorizationTextField.swift */; };
 		70208ACD29EECB320044500E /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACA29EECB320044500E /* OTPStackView.swift */; };
 		70208ACE29EECB320044500E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACB29EECB320044500E /* OTPTextField.swift */; };
@@ -169,6 +170,7 @@
 		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradientView.swift; sourceTree = "<group>"; };
+		1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		70208AC929EECB320044500E /* AuthorizationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		70208ACA29EECB320044500E /* OTPStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
 		70208ACB29EECB320044500E /* OTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		1D1121E32A000B0400D278DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DF909AB2A039A6A00FC2E2F /* Cell */,
 				1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */,
 			);
 			path = View;
@@ -716,6 +719,14 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		1DF909AB2A039A6A00FC2E2F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		70208AC829EECB320044500E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1148,6 +1159,7 @@
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
+				1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */,
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
