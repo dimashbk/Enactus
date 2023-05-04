@@ -114,7 +114,7 @@ final class ProfileViewController: UIViewController {
         case 0:
             viewModel?.moveToWallet()
         case 1:
-            viewModel?.moveToNotification()
+            print("Otmena 667")
         case 2:
             print("Sign out")
         default:

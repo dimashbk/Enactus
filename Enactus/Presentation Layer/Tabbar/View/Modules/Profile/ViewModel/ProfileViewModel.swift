@@ -12,11 +12,6 @@ final class ProfileViewModel {
     var coordinatorDelegate: ProfileCoordinatorProtocol?
     
     var networkService = ENNetworkService()
-
-    
-    func moveToNotification() {
-        coordinatorDelegate?.showNotificationFlow()
-    }
     
     func moveToWallet() {
         coordinatorDelegate?.showWalletFlow()
