@@ -85,6 +85,10 @@
 		709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791082A00206D006FBC4E /* OrgsViewModel.swift */; };
 		7097910E2A0164A1006FBC4E /* ShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910D2A0164A1006FBC4E /* ShopController.swift */; };
 		709791102A0164C9006FBC4E /* ShopCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910F2A0164C9006FBC4E /* ShopCoordinator.swift */; };
+		709791172A03A613006FBC4E /* ShopController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791162A03A613006FBC4E /* ShopController+TableView.swift */; };
+		709791192A03A75C006FBC4E /* ShopController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791182A03A75C006FBC4E /* ShopController+TextField.swift */; };
+		7097911B2A03C772006FBC4E /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911A2A03C772006FBC4E /* SearchTextField.swift */; };
+		7097911E2A03EFB5006FBC4E /* ProductVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -199,6 +203,10 @@
 		709791082A00206D006FBC4E /* OrgsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsViewModel.swift; sourceTree = "<group>"; };
 		7097910D2A0164A1006FBC4E /* ShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopController.swift; sourceTree = "<group>"; };
 		7097910F2A0164C9006FBC4E /* ShopCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCoordinator.swift; sourceTree = "<group>"; };
+		709791162A03A613006FBC4E /* ShopController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopController+TableView.swift"; sourceTree = "<group>"; };
+		709791182A03A75C006FBC4E /* ShopController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopController+TextField.swift"; sourceTree = "<group>"; };
+		7097911A2A03C772006FBC4E /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVIewCell.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -896,9 +904,53 @@
 		7097910C2A016478006FBC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7097910D2A0164A1006FBC4E /* ShopController.swift */,
+				709791142A03A079006FBC4E /* ViewModels */,
+				709791132A03A075006FBC4E /* Views */,
+				709791122A03A070006FBC4E /* Controller */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		709791122A03A070006FBC4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				709791182A03A75C006FBC4E /* ShopController+TextField.swift */,
+				709791162A03A613006FBC4E /* ShopController+TableView.swift */,
+				7097910D2A0164A1006FBC4E /* ShopController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		709791132A03A075006FBC4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7097911C2A03EC36006FBC4E /* TextField */,
+				709791152A03A07E006FBC4E /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		709791142A03A079006FBC4E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		709791152A03A07E006FBC4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		7097911C2A03EC36006FBC4E /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				7097911A2A03C772006FBC4E /* SearchTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
@@ -1162,6 +1214,7 @@
 				70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */,
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */,
+				7097911B2A03C772006FBC4E /* SearchTextField.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
@@ -1199,13 +1252,16 @@
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
 				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,
+				709791172A03A613006FBC4E /* ShopController+TableView.swift in Sources */,
 				1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
+				709791192A03A75C006FBC4E /* ShopController+TextField.swift in Sources */,
 				709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */,
+				7097911E2A03EFB5006FBC4E /* ProductVIewCell.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
 				1D42C83529D1B3E100D6610B /* LogInViewController.swift in Sources */,
 				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
