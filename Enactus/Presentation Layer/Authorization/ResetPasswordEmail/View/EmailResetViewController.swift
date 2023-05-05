@@ -44,6 +44,7 @@ final class EmailResetViewController: UIViewController {
     private lazy var emailTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Email")
         textField.eyeButton.isHidden = true
+        textField.textColor = .enWhite
         return textField
     }()
     

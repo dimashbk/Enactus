@@ -9,10 +9,10 @@ import Foundation
 
 // MARK: - Profile
 struct Profile: Codable {
-    let id: Int
-    let name, surname, patronymic, birthday: String?
-    let group: String?
-    let walletAddress: String
+    var id: Int
+    var name, surname, patronymic, birthday: String
+    var group: String
+    var walletAddress: String
 
     enum CodingKeys: String, CodingKey {
         case id, name, surname, patronymic, birthday, group

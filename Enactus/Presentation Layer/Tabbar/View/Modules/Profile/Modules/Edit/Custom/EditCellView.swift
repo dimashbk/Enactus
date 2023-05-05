@@ -56,7 +56,7 @@ final class EditCellView: UIView {
         }
         textField.snp.makeConstraints { make in
             make.right.equalToSuperview().inset(16)
-            make.width.equalTo(80)
+            make.width.equalTo(100)
             make.centerY.equalToSuperview()
         }
         self.snp.makeConstraints { make in

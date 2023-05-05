@@ -81,4 +81,3 @@ struct User: Codable {
         case id
     }
 }
-

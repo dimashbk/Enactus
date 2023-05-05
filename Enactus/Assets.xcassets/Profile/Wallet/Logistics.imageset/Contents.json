@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "mingcute_transfer-line.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "mingcute_transfer-line — копия.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "mingcute_transfer-line — копия 2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

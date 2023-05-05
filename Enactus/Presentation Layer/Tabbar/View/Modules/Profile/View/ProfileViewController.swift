@@ -10,7 +10,7 @@ final class ProfileViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
         imageView.backgroundColor = .black
-        imageView.image = .init(named: "avatar")
+        imageView.image = .init(named: "AppIcon")
         return imageView
     }()
     
@@ -25,7 +25,7 @@ final class ProfileViewController: UIViewController {
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Mulish", size: 24)
-        label.text = (viewModel?.profileInfo.name ?? "") + " " + (viewModel?.profileInfo.surname ?? "")
+        label.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
         return label
     }()
     
@@ -54,6 +54,12 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        nameLabel.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
     }
     
     private func setup() {
@@ -108,7 +114,7 @@ final class ProfileViewController: UIViewController {
         case 0:
             viewModel?.moveToWallet()
         case 1:
-            viewModel?.moveToNotification()
+            print("Otmena 667")
         case 2:
             print("Sign out")
         default:

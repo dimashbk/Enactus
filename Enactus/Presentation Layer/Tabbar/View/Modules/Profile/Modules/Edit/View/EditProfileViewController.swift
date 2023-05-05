@@ -21,7 +21,7 @@ final class EditProfileViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
         imageView.backgroundColor = .black
-        imageView.image = .init(named: "avatar")
+        imageView.image = .init(named: "AppIcon")
         return imageView
     }()
     
@@ -29,6 +29,7 @@ final class EditProfileViewController: UIViewController {
         let textField = UITextField()
         textField.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
         textField.font = UIFont(name: "Mulish", size: 24)
+        textField.placeholder = "Name Surname"
         textField.textAlignment = .center
         return textField
     }()
@@ -44,6 +45,7 @@ final class EditProfileViewController: UIViewController {
         let editCell = EditCellView()
         editCell.label.text = "Дата рождения"
         editCell.textField.text = profileInfo.birthday
+        editCell.textField.placeholder = "YYYY-MM-DD"
         return editCell
     }()
     
@@ -51,22 +53,25 @@ final class EditProfileViewController: UIViewController {
         let editCell = EditCellView()
         editCell.label.text = "Группа"
         editCell.textField.text = profileInfo.group
+        editCell.textField.placeholder = "Group"
         return editCell
     }()
     
-    private lazy var id: EditCellView = {
+    private lazy var patronymic: EditCellView = {
         let editCell = EditCellView()
-        editCell.label.text = "ID"
+        editCell.label.text = "Отчество"
+        editCell.textField.text = profileInfo.patronymic
+        editCell.textField.placeholder = "Patronymic"
         return editCell
     }()
-    
-
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameTextField.becomeFirstResponder()
     }
     
     private func setup() {
@@ -82,7 +87,7 @@ final class EditProfileViewController: UIViewController {
     
     private func setupSubviews() {
         [backgroundImage, avatarImageView, emailLabel,
-         nameTextField, dateOfBirth, groupId, id].forEach {
+         nameTextField, dateOfBirth, groupId, patronymic].forEach {
             view.addSubview($0)
         }
     }
@@ -113,7 +118,7 @@ final class EditProfileViewController: UIViewController {
             make.top.equalTo(dateOfBirth.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
-        id.snp.makeConstraints { make in
+        patronymic.snp.makeConstraints { make in
             make.top.equalTo(groupId.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
@@ -125,11 +130,32 @@ final class EditProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem = barButton
     }
     @objc func saveProfile() {
-        viewModel?.updateInfo(name: "Davlat",
-                              surname: "Ushurbakiyev",
-                              patronymic: "Alimzhanovich",
-                              birthday: "2000-03-19",
-                              group: "ITSE1909R")
+        
+        var separated = nameTextField.text?.split(separator: " ")
+        
+        var name =  {
+            if  separated?.count ?? 0 > 0{
+                return String(separated?[0] ?? "")
+            } else {
+                return ""
+            }
+        }
+        
+        var surname = {
+            if separated?.count ?? 0 > 1 {
+                     return String(separated?[1] ?? "")
+            } else {
+                    return ""
+                }
+            }
+        
+        self.viewModel?.updateInfo(name: name(),
+                              surname: surname(),
+                                       patronymic: self.patronymic.textField.text,
+                                       birthday: self.dateOfBirth.textField.text,
+                                       group: self.groupId.textField.text)
+        
+        
         navigationController?.popViewController(animated: true)
     }
 }

@@ -43,12 +43,14 @@ final class CreatePasswordViewController: UIViewController {
     private lazy var firstTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Введите пароль")
         textField.isSecureTextEntry = true
+        textField.textColor = .enWhite
         return textField
     }()
     
     private lazy var secondTextField: AuthorizationTextField = {
         let textField = AuthorizationTextField(placeholder: "Повторите пароль")
         textField.isSecureTextEntry = true
+        textField.textColor = .enWhite
         return textField
     }()
     
