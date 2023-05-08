@@ -6,7 +6,6 @@ final class ProductViewCell: UITableViewCell {
     //MARK: - View
     private lazy var productImageView: UIImageView = {
         let view = UIImageView()
-        view.backgroundColor = .red
         view.layer.cornerRadius = 8
         return view
     }()
@@ -15,7 +14,7 @@ final class ProductViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .enTextDarkBlue
         label.font = UIFont(name: "Mulish-Regular", size: 14)
-        label.text = "Бутылка-термос эмблемой IITU"
+        label.numberOfLines = 0
         return label
     }()
     
@@ -46,7 +45,7 @@ final class ProductViewCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .enTextDarkBlue.withAlphaComponent(0.5)
         label.font = UIFont(name: "Mulish-Regular", size: 12)
-        label.text = "1500 C"
+        label.attributedText = "1500 C".addStrike()
         return label
     }()
 
@@ -66,6 +65,7 @@ final class ProductViewCell: UITableViewCell {
     private func setup() {
         setupViews()
         makeConstraints()
+        setupLayer()
     }
     
     private func setupViews() {
@@ -85,35 +85,39 @@ final class ProductViewCell: UITableViewCell {
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(24)
             make.leading.equalTo(productImageView.snp.trailing).offset(16)
-            make.height.equalTo(34)
-        }
-        
-        starImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(16)
-            make.leading.equalToSuperview()
-            make.height.equalTo(24)
-        }
-        
-        subtitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(6)
-            make.leading.equalToSuperview()
+            make.width.equalTo(116)
             make.height.equalTo(40)
         }
         
+        starImageView.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.leading.equalTo(productImageView.snp.trailing).offset(16)
+        }
+        
+        subtitleLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(starImageView.snp.trailing).offset(4)
+        }
+        
         priceLabel.snp.makeConstraints { make in
-            make.top.equalTo(subtitleLabel.snp.bottom).offset(16)
-            make.leading.equalToSuperview()
-            make.height.equalTo(20)
+            make.top.equalToSuperview().offset(34)
+            make.trailing.equalToSuperview().inset(14)
         }
         
         secondPriceLabel.snp.makeConstraints { make in
-            make.top.equalTo(priceLabel.snp.top)
-            make.leading.equalTo(priceLabel.snp.trailing)
-            make.height.equalTo(20)
+            make.top.equalTo(priceLabel.snp.bottom).offset(2)
+            make.trailing.equalToSuperview().inset(14)
         }
     }
     
-    public func configure() {
-        
+    private func setupLayer() {
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.enGray.withAlphaComponent(0.5).cgColor
+        layer.cornerRadius = 12
+    }
+    
+    public func configure(with model: ENProductModel) {
+        titleLabel.text = model.title
+        productImageView.load(from: model.photo)
     }
 }

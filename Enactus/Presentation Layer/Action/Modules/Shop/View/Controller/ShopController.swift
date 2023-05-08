@@ -3,6 +3,8 @@ import SnapKit
 
 final class ShopController: UIViewController {
     
+    //MARK: - Properties
+    public var viewModel: ShopViewModelProtocol?
     //MARK: - View
     private lazy var productSearchBar: SearchTextField = {
         let textField = SearchTextField()
@@ -14,14 +16,21 @@ final class ShopController: UIViewController {
         let view = UITableView()
         view.dataSource = self
         view.delegate = self
-        view.separatorColor = .clear
+        view.separatorStyle = .none
+        view.backgroundColor = .clear
+        view.register(cellClass: ProductViewCell.self)
         return view
     }()
     
     //MARK: - LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func loadView() {
+        super.loadView()
+        
+        fetchProducts()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         setup()
     }
     
@@ -48,6 +57,17 @@ final class ShopController: UIViewController {
             make.top.equalTo(productSearchBar.snp.bottom).offset(16)
             make.leading.trailing.equalToSuperview().inset(16)
             make.bottom.equalToSuperview()
+        }
+    }
+}
+
+extension ShopController {
+    private func fetchProducts() {
+        viewModel?.fetchProducts()
+        viewModel?.updateViewData = {
+            DispatchQueue.main.async {
+                self.mainView.reloadData()
+            }
         }
     }
 }

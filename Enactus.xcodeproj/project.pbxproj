@@ -89,6 +89,8 @@
 		709791192A03A75C006FBC4E /* ShopController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791182A03A75C006FBC4E /* ShopController+TextField.swift */; };
 		7097911B2A03C772006FBC4E /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911A2A03C772006FBC4E /* SearchTextField.swift */; };
 		7097911E2A03EFB5006FBC4E /* ProductVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */; };
+		709791232A0800D4006FBC4E /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791222A0800D4006FBC4E /* ShopViewModel.swift */; };
+		709791272A08EC16006FBC4E /* PoductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791262A08EC16006FBC4E /* PoductModel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -207,6 +209,8 @@
 		709791182A03A75C006FBC4E /* ShopController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopController+TextField.swift"; sourceTree = "<group>"; };
 		7097911A2A03C772006FBC4E /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVIewCell.swift; sourceTree = "<group>"; };
+		709791222A0800D4006FBC4E /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
+		709791262A08EC16006FBC4E /* PoductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoductModel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -904,6 +908,7 @@
 		7097910C2A016478006FBC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				709791252A08EC09006FBC4E /* Model */,
 				709791142A03A079006FBC4E /* ViewModels */,
 				709791132A03A075006FBC4E /* Views */,
 				709791122A03A070006FBC4E /* Controller */,
@@ -933,6 +938,7 @@
 		709791142A03A079006FBC4E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				709791222A0800D4006FBC4E /* ShopViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -951,6 +957,14 @@
 				7097911A2A03C772006FBC4E /* SearchTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		709791252A08EC09006FBC4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				709791262A08EC16006FBC4E /* PoductModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
@@ -1254,6 +1268,7 @@
 				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,
 				709791172A03A613006FBC4E /* ShopController+TableView.swift in Sources */,
 				1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */,
+				709791232A0800D4006FBC4E /* ShopViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
@@ -1274,6 +1289,7 @@
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
 				709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */,
 				7097910E2A0164A1006FBC4E /* ShopController.swift in Sources */,
+				709791272A08EC16006FBC4E /* PoductModel.swift in Sources */,
 				1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */,
 				1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */,
 				1D7BA3D829FB6A4500B6F3E2 /* InfoTableViewCell.swift in Sources */,

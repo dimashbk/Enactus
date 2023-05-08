@@ -8,7 +8,9 @@ final class ShopCoordinator: BaseCoordinator {
     }
     
     override func start() {
+        let shopViewModel = ShopViewModel()
         let shopController = ShopController()
+        shopController.viewModel = shopViewModel
         navigationController.pushViewController(shopController, animated: true)
     }
 }
