@@ -91,6 +91,14 @@
 		7097911E2A03EFB5006FBC4E /* ProductVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */; };
 		709791232A0800D4006FBC4E /* ShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791222A0800D4006FBC4E /* ShopViewModel.swift */; };
 		709791272A08EC16006FBC4E /* PoductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791262A08EC16006FBC4E /* PoductModel.swift */; };
+		7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097912E2A09034D006FBC4E /* CreditCoordinator.swift */; };
+		709791312A090369006FBC4E /* CreditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791302A090369006FBC4E /* CreditController.swift */; };
+		709791372A090B10006FBC4E /* CreditController+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791362A090B10006FBC4E /* CreditController+Section.swift */; };
+		7097913A2A090BE1006FBC4E /* CredtiController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791392A090BE1006FBC4E /* CredtiController+TableView.swift */; };
+		7097913C2A090C02006FBC4E /* CreditHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097913B2A090C02006FBC4E /* CreditHeaderView.swift */; };
+		7097913E2A090D35006FBC4E /* CreditHeaderViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097913D2A090D35006FBC4E /* CreditHeaderViewViewModel.swift */; };
+		709791402A090E1D006FBC4E /* CreditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097913F2A090E1D006FBC4E /* CreditCell.swift */; };
+		709791442A09466E006FBC4E /* CreditCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791432A09466E006FBC4E /* CreditCellViewModel.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -211,6 +219,14 @@
 		7097911D2A03EFB5006FBC4E /* ProductVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVIewCell.swift; sourceTree = "<group>"; };
 		709791222A0800D4006FBC4E /* ShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewModel.swift; sourceTree = "<group>"; };
 		709791262A08EC16006FBC4E /* PoductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoductModel.swift; sourceTree = "<group>"; };
+		7097912E2A09034D006FBC4E /* CreditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCoordinator.swift; sourceTree = "<group>"; };
+		709791302A090369006FBC4E /* CreditController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditController.swift; sourceTree = "<group>"; };
+		709791362A090B10006FBC4E /* CreditController+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditController+Section.swift"; sourceTree = "<group>"; };
+		709791392A090BE1006FBC4E /* CredtiController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CredtiController+TableView.swift"; sourceTree = "<group>"; };
+		7097913B2A090C02006FBC4E /* CreditHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHeaderView.swift; sourceTree = "<group>"; };
+		7097913D2A090D35006FBC4E /* CreditHeaderViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditHeaderViewViewModel.swift; sourceTree = "<group>"; };
+		7097913F2A090E1D006FBC4E /* CreditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCell.swift; sourceTree = "<group>"; };
+		709791432A09466E006FBC4E /* CreditCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCellViewModel.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -838,8 +854,10 @@
 		70208B2129FEAA980044500E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7097910A2A01646E006FBC4E /* Shop */,
 				70208B2229FEAA9E0044500E /* Remittance */,
+				7097910A2A01646E006FBC4E /* Shop */,
+				709791282A0902F7006FBC4E /* Credits */,
+				7097912B2A09030C006FBC4E /* FAQ */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -965,6 +983,100 @@
 				709791262A08EC16006FBC4E /* PoductModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		709791282A0902F7006FBC4E /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				7097912A2A090304006FBC4E /* Coordinator */,
+				709791292A090301006FBC4E /* View */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		709791292A090301006FBC4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709791342A090AE4006FBC4E /* ViewModel */,
+				709791332A090AE0006FBC4E /* View */,
+				709791322A090ADA006FBC4E /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7097912A2A090304006FBC4E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7097912E2A09034D006FBC4E /* CreditCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		7097912B2A09030C006FBC4E /* FAQ */ = {
+			isa = PBXGroup;
+			children = (
+				7097912D2A090314006FBC4E /* Coordinator */,
+				7097912C2A090310006FBC4E /* View */,
+			);
+			path = FAQ;
+			sourceTree = "<group>";
+		};
+		7097912C2A090310006FBC4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7097912D2A090314006FBC4E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		709791322A090ADA006FBC4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				709791302A090369006FBC4E /* CreditController.swift */,
+				709791362A090B10006FBC4E /* CreditController+Section.swift */,
+				709791392A090BE1006FBC4E /* CredtiController+TableView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		709791332A090AE0006FBC4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709791412A094389006FBC4E /* Cell */,
+				7097913B2A090C02006FBC4E /* CreditHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		709791342A090AE4006FBC4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				709791422A09438F006FBC4E /* Cell */,
+				7097913D2A090D35006FBC4E /* CreditHeaderViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		709791412A094389006FBC4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7097913F2A090E1D006FBC4E /* CreditCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		709791422A09438F006FBC4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				709791432A09466E006FBC4E /* CreditCellViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		70A1F6B129D4D6D8002FDC29 /* Controller */ = {
@@ -1206,6 +1318,7 @@
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
+				7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
@@ -1228,6 +1341,7 @@
 				70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */,
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */,
+				7097913C2A090C02006FBC4E /* CreditHeaderView.swift in Sources */,
 				7097911B2A03C772006FBC4E /* SearchTextField.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
@@ -1254,6 +1368,7 @@
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
 				70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				7097913E2A090D35006FBC4E /* CreditHeaderViewViewModel.swift in Sources */,
 				1D28D7F429EFF642002D6A4B /* CreatePasswordViewController.swift in Sources */,
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
@@ -1268,13 +1383,17 @@
 				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,
 				709791172A03A613006FBC4E /* ShopController+TableView.swift in Sources */,
 				1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */,
+				709791372A090B10006FBC4E /* CreditController+Section.swift in Sources */,
 				709791232A0800D4006FBC4E /* ShopViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
+				709791442A09466E006FBC4E /* CreditCellViewModel.swift in Sources */,
 				709791192A03A75C006FBC4E /* ShopController+TextField.swift in Sources */,
+				7097913A2A090BE1006FBC4E /* CredtiController+TableView.swift in Sources */,
+				709791402A090E1D006FBC4E /* CreditCell.swift in Sources */,
 				709791092A00206D006FBC4E /* OrgsViewModel.swift in Sources */,
 				7097911E2A03EFB5006FBC4E /* ProductVIewCell.swift in Sources */,
 				1D7BA3BE29F5891500B6F3E2 /* Authorization Service.swift in Sources */,
@@ -1282,6 +1401,7 @@
 				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D28D80629F29B6A002D6A4B /* LoginViewModel.swift in Sources */,
+				709791312A090369006FBC4E /* CreditController.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
 				1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,

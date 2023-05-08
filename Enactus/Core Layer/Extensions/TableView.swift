@@ -10,7 +10,19 @@ extension UITableView {
         return cell
     }
     
+    public func dequeueReusableHeaderFooterView<Cell: UITableViewHeaderFooterView>() -> Cell {
+        guard let view = dequeueReusableHeaderFooterView(withIdentifier: "\(Cell.self)") as? Cell else {
+            fatalError("register(aClass: \(Cell.self) has not been implemented")
+        }
+
+        return view
+    }
+    
     func register(cellClass: AnyClass) {
         register(cellClass, forCellReuseIdentifier: "\(cellClass)")
+    }
+    
+    public func register(aClass: AnyClass) {
+        register(aClass, forHeaderFooterViewReuseIdentifier: "\(aClass)")
     }
 }
