@@ -51,6 +51,9 @@
 		1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */; };
 		1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */; };
 		1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */; };
+		1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */; };
+		1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1DA47EA02A0A414B00479AE5 /* FSCalendar */; };
+		1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -159,6 +162,8 @@
 		1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellView.swift; sourceTree = "<group>"; };
+		1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -212,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEA247229C1D0400043126A /* SnapKit in Frameworks */,
+				1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */,
 				70A1F74B29EE0478002FDC29 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,6 +595,7 @@
 		1D7BA3E929FBF18400B6F3E2 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				1DA47E9C2A0A34B600479AE5 /* ViewModel */,
 				1DF909A82A02FC8B00FC2E2F /* Custom */,
 				1D1121E32A000B0400D278DF /* View */,
 				1D1121E22A000AF400D278DF /* Coordinator */,
@@ -637,6 +644,30 @@
 				1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		1DA47E9C2A0A34B600479AE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DA47EA22A0A4BF200479AE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA32A0A4BF600479AE5 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DA47EA32A0A4BF600479AE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -936,6 +967,7 @@
 		70A1F71929EB5261002FDC29 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				1DA47EA22A0A4BF200479AE5 /* View */,
 				70208AF329F7887A0044500E /* Controller */,
 				70208AF229F7886F0044500E /* Coordinator */,
 			);
@@ -1040,6 +1072,7 @@
 			packageProductDependencies = (
 				1DEA247129C1D0400043126A /* SnapKit */,
 				70A1F74A29EE0478002FDC29 /* Alamofire */,
+				1DA47EA02A0A414B00479AE5 /* FSCalendar */,
 			);
 			productName = Enactus;
 			productReference = 1D39B5CB29C0E9E100D441B6 /* Enactus.app */;
@@ -1072,6 +1105,7 @@
 			packageReferences = (
 				1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 1D39B5CC29C0E9E100D441B6 /* Products */;
 			projectDirPath = "";
@@ -1153,8 +1187,10 @@
 				1D28D7F429EFF642002D6A4B /* CreatePasswordViewController.swift in Sources */,
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
+				1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
+				1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */,
 				1D0037232A01202600735E53 /* EditViewModel.swift in Sources */,
 				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
@@ -1404,6 +1440,14 @@
 				kind = branch;
 			};
 		};
+		1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1415,6 +1459,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1DA47EA02A0A414B00479AE5 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		1DEA247129C1D0400043126A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */;
