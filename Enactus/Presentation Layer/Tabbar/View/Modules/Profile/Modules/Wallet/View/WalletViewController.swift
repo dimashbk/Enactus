@@ -11,6 +11,7 @@ final class WalletViewController: UIViewController {
     
     private lazy var gradientCard: CardGradientView = {
         let view = CardGradientView()
+        view.layer.cornerRadius = 20
         return view
     }()
     

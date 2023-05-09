@@ -20,5 +20,15 @@ final class ProfileViewModel {
     func moveToEdit() {
         coordinatorDelegate?.showEditFlow()
     }
+    func signOut() {
+        coordinatorDelegate?.showSigninFlow()
+        profileInfo = Profile(id: 0,
+                              name: "",
+                              surname: "",
+                              patronymic: "",
+                              birthday: "",
+                              group: "",
+                              walletAddress: "")
+    }
 
 }

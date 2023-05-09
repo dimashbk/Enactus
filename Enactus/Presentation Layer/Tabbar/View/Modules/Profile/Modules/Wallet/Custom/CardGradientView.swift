@@ -24,7 +24,7 @@ final class CardGradientView: UIView {
         return label
     }()
     
-    private lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = .init(named: "AppIcon")
         imageView.layer.cornerRadius = 26
@@ -53,7 +53,6 @@ final class CardGradientView: UIView {
         layer.colors = [UIColor.enFirstGradient.cgColor, UIColor.enSecondGradient.cgColor]
         layer.startPoint = CGPoint(x: 0.0, y: 0.5)
         layer.endPoint = CGPoint(x: 1.0, y: 0.5)
-        layer.cornerRadius = 20
     }
     
     private func setup() {
