@@ -20,7 +20,22 @@ final class ProfileViewController: UIViewController {
         return imageView
     }()
     
-    
+    private lazy var signOutAlert: UIAlertController = {
+        
+        let alertController = UIAlertController(title: "Выйти?", message: "Вы уверены что хотите выйти?", preferredStyle: .alert)
+       //alert action
+        let yesAction = UIAlertAction(title: "Да", style: .default) { (action) in
+            self.viewModel?.signOut()
+        }
+        let noAction = UIAlertAction(title: "Нет", style: .default) { (action) in
+
+        }
+       
+       alertController.addAction(yesAction)
+       alertController.addAction(noAction)
+
+        return alertController
+    }()
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
@@ -116,7 +131,7 @@ final class ProfileViewController: UIViewController {
         case 1:
             print("Otmena 667")
         case 2:
-            print("Sign out")
+            present(signOutAlert, animated: true)
         default:
             return
         }

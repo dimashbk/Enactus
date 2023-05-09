@@ -28,7 +28,8 @@ final class SignInCoordinator: BaseCoordinator {
         let signInVC =  SignInViewController()
         signInVC.viewModel = SigninViewModel()
         signInVC.viewModel?.coordinatorDelegate = self
-//        signInVC.navigationItem.hidesBackButton = true
+        signInVC.navigationItem.hidesBackButton = true
+        signInVC.hidesBottomBarWhenPushed = true
         navigationController.pushViewController(signInVC, animated: true)
     }
 }
