@@ -10,6 +10,10 @@ final class ScheduleViewController: UIViewController {
         calendar.delegate = self
         calendar.dataSource = self
         calendar.setScope(.week, animated: true)
+        calendar.appearance.weekdayTextColor = .enFirstGradient
+        calendar.appearance.headerTitleColor = .enFirstGradient
+        calendar.appearance.selectionColor = .enFirstGradient
+        calendar.appearance.todayColor = .enSecondGradient
         return calendar
     }()
     
