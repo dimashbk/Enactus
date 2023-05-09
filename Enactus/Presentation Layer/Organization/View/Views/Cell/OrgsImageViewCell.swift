@@ -62,7 +62,6 @@ final class OrgsImageViewCell: UITableViewCell {
     
     private func setupColors() {
         backgroundColor = .white
-        
     }
     
     public func configure(with model: ENOrganizationModel) {

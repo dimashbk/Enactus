@@ -4,6 +4,8 @@ import SnapKit
 final class CreditController: UIViewController {
     
     //MARK: - Properties
+    public var mainCoordinator: CreditCoordinator?
+    
     let sections: [Section] = [.init(section: .education, rows: [.overall]), .init(section: .credit, rows: [.disc])]
     
     //MARK: - View
@@ -19,8 +21,8 @@ final class CreditController: UIViewController {
     }()
     
     //MARK: - View
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         setup()
     }
@@ -29,6 +31,7 @@ final class CreditController: UIViewController {
     private func setup() {
         setupViews()
         makeConstraints()
+        setupNavbar()
     }
     
     private func setupViews() {
@@ -43,5 +46,9 @@ final class CreditController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(500)
         }
+    }
+    
+    private func setupNavbar() {
+        navigationItem.title = "Кредиты" 
     }
 }

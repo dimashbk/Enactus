@@ -39,6 +39,17 @@ extension CreditController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 22
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = sections[indexPath.section].rows[indexPath.row]
+        
+        switch row {
+        case .overall:
+            mainCoordinator?.showDetailFlow()
+        case .disc:
+            print(2)
+        }
     }
 }

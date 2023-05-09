@@ -1,31 +1,19 @@
 import UIKit
 import SnapKit
 
-final class CreditCell: UITableViewCell {
+final class CreditDetailCell: UITableViewCell {
     
     //MARK: - View
     private lazy var iconImageView: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
         view.image = UIImage(named: "farmers")
         return view
     }()
     
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Mulish-Bold", size: 16)
-        return label
-    }()
-    
-    private lazy var subtitleLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "Mulish-Regular", size: 12)
-        return label
-    }()
-    
-    private lazy var priceLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "Mulish-Bold", size: 14)
+        label.font = UIFont(name: "Mulish-Regular", size: 16)
         return label
     }()
     
@@ -55,35 +43,25 @@ final class CreditCell: UITableViewCell {
     }
     
     private func setupViews() {
-        [iconImageView, titleLabel, subtitleLabel, priceLabel, button].forEach {
+        [iconImageView, titleLabel, button].forEach {
             contentView.addSubview($0)
         }
     }
     
     private func makeConstraints() {
         iconImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
+            make.top.equalToSuperview().offset(14)
             make.leading.equalToSuperview().inset(12)
-            make.height.equalTo(66)
+            make.height.equalTo(40)
         }
         
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(24)
-            make.leading.equalTo(iconImageView.snp.trailing).offset(20)
-        }
-        
-        subtitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(4)
-            make.leading.equalTo(iconImageView.snp.trailing).offset(20)
-        }
-        
-        priceLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(34)
-            make.trailing.equalToSuperview().inset(40)
+            make.top.equalToSuperview().offset(22)
+            make.leading.equalTo(iconImageView.snp.trailing).offset(16)
         }
         
         button.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(32)
+            make.top.equalToSuperview().offset(30)
             make.trailing.equalToSuperview().inset(14)
         }
     }
@@ -93,9 +71,7 @@ final class CreditCell: UITableViewCell {
         backgroundColor = UIColor.enPreWhite
     }
     
-    public func configure(with viewModel: CreditCellViewModelProtocol) {
+    public func configure(with viewModel: CreditDetailCellViewModelProtocol) {
         titleLabel.text = viewModel.title
-        subtitleLabel.text = viewModel.subtitle
-        priceLabel.text = viewModel.price
     }
 }

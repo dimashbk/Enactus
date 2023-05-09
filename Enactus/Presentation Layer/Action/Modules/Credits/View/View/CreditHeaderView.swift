@@ -29,7 +29,8 @@ final class CreditHeaderView: UITableViewHeaderFooterView {
     
     private func setupViews() {
         [titleLabel].forEach {
-            addSubview($0)
+            //            addSubview($0)
+            contentView.addSubview($0)
         }
     }
     

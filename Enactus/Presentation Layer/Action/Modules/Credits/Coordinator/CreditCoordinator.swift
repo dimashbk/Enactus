@@ -8,9 +8,13 @@ final class CreditCoordinator: BaseCoordinator {
     }
     
     override func start() {
-//        let shopViewModel = ShopViewModel()
         let creditController = CreditController()
-//        shopController.viewModel = shopViewModel
+        creditController.mainCoordinator = self
         navigationController.pushViewController(creditController, animated: true)
+    }
+    
+    public func showDetailFlow() {
+        let detailCoordinator = CreditDetailCoordinator(navigationController: navigationController)
+        coordinate(to: detailCoordinator)
     }
 }
