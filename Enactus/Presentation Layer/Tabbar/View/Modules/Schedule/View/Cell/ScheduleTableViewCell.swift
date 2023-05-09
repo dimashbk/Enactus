@@ -61,6 +61,16 @@ final class ScheduleTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(lessonType: Int, lessonName: String, lessonTime: String) {
+        if lessonType == 1 {
+            self.lessonType.text = "Лекция"
+        } else {
+            self.lessonType.text = "Практика"
+        }
+        self.lessonName.text = lessonName
+        self.lessonTime.text = lessonTime
+    }
+    
     private func setup() {
         setupSubviews()
         setupConstraints()
@@ -81,7 +91,7 @@ final class ScheduleTableViewCell: UITableViewCell {
             make.left.right.equalToSuperview()
         }
         myImageView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview().inset(22)
+            make.centerY.equalToSuperview()
             make.right.equalToSuperview().inset(24)
         }
         lessonType.snp.makeConstraints { make in

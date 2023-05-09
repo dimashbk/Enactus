@@ -54,6 +54,9 @@
 		1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */; };
 		1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1DA47EA02A0A414B00479AE5 /* FSCalendar */; };
 		1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */; };
+		1DA47EA72A0A883000479AE5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA62A0A883000479AE5 /* Date.swift */; };
+		1DA47EAA2A0A891500479AE5 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */; };
+		1DA47EAD2A0A894300479AE5 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EAC2A0A894300479AE5 /* LessonModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -164,6 +167,9 @@
 		1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellView.swift; sourceTree = "<group>"; };
 		1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		1DA47EA62A0A883000479AE5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		1DA47EAC2A0A894300479AE5 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -446,6 +452,7 @@
 				70208ADA29EF26E80044500E /* TableView.swift */,
 				70208ADE29EF42B20044500E /* String.swift */,
 				70208AE029EF497D0044500E /* View.swift */,
+				1DA47EA62A0A883000479AE5 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -668,6 +675,22 @@
 				1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1DA47EA82A0A890200479AE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DA47EAB2A0A893B00479AE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EAC2A0A894300479AE5 /* LessonModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -967,6 +990,8 @@
 		70A1F71929EB5261002FDC29 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				1DA47EAB2A0A893B00479AE5 /* Model */,
+				1DA47EA82A0A890200479AE5 /* ViewModel */,
 				1DA47EA22A0A4BF200479AE5 /* View */,
 				70208AF329F7887A0044500E /* Controller */,
 				70208AF229F7886F0044500E /* Coordinator */,
@@ -1143,6 +1168,7 @@
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
+				1DA47EA72A0A883000479AE5 /* Date.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
 				1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */,
@@ -1163,6 +1189,7 @@
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
+				1DA47EAA2A0A891500479AE5 /* ScheduleViewModel.swift in Sources */,
 				1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
@@ -1188,6 +1215,7 @@
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
 				1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */,
+				1DA47EAD2A0A894300479AE5 /* LessonModel.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
 				1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */,

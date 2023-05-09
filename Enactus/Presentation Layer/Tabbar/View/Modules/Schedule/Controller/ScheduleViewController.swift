@@ -5,6 +5,8 @@ final class ScheduleViewController: UIViewController {
     
     var calendarHeightConstraint : NSLayoutConstraint?
     
+    var viewModel: ScheduleViewModel?
+    
     private lazy var calendar: FSCalendar = {
         let calendar = FSCalendar()
         calendar.delegate = self
@@ -30,18 +32,30 @@ final class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewModel?.getAllLessons()
         title = "Schedule"
+        bindViewModel()
+    }
+    
+    func bindViewModel(){
+           self.viewModel?.updateViewData = {
+               DispatchQueue.main.async {
+                   self.tableView.reloadData()
+               }
+           }
     }
     
     private func setup() {
         setupSubviews()
         setupConstraints()
     }
+    
     private func setupSubviews() {
         [calendar, tableView].forEach{
             view.addSubview($0)
         }
     }
+    
     private func setupConstraints() {
         calendarHeightConstraint = NSLayoutConstraint(item: calendar, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
         calendar.addConstraint(calendarHeightConstraint ?? NSLayoutConstraint())
@@ -55,6 +69,7 @@ final class ScheduleViewController: UIViewController {
             make.bottom.equalToSuperview()
         }
     }
+    
 }
 
 extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource {
@@ -63,18 +78,22 @@ extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource {
         view.layoutIfNeeded()
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
+        viewModel?.filterByWeekday(weekday: date.weekday)
     }
 }
 
 extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        return viewModel?.filteredArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ScheduleTableViewCell()
+        var lesson = viewModel?.filteredArray[indexPath.row]
+        cell.configure(lessonType: lesson?.typeID ?? 0,
+                       lessonName: lesson?.lesson ?? "",
+                       lessonTime: lesson?.timeOfTheLesson ?? "")
         return cell
     }
     
@@ -83,3 +102,5 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
