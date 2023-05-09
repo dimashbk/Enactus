@@ -32,22 +32,14 @@ final class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        viewModel?.getAllLessons()
         title = "Schedule"
-        bindViewModel()
-    }
-    
-    func bindViewModel(){
-           self.viewModel?.updateViewData = {
-               DispatchQueue.main.async {
-                   self.tableView.reloadData()
-               }
-           }
     }
     
     private func setup() {
         setupSubviews()
         setupConstraints()
+        viewModel?.getAllLessons()
+        bindViewModel()
     }
     
     private func setupSubviews() {
@@ -69,6 +61,15 @@ final class ScheduleViewController: UIViewController {
             make.bottom.equalToSuperview()
         }
     }
+    
+    func bindViewModel(){
+           self.viewModel?.updateViewData = {
+               DispatchQueue.main.async {
+                   self.tableView.reloadData()
+               }
+           }
+    }
+    
     
 }
 
