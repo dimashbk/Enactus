@@ -133,6 +133,10 @@
 		70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74729EDF6C6002FDC29 /* MainViewModel.swift */; };
 		70A1F74B29EE0478002FDC29 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 70A1F74A29EE0478002FDC29 /* Alamofire */; };
 		70A1F74D29EEBA3F002FDC29 /* OrganizationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F74C29EEBA3F002FDC29 /* OrganizationHeaderView.swift */; };
+		70D7C8C72A0B4B51000AF77F /* RemittanceController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8C62A0B4B51000AF77F /* RemittanceController+TextField.swift */; };
+		70D7C8CB2A0B5173000AF77F /* TransConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8CA2A0B5173000AF77F /* TransConfirmController.swift */; };
+		70D7C8CD2A0B5185000AF77F /* TransConfirmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8CC2A0B5185000AF77F /* TransConfirmCoordinator.swift */; };
+		70D7C8D22A0B52A2000AF77F /* TransConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8D12A0B52A2000AF77F /* TransConfirmViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -276,6 +280,10 @@
 		70A1F74529EDF4FA002FDC29 /* ENOrganizationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENOrganizationModel.swift; sourceTree = "<group>"; };
 		70A1F74729EDF6C6002FDC29 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		70A1F74C29EEBA3F002FDC29 /* OrganizationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationHeaderView.swift; sourceTree = "<group>"; };
+		70D7C8C62A0B4B51000AF77F /* RemittanceController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemittanceController+TextField.swift"; sourceTree = "<group>"; };
+		70D7C8CA2A0B5173000AF77F /* TransConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransConfirmController.swift; sourceTree = "<group>"; };
+		70D7C8CC2A0B5185000AF77F /* TransConfirmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransConfirmCoordinator.swift; sourceTree = "<group>"; };
+		70D7C8D12A0B52A2000AF77F /* TransConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransConfirmViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -897,8 +905,7 @@
 		70208B2229FEAA9E0044500E /* Remittance */ = {
 			isa = PBXGroup;
 			children = (
-				70208B2429FEAAB60044500E /* Coordinator */,
-				70208B2329FEAAB20044500E /* View */,
+				70D7C8C12A0B4A28000AF77F /* Module */,
 			);
 			path = Remittance;
 			sourceTree = "<group>";
@@ -906,7 +913,7 @@
 		70208B2329FEAAB20044500E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70208B2729FEAB220044500E /* RemittanceController.swift */,
+				70D7C8C42A0B4AF9000AF77F /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1448,6 +1455,75 @@
 			path = NetworkService;
 			sourceTree = "<group>";
 		};
+		70D7C8C12A0B4A28000AF77F /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8C32A0B4A3D000AF77F /* TransactionConfirm */,
+				70D7C8C22A0B4A35000AF77F /* Transaction */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		70D7C8C22A0B4A35000AF77F /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2429FEAAB60044500E /* Coordinator */,
+				70208B2329FEAAB20044500E /* View */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		70D7C8C32A0B4A3D000AF77F /* TransactionConfirm */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8C92A0B5161000AF77F /* Coordinator */,
+				70D7C8C82A0B5158000AF77F /* View */,
+			);
+			path = TransactionConfirm;
+			sourceTree = "<group>";
+		};
+		70D7C8C42A0B4AF9000AF77F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70208B2729FEAB220044500E /* RemittanceController.swift */,
+				70D7C8C62A0B4B51000AF77F /* RemittanceController+TextField.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70D7C8C82A0B5158000AF77F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8D02A0B5283000AF77F /* ViewModel */,
+				70D7C8CE2A0B5277000AF77F /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70D7C8C92A0B5161000AF77F /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8CC2A0B5185000AF77F /* TransConfirmCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70D7C8CE2A0B5277000AF77F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8CA2A0B5173000AF77F /* TransConfirmController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70D7C8D02A0B5283000AF77F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70D7C8D12A0B52A2000AF77F /* TransConfirmViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1570,10 +1646,12 @@
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
+				70D7C8CD2A0B5185000AF77F /* TransConfirmCoordinator.swift in Sources */,
 				709791732A0A9AE4006FBC4E /* ConfirmController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				709791652A0A6628006FBC4E /* PaymentCoordinator.swift in Sources */,
 				709791102A0164C9006FBC4E /* ShopCoordinator.swift in Sources */,
+				70D7C8D22A0B52A2000AF77F /* TransConfirmViewModel.swift in Sources */,
 				1D28D80929F2AD76002D6A4B /* SigninViewModel.swift in Sources */,
 				709791632A0A65E6006FBC4E /* PaymentController.swift in Sources */,
 				70208B1D29FC1EE00044500E /* OrgsTitleViewCell.swift in Sources */,
@@ -1604,6 +1682,7 @@
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
 				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				7097910329FFEACA006FBC4E /* UIImageView.swift in Sources */,
+				70D7C8CB2A0B5173000AF77F /* TransConfirmController.swift in Sources */,
 				709791072A001E5F006FBC4E /* OrgsDescriptionViewCell.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				709791752A0A9B08006FBC4E /* ConfirmCoordinator.swift in Sources */,
@@ -1615,6 +1694,7 @@
 				709791372A090B10006FBC4E /* CreditController+Section.swift in Sources */,
 				709791232A0800D4006FBC4E /* ShopViewModel.swift in Sources */,
 				1D28D80129F1A804002D6A4B /* EmailResetCoordinator.swift in Sources */,
+				70D7C8C72A0B4B51000AF77F /* RemittanceController+TextField.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				709791522A0A1F81006FBC4E /* CreditDetailController.swift in Sources */,
 				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,

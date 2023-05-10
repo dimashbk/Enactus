@@ -23,6 +23,7 @@ extension MainCoordinator {
     
     func showRemittanceFlow() {
         let remittanceCoordinator = RemittanceCoordinator(navigationController: navigationController)
+        store(coordinator: remittanceCoordinator)
         coordinate(to: remittanceCoordinator)
     }
     

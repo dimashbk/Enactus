@@ -6,7 +6,7 @@ final class ConfirmView: UIView {
     //MARK: - View
     public lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "Mulish-Bold", size: 16)
+        label.font = UIFont(name: "Mulish-Regular", size: 16)
         return label
     }()
     
