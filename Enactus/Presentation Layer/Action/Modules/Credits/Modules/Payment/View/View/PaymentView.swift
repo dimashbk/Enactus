@@ -64,6 +64,7 @@ final class PaymentView: UIView {
         titleLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(14)
             make.leading.equalTo(iconImageView.snp.trailing).offset(12)
+            make.width.equalTo(190)
         }
         
         subtitleLabel.snp.makeConstraints { make in

@@ -37,8 +37,8 @@ final class OrganizationController: UIViewController {
         fetchDetailModel()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         view.backgroundColor = .white
         setup()
