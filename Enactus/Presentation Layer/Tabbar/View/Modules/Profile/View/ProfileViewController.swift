@@ -57,8 +57,8 @@ final class ProfileViewController: UIViewController {
         tableView.backgroundColor = .none
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.regiter(cellClass: InfoTableViewCell.self)
-        tableView.regiter(cellClass: ButtonTableViewCell.self)
+        tableView.register(cellClass: InfoTableViewCell.self)
+        tableView.register(cellClass: ButtonTableViewCell.self)
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
         tableView.isScrollEnabled = false

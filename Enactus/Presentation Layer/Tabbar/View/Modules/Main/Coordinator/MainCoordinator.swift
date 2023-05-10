@@ -14,9 +14,29 @@ final class MainCoordinator: BaseCoordinator {
         mainController.coordinator = self
         navigationController.pushViewController(mainController, animated: true)
     }
-    
-    func showOrgDetailFlow() {
+}
+
+extension MainCoordinator {
+    func showOrgDetailFlow(model: ENOrganizationModel) {
         let organizationCoordinator = OrganizationCoordinator(navigationController: navigationController)
-        coordinate(to: organizationCoordinator)
+        organizationCoordinator.start(model: model)
+    }
+    
+    func showRemittanceFlow() {
+        let remittanceCoordinator = RemittanceCoordinator(navigationController: navigationController)
+        store(coordinator: remittanceCoordinator)
+        coordinate(to: remittanceCoordinator)
+    }
+    
+    func showShopFlow() {
+        let shopCoordinator = ShopCoordinator(navigationController: navigationController)
+        store(coordinator: shopCoordinator)
+        coordinate(to: shopCoordinator)
+    }
+    
+    func showCreditlow() {
+        let creditCoordinator = CreditCoordinator(navigationController: navigationController)
+        store(coordinator: creditCoordinator)
+        coordinate(to: creditCoordinator)
     }
 }

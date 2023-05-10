@@ -180,12 +180,6 @@ final class ENNetworkService: ENNetworkServiceProtocol {
         
         request.httpBody = body
         
-//        if let body = body {
-//            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-//        } else {
-//            print("HUIHUIHUIHUI")
-//        }
-        
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completion(.failure(error))

@@ -13,7 +13,7 @@ struct ENOrganizationModel: Codable {
     var createdAt: String
     var updatedAt: String
     var deletedAt: String?
-    var currency: ENOrganizationCurrencyModel
+    var currency: ENCurrencyModel
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -32,7 +32,7 @@ struct ENOrganizationModel: Codable {
     }
 }
 
-struct ENOrganizationCurrencyModel: Codable {
+struct ENCurrencyModel: Codable {
     var id: Int
     var title: String
     var createdAt: String

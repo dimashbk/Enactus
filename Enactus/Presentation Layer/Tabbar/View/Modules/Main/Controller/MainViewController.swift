@@ -31,7 +31,7 @@ final class MainViewController: UIViewController {
         let view = UITableView()
         view.delegate = self
         view.dataSource = self
-        view.regiter(cellClass: OrganizationTableViewCell.self)
+        view.register(cellClass: OrganizationTableViewCell.self)
         return view
     }()
     
@@ -54,6 +54,8 @@ final class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .white
         setup()
     }
     

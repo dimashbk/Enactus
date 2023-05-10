@@ -52,4 +52,11 @@ extension UIColor{
     static var enTextDarkBlue: UIColor {
         UIColor(red: 34/255, green: 50/255, blue: 65/255, alpha: 1)
     }
+    static var enDarkestBlue: UIColor {
+        UIColor(red: 17/255, green: 26/255, blue: 32/255, alpha: 1)
+    }
+//background: rgba(249, 249, 249, 1);
+    static var enPreWhite: UIColor {
+        UIColor(red: 249/255, green: 249/255, blue: 249/255, alpha: 1)
+    }
 }
