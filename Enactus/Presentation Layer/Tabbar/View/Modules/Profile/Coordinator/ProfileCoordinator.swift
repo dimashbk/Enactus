@@ -11,11 +11,11 @@ protocol WalletFlow: AnyObject {
     func showWalletFlow()
 }
 
-protocol NotificationFlow: AnyObject {
-    func showNotificationFlow()
+protocol EditFlow: AnyObject {
+    func showEditFlow()
 }
 
-typealias ProfileCoordinatorProtocol = WalletFlow & NotificationFlow
+typealias ProfileCoordinatorProtocol = WalletFlow & EditFlow & SigninFlow
 
 final class ProfileCoordinator: BaseCoordinator{
 
@@ -36,15 +36,20 @@ final class ProfileCoordinator: BaseCoordinator{
 }
 
 extension ProfileCoordinator: ProfileCoordinatorProtocol {
-    func showWalletFlow() {
-        print("Move to Wallet")
-    }
-    
-    func showNotificationFlow() {
-        print("Move to Notification")
-    }
     
     // MARK: - FlowMethods
+    func showEditFlow() {
+        let editCoordinator = EditCoordinator(navigationController: navigationController)
+        coordinate(to: editCoordinator)
+    }
     
-    
+    func showWalletFlow() {
+        let walletCoordinator = WalletCoordinator(navigationController: navigationController)
+        coordinate(to: walletCoordinator)
+    }
+    func showSigninFlow() {
+        let signInCoordinator = SignInCoordinator(navigationController: navigationController)
+        coordinate(to: signInCoordinator)
+    }
+
 }

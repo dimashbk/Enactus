@@ -9,7 +9,7 @@ import UIKit
 
 final class EditProfileViewController: UIViewController {
     
-    var viewModel: ProfileViewModel?
+    var viewModel: EditProfileViewModel?
     
     private lazy var backgroundImage: UIImageView = {
         let imageView = UIImageView()
@@ -21,21 +21,22 @@ final class EditProfileViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
         imageView.backgroundColor = .black
-        imageView.image = .init(named: "avatar")
+        imageView.image = .init(named: "AppIcon")
         return imageView
     }()
     
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
-        textField.text = "Амарова Карина"
+        textField.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
         textField.font = UIFont(name: "Mulish", size: 24)
+        textField.placeholder = "Name Surname"
         textField.textAlignment = .center
         return textField
     }()
     
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "27477@iitu.edu.kz"
+        label.text = AuthorizationService.shared.authorizationModel.email
         label.font = UIFont(name: "Mulish", size: 16)
         return label
     }()
@@ -43,28 +44,34 @@ final class EditProfileViewController: UIViewController {
     private lazy var dateOfBirth: EditCellView = {
         let editCell = EditCellView()
         editCell.label.text = "Дата рождения"
+        editCell.textField.text = profileInfo.birthday
+        editCell.textField.placeholder = "YYYY-MM-DD"
         return editCell
     }()
     
     private lazy var groupId: EditCellView = {
         let editCell = EditCellView()
         editCell.label.text = "Группа"
+        editCell.textField.text = profileInfo.group
+        editCell.textField.placeholder = "Group"
         return editCell
     }()
     
-    private lazy var id: EditCellView = {
+    private lazy var patronymic: EditCellView = {
         let editCell = EditCellView()
-        editCell.label.text = "ID"
+        editCell.label.text = "Отчество"
+        editCell.textField.text = profileInfo.patronymic
+        editCell.textField.placeholder = "Patronymic"
         return editCell
     }()
-    
-
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        nameTextField.becomeFirstResponder()
     }
     
     private func setup() {
@@ -80,7 +87,7 @@ final class EditProfileViewController: UIViewController {
     
     private func setupSubviews() {
         [backgroundImage, avatarImageView, emailLabel,
-         nameTextField, dateOfBirth, groupId, id].forEach {
+         nameTextField, dateOfBirth, groupId, patronymic].forEach {
             view.addSubview($0)
         }
     }
@@ -111,18 +118,44 @@ final class EditProfileViewController: UIViewController {
             make.top.equalTo(dateOfBirth.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
-        id.snp.makeConstraints { make in
+        patronymic.snp.makeConstraints { make in
             make.top.equalTo(groupId.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
     }
     
     private func setupNavController() {
-        let barButton = UIBarButtonItem(title: "Cохранить", style: .plain, target: self, action: #selector(editProfile))
+        let barButton = UIBarButtonItem(title: "Cохранить", style: .plain, target: self, action: #selector(saveProfile))
         barButton.tintColor = .enBlack
         navigationItem.rightBarButtonItem = barButton
     }
-    @objc func editProfile() {
+    @objc func saveProfile() {
+        
+        var separated = nameTextField.text?.split(separator: " ")
+        
+        var name =  {
+            if  separated?.count ?? 0 > 0{
+                return String(separated?[0] ?? "")
+            } else {
+                return ""
+            }
+        }
+        
+        var surname = {
+            if separated?.count ?? 0 > 1 {
+                     return String(separated?[1] ?? "")
+            } else {
+                    return ""
+                }
+            }
+        
+        self.viewModel?.updateInfo(name: name(),
+                              surname: surname(),
+                                       patronymic: self.patronymic.textField.text,
+                                       birthday: self.dateOfBirth.textField.text,
+                                       group: self.groupId.textField.text)
+        
+        
         navigationController?.popViewController(animated: true)
     }
 }

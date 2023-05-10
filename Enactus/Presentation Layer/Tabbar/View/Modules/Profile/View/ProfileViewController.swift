@@ -10,7 +10,7 @@ final class ProfileViewController: UIViewController {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 50
         imageView.backgroundColor = .black
-        imageView.image = .init(named: "avatar")
+        imageView.image = .init(named: "AppIcon")
         return imageView
     }()
     
@@ -20,18 +20,34 @@ final class ProfileViewController: UIViewController {
         return imageView
     }()
     
-    
+    private lazy var signOutAlert: UIAlertController = {
+        
+        let alertController = UIAlertController(title: "Выйти?", message: "Вы уверены что хотите выйти?", preferredStyle: .alert)
+       //alert action
+        let yesAction = UIAlertAction(title: "Да", style: .default) { (action) in
+            self.viewModel?.signOut()
+        }
+        let noAction = UIAlertAction(title: "Нет", style: .default) { (action) in
+
+        }
+       
+       alertController.addAction(yesAction)
+       alertController.addAction(noAction)
+
+        return alertController
+    }()
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "Амарова Карина"
         label.font = UIFont(name: "Mulish", size: 24)
+        label.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
         return label
     }()
     
     private lazy var emailLabel: UILabel = {
         let label = UILabel()
-        label.text = "27477@iitu.edu.kz"
+        label.text = AuthorizationService.shared.authorizationModel.email
+        
         label.font = UIFont(name: "Mulish", size: 16)
         return label
     }()
@@ -53,6 +69,12 @@ final class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        nameLabel.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
     }
     
     private func setup() {
@@ -107,21 +129,23 @@ final class ProfileViewController: UIViewController {
         case 0:
             viewModel?.moveToWallet()
         case 1:
-            viewModel?.moveToNotification()
+            print("Otmena 667")
         case 2:
-            print("Sign out")
+            present(signOutAlert, animated: true)
         default:
             return
         }
     }
     
     @objc func editProfile() {
-        print("Edit")
-        navigationController?.pushViewController(EditProfileViewController(), animated: true)
+        viewModel?.moveToEdit()
     }
 }
 
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func updateViewData() {
+        self.tableView.reloadData()
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         self.sections.count
@@ -136,7 +160,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.section == 0 {
             let row = sections[indexPath.section].rows[indexPath.row]
             let cell: InfoTableViewCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configure(with: ProfileInfoTableViewCellViewModel(row: row))
+            cell.viewModel = ProfileInfoTableViewCellViewModel(row: row)
+            cell.configure(with: cell.viewModel!)
             return cell
         } else {
             let row = sections[indexPath.section].rows[indexPath.row]

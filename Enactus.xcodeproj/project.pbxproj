@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D0037232A01202600735E53 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037222A01202600735E53 /* EditViewModel.swift */; };
+		1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037262A01206400735E53 /* EditCoordinator.swift */; };
+		1D1121E52A000B1700D278DF /* WalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1121E42A000B1700D278DF /* WalletCoordinator.swift */; };
 		1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */; };
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
 		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
@@ -45,11 +48,15 @@
 		1D7BA3E529FBC17100B6F3E2 /* ProfileViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */; };
 		1D7BA3E729FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */; };
 		1D7BA3ED29FBF1B400B6F3E2 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */; };
-		1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */; };
 		1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */; };
-		1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */; };
 		1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */; };
 		1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */; };
+		1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */; };
+		1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1DA47EA02A0A414B00479AE5 /* FSCalendar */; };
+		1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */; };
+		1DA47EA72A0A883000479AE5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA62A0A883000479AE5 /* Date.swift */; };
+		1DA47EAA2A0A891500479AE5 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */; };
+		1DA47EAD2A0A894300479AE5 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EAC2A0A894300479AE5 /* LessonModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
 		1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503D29D18EC200581D6B /* Coordinator.swift */; };
 		1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */; };
@@ -57,6 +64,8 @@
 		1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DEA247329C1D7970043126A /* Colors + Extension.swift */; };
 		1DEA247729C1E0B20043126A /* Mulish-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */; };
 		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
+		1DF909AA2A02FD0A00FC2E2F /* CardGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */; };
+		1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */; };
 		70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AC929EECB320044500E /* AuthorizationTextField.swift */; };
 		70208ACD29EECB320044500E /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACA29EECB320044500E /* OTPStackView.swift */; };
 		70208ACE29EECB320044500E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACB29EECB320044500E /* OTPTextField.swift */; };
@@ -155,6 +164,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D0037222A01202600735E53 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		1D0037262A01206400735E53 /* EditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCoordinator.swift; sourceTree = "<group>"; };
+		1D1121E42A000B1700D278DF /* WalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCoordinator.swift; sourceTree = "<group>"; };
 		1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Black.ttf"; sourceTree = "<group>"; };
 		1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
@@ -195,17 +207,22 @@
 		1D7BA3E429FBC17100B6F3E2 /* ProfileViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + Extension.swift"; sourceTree = "<group>"; };
 		1D7BA3E629FBCE1A00B6F3E2 /* ProfileButtonTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
-		1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		1D7BA3F129FE899C00B6F3E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCoordinator.swift; sourceTree = "<group>"; };
 		1D7BA3F729FE8F2600B6F3E2 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCellView.swift; sourceTree = "<group>"; };
+		1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		1DA47EA62A0A883000479AE5 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		1DA47EAC2A0A894300479AE5 /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		1DC0503D29D18EC200581D6B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1DC0504129D18F6A00581D6B /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		1DEA247329C1D7970043126A /* Colors + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + Extension.swift"; sourceTree = "<group>"; };
 		1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-ExtraBold.ttf"; sourceTree = "<group>"; };
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradientView.swift; sourceTree = "<group>"; };
+		1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		70208AC929EECB320044500E /* AuthorizationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		70208ACA29EECB320044500E /* OTPStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
 		70208ACB29EECB320044500E /* OTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -296,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DEA247229C1D0400043126A /* SnapKit in Frameworks */,
+				1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */,
 				70A1F74B29EE0478002FDC29 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +321,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D0037252A01205100735E53 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D0037262A01206400735E53 /* EditCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D1121E22A000AF400D278DF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				1D1121E42A000B1700D278DF /* WalletCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		1D1121E32A000B0400D278DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DF909AB2A039A6A00FC2E2F /* Cell */,
+				1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1D28D7EE29EFDA83002D6A4B /* BaseCoordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -641,7 +684,6 @@
 			isa = PBXGroup;
 			children = (
 				1D7BA3F929FEA2BD00B6F3E2 /* Edit */,
-				1D7BA3EA29FBF18900B6F3E2 /* Notifications */,
 				1D7BA3E929FBF18400B6F3E2 /* Wallet */,
 			);
 			path = Modules;
@@ -650,18 +692,13 @@
 		1D7BA3E929FBF18400B6F3E2 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				1D7BA3EC29FBF1B400B6F3E2 /* WalletViewController.swift */,
+				7097917A2A0B3896006FBC4E /* Model */,
+				1DA47E9C2A0A34B600479AE5 /* ViewModel */,
+				1DF909A82A02FC8B00FC2E2F /* Custom */,
+				1D1121E32A000B0400D278DF /* View */,
+				1D1121E22A000AF400D278DF /* Coordinator */,
 			);
 			path = Wallet;
-			sourceTree = "<group>";
-		};
-		1D7BA3EA29FBF18900B6F3E2 /* Notifications */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BA3F429FE8C7100B6F3E2 /* Coordinator */,
-				1D7BA3F329FE8C6200B6F3E2 /* View */,
-			);
-			path = Notifications;
 			sourceTree = "<group>";
 		};
 		1D7BA3F029FE897600B6F3E2 /* Coordinator */ = {
@@ -672,26 +709,11 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		1D7BA3F329FE8C6200B6F3E2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BA3EE29FBF1E600B6F3E2 /* NotificationViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1D7BA3F429FE8C7100B6F3E2 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BA3F529FE8C9000B6F3E2 /* NotificationsCoordinator.swift */,
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
 		1D7BA3F929FEA2BD00B6F3E2 /* Edit */ = {
 			isa = PBXGroup;
 			children = (
 				1D7BA3FD29FEA61000B6F3E2 /* Custom */,
+				1D0037252A01205100735E53 /* Coordinator */,
 				1D7BA3FC29FEA60A00B6F3E2 /* View */,
 				1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */,
 			);
@@ -701,6 +723,7 @@
 		1D7BA3FB29FEA3D800B6F3E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				1D0037222A01202600735E53 /* EditViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -719,6 +742,46 @@
 				1D7BA3FE29FEA63D00B6F3E2 /* EditCellView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		1DA47E9C2A0A34B600479AE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DA47EA22A0A4BF200479AE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA32A0A4BF600479AE5 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DA47EA32A0A4BF600479AE5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		1DA47EA82A0A890200479AE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1DA47EAB2A0A893B00479AE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1DA47EAC2A0A894300479AE5 /* LessonModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1DC0503929D18E7800581D6B /* AppCoordinator */ = {
@@ -761,6 +824,22 @@
 				1DEA247629C1E0B20043126A /* Mulish-ExtraBold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1DF909A82A02FC8B00FC2E2F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		1DF909AB2A039A6A00FC2E2F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		70208AC829EECB320044500E /* Custom */ = {
@@ -1375,6 +1454,9 @@
 		70A1F71929EB5261002FDC29 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				1DA47EAB2A0A893B00479AE5 /* Model */,
+				1DA47EA82A0A890200479AE5 /* ViewModel */,
+				1DA47EA22A0A4BF200479AE5 /* View */,
 				70208AF329F7887A0044500E /* Controller */,
 				70208AF229F7886F0044500E /* Coordinator */,
 			);
@@ -1558,6 +1640,7 @@
 			packageProductDependencies = (
 				1DEA247129C1D0400043126A /* SnapKit */,
 				70A1F74A29EE0478002FDC29 /* Alamofire */,
+				1DA47EA02A0A414B00479AE5 /* FSCalendar */,
 			);
 			productName = Enactus;
 			productReference = 1D39B5CB29C0E9E100D441B6 /* Enactus.app */;
@@ -1590,6 +1673,7 @@
 			packageReferences = (
 				1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 1D39B5CC29C0E9E100D441B6 /* Products */;
 			projectDirPath = "";
@@ -1629,7 +1713,9 @@
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
+				1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
+				1DA47EA72A0A883000479AE5 /* Date.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
 				1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */,
@@ -1658,7 +1744,8 @@
 				7097911B2A03C772006FBC4E /* SearchTextField.swift in Sources */,
 				70208AD429EECB800044500E /* OTPCoordinator.swift in Sources */,
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
-				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
+				1DA47EAA2A0A891500479AE5 /* ScheduleViewModel.swift in Sources */,
+				1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
 				70D7C8CD2A0B5185000AF77F /* TransConfirmCoordinator.swift in Sources */,
 				709791732A0A9AE4006FBC4E /* ConfirmController.swift in Sources */,
@@ -1677,6 +1764,7 @@
 				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
 				70208ACD29EECB320044500E /* OTPStackView.swift in Sources */,
 				1D7BA3DA29FB9C0100B6F3E2 /* ButtonTableViewCell.swift in Sources */,
+				7097917C2A0B38A4006FBC4E /* TransactionModel.swift in Sources */,
 				70208AD529EECB800044500E /* OTPViewController.swift in Sources */,
 				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
 				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
@@ -1693,8 +1781,12 @@
 				1D28D7F429EFF642002D6A4B /* CreatePasswordViewController.swift in Sources */,
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
 				1D7BA3CD29F7BE0700B6F3E2 /* CreatePasswordViewModel.swift in Sources */,
+				1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */,
+				1DA47EAD2A0A894300479AE5 /* LessonModel.swift in Sources */,
 				70A1F74029EDF3CE002FDC29 /* ENHTTPMethods.swift in Sources */,
 				70208AF529F788900044500E /* ScheduleCoordinator.swift in Sources */,
+				1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */,
+				1D0037232A01202600735E53 /* EditViewModel.swift in Sources */,
 				70208B2829FEAB220044500E /* RemittanceController.swift in Sources */,
 				7097910329FFEACA006FBC4E /* UIImageView.swift in Sources */,
 				70D7C8CB2A0B5173000AF77F /* TransConfirmController.swift in Sources */,
@@ -1743,6 +1835,7 @@
 				1D39B5FB29C0F44A00D441B6 /* CollectionView.swift in Sources */,
 				70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */,
 				1D39B5F429C0F23F00D441B6 /* OnboardingCollectionViewCell.swift in Sources */,
+				1DF909AA2A02FD0A00FC2E2F /* CardGradientView.swift in Sources */,
 				70A1F74429EDF491002FDC29 /* ENNetworkService.swift in Sources */,
 				709791552A0A2535006FBC4E /* CreditDetailController+TableView.swift in Sources */,
 			);
@@ -1968,6 +2061,14 @@
 				kind = branch;
 			};
 		};
+		1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		70A1F74929EE0478002FDC29 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1979,6 +2080,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1DA47EA02A0A414B00479AE5 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1DA47E9F2A0A414B00479AE5 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		1DEA247129C1D0400043126A /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1D39B5EB29C0F05E00D441B6 /* XCRemoteSwiftPackageReference "SnapKit" */;

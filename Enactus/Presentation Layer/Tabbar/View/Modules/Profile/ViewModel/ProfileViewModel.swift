@@ -5,32 +5,30 @@
 //  Created by Dinmukhamed on 28.04.2023.
 //
 
+import Foundation
+
 final class ProfileViewModel {
     
     var coordinatorDelegate: ProfileCoordinatorProtocol?
     
-    func moveToNotification() {
-        coordinatorDelegate?.showNotificationFlow()
-    }
+    var networkService = ENNetworkService()
     
     func moveToWallet() {
         coordinatorDelegate?.showWalletFlow()
     }
     
-    struct Profile {
-        enum Section {
-            case info
-            case button
-        }
-        
-        enum Row {
-            case first
-            case second
-            case third
-        }
-        
-        let section: Section
-        var rows: [Row]
+    func moveToEdit() {
+        coordinatorDelegate?.showEditFlow()
     }
-     
+    func signOut() {
+        coordinatorDelegate?.showSigninFlow()
+        profileInfo = Profile(id: 0,
+                              name: "",
+                              surname: "",
+                              patronymic: "",
+                              birthday: "",
+                              group: "",
+                              walletAddress: "")
+    }
+
 }

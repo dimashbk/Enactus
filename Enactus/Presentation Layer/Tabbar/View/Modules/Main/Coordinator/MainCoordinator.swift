@@ -1,6 +1,7 @@
 import UIKit
 
 final class MainCoordinator: BaseCoordinator {
+    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

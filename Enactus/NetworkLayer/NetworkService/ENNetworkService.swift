@@ -185,12 +185,11 @@ final class ENNetworkService: ENNetworkServiceProtocol {
                 completion(.failure(error))
                 return
             }
-            
+            print(response)
             guard let data = data else {
                 completion(.failure(NSError(domain: "NetworkManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
                 return
             }
-            
             do {
                 let decodableData = try self.decoder.decode(T.self, from: data)
                 completion(.success(decodableData))
@@ -198,6 +197,7 @@ final class ENNetworkService: ENNetworkServiceProtocol {
             catch let error {
                 completion(.failure(error))
             }
+           
         }
         
         task.resume()

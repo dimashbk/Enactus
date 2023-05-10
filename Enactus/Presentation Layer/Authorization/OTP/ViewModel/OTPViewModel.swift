@@ -32,6 +32,7 @@ final class OTPViewModel {
         case .signUp:
             print("Sign Up")
             AuthorizationService.shared.register()
+            AuthorizationService.shared.getProfileInfo()
             coordinatorDelegate?.showCreatePasswordFlow()
         case .none:
             print("none")

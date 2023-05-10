@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class AppCoordinator: BaseCoordinator {
+final class AppCoordinator: BaseCoordinator {
     
     private var window: UIWindow?
     
