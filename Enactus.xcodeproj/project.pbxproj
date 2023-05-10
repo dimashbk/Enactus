@@ -111,6 +111,10 @@
 		7097916A2A0A7003006FBC4E /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791692A0A7003006FBC4E /* PaymentView.swift */; };
 		7097916C2A0A743E006FBC4E /* PaymentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097916B2A0A743E006FBC4E /* PaymentTextField.swift */; };
 		7097916E2A0A7ADA006FBC4E /* PaymentController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097916D2A0A7ADA006FBC4E /* PaymentController+TextField.swift */; };
+		709791732A0A9AE4006FBC4E /* ConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791722A0A9AE4006FBC4E /* ConfirmController.swift */; };
+		709791752A0A9B08006FBC4E /* ConfirmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791742A0A9B08006FBC4E /* ConfirmCoordinator.swift */; };
+		709791772A0A9BAB006FBC4E /* ConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791762A0A9BAB006FBC4E /* ConfirmViewModel.swift */; };
+		709791792A0AA0F5006FBC4E /* ConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709791782A0AA0F5006FBC4E /* ConfirmView.swift */; };
 		70A1F6CF29DAFF63002FDC29 /* ENActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */; };
 		70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71729EB5019002FDC29 /* ENTabBarController.swift */; };
 		70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1F71D29EB529C002FDC29 /* MainViewController.swift */; };
@@ -251,6 +255,10 @@
 		709791692A0A7003006FBC4E /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		7097916B2A0A743E006FBC4E /* PaymentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTextField.swift; sourceTree = "<group>"; };
 		7097916D2A0A7ADA006FBC4E /* PaymentController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentController+TextField.swift"; sourceTree = "<group>"; };
+		709791722A0A9AE4006FBC4E /* ConfirmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmController.swift; sourceTree = "<group>"; };
+		709791742A0A9B08006FBC4E /* ConfirmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmCoordinator.swift; sourceTree = "<group>"; };
+		709791762A0A9BAB006FBC4E /* ConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewModel.swift; sourceTree = "<group>"; };
+		709791782A0AA0F5006FBC4E /* ConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmView.swift; sourceTree = "<group>"; };
 		70A1F6CE29DAFF63002FDC29 /* ENActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ENActivityIndicator.swift; path = ../Models/ENActivityIndicator.swift; sourceTree = "<group>"; };
 		70A1F71729EB5019002FDC29 /* ENTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENTabBarController.swift; sourceTree = "<group>"; };
 		70A1F71D29EB529C002FDC29 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -1180,6 +1188,9 @@
 		7097914D2A0A1F51006FBC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				709791712A0A9ACD006FBC4E /* ViewModel */,
+				709791702A0A9AC9006FBC4E /* View */,
+				7097916F2A0A9AC5006FBC4E /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1187,6 +1198,7 @@
 		7097914E2A0A1F54006FBC4E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				709791742A0A9B08006FBC4E /* ConfirmCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1255,6 +1267,30 @@
 		709791682A0A6F63006FBC4E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7097916F2A0A9AC5006FBC4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				709791722A0A9AE4006FBC4E /* ConfirmController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		709791702A0A9AC9006FBC4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				709791782A0AA0F5006FBC4E /* ConfirmView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		709791712A0A9ACD006FBC4E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				709791762A0A9BAB006FBC4E /* ConfirmViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1498,6 +1534,7 @@
 				7097915F2A0A30A8006FBC4E /* CreditDetailCellViewModel.swift in Sources */,
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				709791612A0A30E0006FBC4E /* CreditDetailController+Section.swift in Sources */,
+				709791792A0AA0F5006FBC4E /* ConfirmView.swift in Sources */,
 				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */,
@@ -1509,6 +1546,7 @@
 				1D28D7F829EFFA34002D6A4B /* CreatePasswordCoordinator.swift in Sources */,
 				70208ACE29EECB320044500E /* OTPTextField.swift in Sources */,
 				1D28D7FA29F12D66002D6A4B /* TwoStateButton.swift in Sources */,
+				709791772A0A9BAB006FBC4E /* ConfirmViewModel.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
 				70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */,
 				709790FE29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift in Sources */,
@@ -1532,6 +1570,7 @@
 				70A1F72429EB5365002FDC29 /* ENTabBarCoordinator.swift in Sources */,
 				1D7BA3EF29FBF1E600B6F3E2 /* NotificationViewController.swift in Sources */,
 				1D39B5E829C0ED8B00D441B6 /* OnboardingViewController.swift in Sources */,
+				709791732A0A9AE4006FBC4E /* ConfirmController.swift in Sources */,
 				7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */,
 				709791652A0A6628006FBC4E /* PaymentCoordinator.swift in Sources */,
 				709791102A0164C9006FBC4E /* ShopCoordinator.swift in Sources */,
@@ -1567,6 +1606,7 @@
 				7097910329FFEACA006FBC4E /* UIImageView.swift in Sources */,
 				709791072A001E5F006FBC4E /* OrgsDescriptionViewCell.swift in Sources */,
 				70208AE129EF497D0044500E /* View.swift in Sources */,
+				709791752A0A9B08006FBC4E /* ConfirmCoordinator.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
 				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,

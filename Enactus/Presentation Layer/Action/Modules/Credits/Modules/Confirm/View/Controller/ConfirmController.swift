@@ -1,17 +1,11 @@
 import UIKit
 import SnapKit
 
-final class PaymentController: UIViewController {
+final class ConfirmController: UIViewController {
     
     //MARK: - Properties
-    var coordinator: PaymentCoordinator?
-    
-    var isEnable: Bool? {
-        didSet {
-            fixedButton.backgroundColor = isEnable ?? false ? .enBlue : .white
-            fixedButton.setTitleColor(isEnable ?? false ? .white : .enBlue , for: .normal)
-        }
-    }
+    var coordinator: ConfirmCoordinator?
+    var viewModel: ConfirmViewModelProtocol?
     
     //MARK: - View
     private lazy var firstView: PaymentView = {
@@ -36,30 +30,35 @@ final class PaymentController: UIViewController {
         return view
     }()
     
-    private lazy var paymentTextField: PaymentTextField = {
-        let textField = PaymentTextField()
-        textField.delegate = self
-        return textField
+    private lazy var firstConfirmView: ConfirmView = {
+        let view = ConfirmView()
+        view.titleLabel.text = "Cумма перевода"
+        return view
     }()
     
+    private lazy var secondConfirmView: ConfirmView = {
+        let view = ConfirmView()
+        view.titleLabel.text = "Комиссия"
+        view.priceLabel.text = "0"
+        return view
+    }()
+    
+    private lazy var thirdConfirmView: ConfirmView = {
+        let view = ConfirmView()
+        view.titleLabel.text = "Cумма списания"
+        return view
+    }()
+        
     private lazy var fixedButton: UIButton = {
         let button = UIButton()
         button.autoresizingMask = [.flexibleRightMargin, .flexibleBottomMargin]
         button.layer.cornerRadius = 12
-        button.setTitle("Оплатить", for: .normal)
+        button.setTitle("Подтвердить", for: .normal)
         button.setTitleColor(.enBlue, for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.enBlue.cgColor
+        button.backgroundColor = .enBlue
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(buttonDidTap), for: .touchUpInside)
         return button
-    }()
-    
-    private lazy var textLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "Arial", size: 12)
-        label.textColor = .enGray
-        label.text = "Стоимость 1 кредита составляет 500C"
-        return label
     }()
     
     //MARK: - LifeCycle
@@ -72,22 +71,17 @@ final class PaymentController: UIViewController {
     //MARK: - Methdos
     @objc
     private func buttonDidTap() {
-        guard
-            let text = paymentTextField.text,
-            let _ = Int(text),
-            isEnable == true
-        else { return }
         
-        coordinator?.showConfirmFlow(text: text)
     }
     
     private func setup() {
         setupViews()
         makeConstraints()
+        configure()
     }
     
     private func setupViews() {
-        [firstView,secondView, iconImageView, paymentTextField, fixedButton, textLabel].forEach {
+        [firstView, secondView, iconImageView, fixedButton, firstConfirmView, secondConfirmView, thirdConfirmView].forEach {
             view.addSubview($0)
         }
     }
@@ -110,8 +104,20 @@ final class PaymentController: UIViewController {
             make.height.equalTo(66)
         }
         
-        paymentTextField.snp.makeConstraints { make in
-            make.top.equalTo(secondView.snp.bottom).offset(12)
+        firstConfirmView.snp.makeConstraints { make in
+            make.top.equalTo(secondView.snp.bottom).offset(24)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(66)
+        }
+        
+        secondConfirmView.snp.makeConstraints { make in
+            make.top.equalTo(firstConfirmView.snp.bottom).offset(2)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(66)
+        }
+        
+        thirdConfirmView.snp.makeConstraints { make in
+            make.top.equalTo(secondConfirmView.snp.bottom).offset(2)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(66)
         }
@@ -122,14 +128,12 @@ final class PaymentController: UIViewController {
             make.height.equalTo(46)
             make.width.equalTo(327)
         }
-        
-        textLabel.snp.makeConstraints { make in
-            make.bottom.equalTo(fixedButton.snp.top).inset(-24)
-            make.centerX.equalToSuperview()
-        }
     }
     
-    public func setupButtonColor() {
-        isEnable = !(paymentTextField.text?.isEmpty ?? true)
+    private func configure() {
+        guard let viewModel = viewModel else {return}
+        
+        firstConfirmView.priceLabel.text = viewModel.text
+        thirdConfirmView.priceLabel.text = viewModel.text
     }
 }

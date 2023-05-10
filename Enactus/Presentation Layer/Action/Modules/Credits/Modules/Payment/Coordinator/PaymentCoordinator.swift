@@ -9,6 +9,13 @@ final class PaymentCoordinator: BaseCoordinator {
     
     override func start() {
         let paymentController = PaymentController()
+        paymentController.coordinator = self
         navigationController.pushViewController(paymentController, animated: true)
+    }
+    
+    func showConfirmFlow(text: String) {
+        let confirmCoordinator = ConfirmCoordinator(navigationController: navigationController)
+        confirmCoordinator.start(text: text)
+        print(text)
     }
 }
