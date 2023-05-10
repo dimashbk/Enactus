@@ -29,11 +29,13 @@ extension MainCoordinator {
     
     func showShopFlow() {
         let shopCoordinator = ShopCoordinator(navigationController: navigationController)
+        store(coordinator: shopCoordinator)
         coordinate(to: shopCoordinator)
     }
     
     func showCreditlow() {
         let creditCoordinator = CreditCoordinator(navigationController: navigationController)
+        store(coordinator: creditCoordinator)
         coordinate(to: creditCoordinator)
     }
 }

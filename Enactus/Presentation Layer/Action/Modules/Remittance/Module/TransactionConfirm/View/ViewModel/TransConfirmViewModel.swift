@@ -27,19 +27,30 @@ final class TransConfirmViewModel: TransConfirmViewModelProtocol {
 
 extension TransConfirmViewModel {
     func createTransaction() {
-        guard let url = URL(string: "http://studc-api.kz/api/transactions/create") else {return}
+        guard let url = URL(string: "http://studc-api.kz/api/transactions/create") else { return }
         
         let token = AuthorizationService.shared.accessToken
         
-        let headers = ["Authorization": "Bearer \(token)"]
+        let headers = ["Authorization": "Bearer \(token)", "Content-Type": "application/json"]
         
-        networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<[ENOrganizationModel],Error>) in
-            switch result {
-            case .success(let data):
-                print("Response: \(data)")
-            case .failure(let error):
-                print("Error:", error.localizedDescription)
+        let patchBody = TransactionRequest(walletID: self.walletId, amount: self.amount)
+        
+        do {
+            let encoder = JSONEncoder()
+            let body = try encoder.encode(patchBody)
+            
+            networkService.sendRequest(url: url, method: "POST", headers: headers, body: body) { (result: Result<TransactionConfirmResponse,Error>) in
+                switch result {
+                case .success(let data):
+                    print("Response: \(data)")
+                case .failure(let error):
+                    print("Error:", error.localizedDescription)
+                }
             }
+        } catch {
+            print("error")
         }
+        
+        
     }
 }

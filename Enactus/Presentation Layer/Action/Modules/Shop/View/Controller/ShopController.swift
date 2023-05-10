@@ -31,9 +31,15 @@ final class ShopController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         setup()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = .white
+    }
     //MARK: - Methods
     private func setup() {
         setupViews()

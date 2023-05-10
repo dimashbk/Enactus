@@ -64,7 +64,7 @@ final class RemittanceController: UIViewController {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         setup()
     }
     
@@ -94,7 +94,7 @@ final class RemittanceController: UIViewController {
 
     private func makeConstraints() {
         firstView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(16)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(66)
         }

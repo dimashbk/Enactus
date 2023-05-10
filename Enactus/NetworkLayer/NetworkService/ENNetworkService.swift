@@ -169,7 +169,7 @@ final class ENNetworkService: ENNetworkServiceProtocol {
         }.resume()
     }
     
-    func sendRequest<T: Decodable>(url: URL, method: String, headers: [String: String], body: [String: Any]?, completion: @escaping (Result<T, Error>) -> Void) {
+    func sendRequest<T: Decodable>(url: URL, method: String, headers: [String: String], body: Data? = nil, completion: @escaping (Result<T, Error>) -> Void) {
         var request = URLRequest(url: url)
 
         request.httpMethod = method
@@ -178,9 +178,7 @@ final class ENNetworkService: ENNetworkServiceProtocol {
             request.setValue(value, forHTTPHeaderField: key)
         }
         
-        if let body = body {
-            request.httpBody = try? JSONSerialization.data(withJSONObject: body)
-        }
+        request.httpBody = body
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {

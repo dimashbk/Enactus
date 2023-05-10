@@ -64,13 +64,14 @@ final class TransConfirmController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .white
         setup()
     }
     
     //MARK: - Methdos
     @objc
     private func buttonDidTap() {
-        
+        viewModel?.createTransaction()
     }
     
     private func setup() {
