@@ -9,6 +9,8 @@ import UIKit
 
 final class WalletViewController: UIViewController {
     
+    var viewModel: WalletViewModelProtocol?
+    
     private lazy var gradientCard: CardGradientView = {
         let view = CardGradientView()
         view.layer.cornerRadius = 20
@@ -31,6 +33,12 @@ final class WalletViewController: UIViewController {
         tableView.separatorStyle = .none
         return tableView
     }()
+    
+    override func loadView() {
+        super.loadView()
+        
+        fetchTransactions()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,22 +74,34 @@ final class WalletViewController: UIViewController {
             make.bottom.equalToSuperview()
         }
     }
+    
+    private func fetchTransactions() {
+        viewModel?.getTransactions()
+        viewModel?.updateViewData = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+    }
 }
 
 extension WalletViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+        guard let viewModel = viewModel else { return 0 }
+        
+        return viewModel.transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = PaymentTableViewCell()
+        
+        guard let viewModel = viewModel else { return UITableViewCell() }
+        
+        let cell: PaymentTableViewCell = tableView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: viewModel.transactions[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
-    
-    
 }

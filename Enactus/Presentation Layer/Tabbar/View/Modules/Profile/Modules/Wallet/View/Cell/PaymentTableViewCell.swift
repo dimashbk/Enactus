@@ -32,17 +32,12 @@ final class PaymentTableViewCell: UITableViewCell {
     
     private lazy var sumLabel: UILabel = {
         let label = UILabel()
-        label.text = "-1 000 000.00"
-        label.text = label.text?.addTenge()
         label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
-    
-
     private lazy var dateLabel: UILabel = {
        let label = UILabel()
-        label.text = "12.03.2023"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = .enGray
         return label
@@ -102,6 +97,28 @@ final class PaymentTableViewCell: UITableViewCell {
             make.top.equalTo(sumLabel.snp.bottom).offset(5)
             make.right.equalToSuperview().inset(16)
         }
+    }
+    
+    public func configure(with model: TransactionModel) {
+        if model.fromUser == profileInfo.id {
+            sumLabel.text = "-\(model.amount)".addTenge()
+        }else if model.toUser == profileInfo.id {
+            sumLabel.text = "\(model.amount)".addTenge()
+        }
+        
+        configureDateText(dateText: model.createdAt)
+    }
+    
+    private func configureDateText(dateText: String) {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+        let date = inputDateFormatter.date(from: dateText)
+
+        guard let date = date else {return}
+        
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "dd.MM.yyyy"
+        dateLabel.text = outputDateFormatter.string(from: date)
     }
 
 }

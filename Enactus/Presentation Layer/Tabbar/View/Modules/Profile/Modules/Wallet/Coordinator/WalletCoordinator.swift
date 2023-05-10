@@ -15,7 +15,9 @@ final class WalletCoordinator: BaseCoordinator{
     }
     
     override func start() {
+        let walletViewModel = WalletViewModel()
         let walletVC = WalletViewController()
+        walletVC.viewModel = walletViewModel
         navigationController.pushViewController(walletVC, animated: true)
     }
 }
