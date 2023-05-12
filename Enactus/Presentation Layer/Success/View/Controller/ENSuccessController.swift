@@ -47,8 +47,8 @@ final class ENSuccessController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setup()
         view.backgroundColor = .black
+        setup()
     }
     
     //MARK: - Methods
@@ -90,6 +90,8 @@ final class ENSuccessController: UIViewController {
     
     @objc
     private func onBackButtonDidTap() {
-        viewModel?.onBackButtonDidTap?()
+        DispatchQueue.main.async {
+            self.viewModel?.onBackButtonDidTap?()
+        }
     }
 }

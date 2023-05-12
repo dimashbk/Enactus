@@ -8,10 +8,11 @@ final class ENSuccessCoordinator: BaseCoordinator {
         self.navigationController = navigationController
     }
     
-    override func start() {
-        let viewModel = ENSuccessViewModel(title: "Ваша заявка принята!", subtitle: "В скором времени организация рассмотрит вашу позицию", onBackButtonDidTap: {})
+    func start(title: String?, subtitle: String?, onBackButtonDidTap: (() -> ())?) {
+        let viewModel = ENSuccessViewModel(title: title, subtitle: subtitle, onBackButtonDidTap: onBackButtonDidTap)
         let controller = ENSuccessController()
+        controller.modalPresentationStyle = .fullScreen
         controller.viewModel = viewModel
-        navigationController.pushViewController(controller, animated: true)
+        navigationController.present(controller, animated: true)
     }
 }

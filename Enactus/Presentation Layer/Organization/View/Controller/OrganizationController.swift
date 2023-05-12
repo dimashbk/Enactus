@@ -3,7 +3,7 @@ import SnapKit
 
 final class OrganizationController: UIViewController {
     
-    public var orgsViewModel: OrgsViewModelProtocol?
+    public var orgsViewModel: OrgsViewModel?
     
     let sections: [Section] = [.init(section: .details, rows: [.image, .title, .location, .description])]
     
@@ -45,8 +45,7 @@ final class OrganizationController: UIViewController {
     }
     
     //MARK: - Init
-    init(viewModel: OrgsViewModelProtocol) {
-        self.orgsViewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     

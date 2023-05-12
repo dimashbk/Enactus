@@ -23,9 +23,7 @@ final class OrgsViewModel: OrgsViewModelProtocol {
     var coordinatorDelegate: OrganizationCoordinator?
 
     private let networkService: ENNetworkService
-    
-    weak var coordinator: OrganizationCoordinator?
-    
+        
     var organization: ENOrganizationModel?
     
     var organizationModel: ENOrganizationModel
@@ -65,10 +63,15 @@ extension OrgsViewModel {
         networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<ApplyResponse,Error>) in
             switch result {
             case .success(let data):
-                self.isApplied = true
+                DispatchQueue.main.async {
+                    self.isApplied = true
+                    self.coordinatorDelegate?.showSuccessPage()
+                }
             case .failure(let error):
-                self.isApplied = false
-                print("Error:", error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.isApplied = false
+                    print("Error:", error.localizedDescription)
+                }
             }
         }
     }
