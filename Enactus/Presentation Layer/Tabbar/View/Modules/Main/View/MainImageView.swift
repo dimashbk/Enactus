@@ -19,7 +19,7 @@ final class MainImageView: UIImageView {
     
     private lazy var greetingLabel: UILabel = {
         let label = UILabel()
-        label.text = "Привет, Карина!"
+        label.text = "Привет, \(profileInfo.name)!"
         label.font = UIFont(name: "Mulish-Regular", size: 14)
         label.textColor = .white
         return label

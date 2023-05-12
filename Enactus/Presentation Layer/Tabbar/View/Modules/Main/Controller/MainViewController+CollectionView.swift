@@ -28,7 +28,7 @@ extension MainViewController: UICollectionViewDataSource {
         case .credits:
             coordinator?.showCreditlow()
         case .faq:
-            print(3)
+            coordinator?.showFaqFlow()
         }
     }
 }

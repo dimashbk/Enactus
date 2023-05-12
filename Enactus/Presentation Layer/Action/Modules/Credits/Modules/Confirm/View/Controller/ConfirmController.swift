@@ -72,7 +72,7 @@ final class ConfirmController: UIViewController {
     //MARK: - Methdos
     @objc
     private func buttonDidTap() {
-        
+        coordinator?.goToCreditsController()
     }
     
     private func setup() {

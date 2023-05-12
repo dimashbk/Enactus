@@ -39,4 +39,10 @@ extension MainCoordinator {
         store(coordinator: creditCoordinator)
         coordinate(to: creditCoordinator)
     }
+    
+    func showFaqFlow() {
+        let faqCoordinator = FaqCoordinator(navigationController: navigationController)
+        store(coordinator: faqCoordinator)
+        coordinate(to: faqCoordinator)
+    }
 }

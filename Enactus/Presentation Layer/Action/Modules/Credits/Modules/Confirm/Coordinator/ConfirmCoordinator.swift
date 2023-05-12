@@ -16,6 +16,11 @@ final class ConfirmCoordinator: BaseCoordinator {
     }
     
     func goToCreditsController() {
-        
+        let controllers = navigationController.viewControllers
+        for vc in controllers {
+            if vc is CreditController {
+                _ = navigationController.popToViewController(vc, animated: true)
+            }
+        }
     }
 }

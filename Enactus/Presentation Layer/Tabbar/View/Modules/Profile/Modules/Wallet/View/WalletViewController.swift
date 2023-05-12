@@ -28,7 +28,7 @@ final class WalletViewController: UIViewController {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.regiter(cellClass: PaymentTableViewCell.self)
+        tableView.register(cellClass: PaymentTableViewCell.self)
         tableView.allowsSelection = false
         tableView.separatorStyle = .none
         return tableView
