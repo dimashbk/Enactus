@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1D0037232A01202600735E53 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037222A01202600735E53 /* EditViewModel.swift */; };
 		1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0037262A01206400735E53 /* EditCoordinator.swift */; };
-		1D1121E52A000B1700D278DF /* WalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1121E42A000B1700D278DF /* WalletCoordinator.swift */; };
 		1D167E3F29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D167E3E29C1EC5B00CEEFAA /* WelcomeCollectionViewCell.swift */; };
 		1D167E4129C1F06500CEEFAA /* Mulish-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4029C1F06500CEEFAA /* Mulish-Black.ttf */; };
 		1D167E4329C1F7C200CEEFAA /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D167E4229C1F7C200CEEFAA /* Mulish-Bold.ttf */; };
@@ -54,7 +53,6 @@
 		1DA47E9E2A0A34CA00479AE5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47E9D2A0A34CA00479AE5 /* ViewModel.swift */; };
 		1DA47EA12A0A414B00479AE5 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 1DA47EA02A0A414B00479AE5 /* FSCalendar */; };
 		1DA47EA52A0A4C0300479AE5 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA42A0A4C0300479AE5 /* ScheduleTableViewCell.swift */; };
-		1DA47EA72A0A883000479AE5 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA62A0A883000479AE5 /* Date.swift */; };
 		1DA47EAA2A0A891500479AE5 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EA92A0A891500479AE5 /* ScheduleViewModel.swift */; };
 		1DA47EAD2A0A894300479AE5 /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47EAC2A0A894300479AE5 /* LessonModel.swift */; };
 		1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0503A29D18E8A00581D6B /* AppCoordinator.swift */; };
@@ -85,6 +83,9 @@
 		70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */; };
 		70208B2829FEAB220044500E /* RemittanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208B2729FEAB220044500E /* RemittanceController.swift */; };
 		7036D09C29D19B7C00E62230 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7036D09B29D19B7C00E62230 /* GradientLabel.swift */; };
+		705044532A0CB93D00D96BE6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705044522A0CB93D00D96BE6 /* Date.swift */; };
+		705044542A0CB9EB00D96BE6 /* WalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1121E42A000B1700D278DF /* WalletCoordinator.swift */; };
+		705044572A0CBA2900D96BE6 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705044562A0CBA2900D96BE6 /* TransactionModel.swift */; };
 		709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709790FB29FFE49F006FBC4E /* OrganizationController+TableView.swift */; };
 		709790FE29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709790FD29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift */; };
 		7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7097910029FFE630006FBC4E /* OrgsImageViewCell.swift */; };
@@ -148,6 +149,13 @@
 		70D7C8D22A0B52A2000AF77F /* TransConfirmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8D12A0B52A2000AF77F /* TransConfirmViewModel.swift */; };
 		70D7C8D52A0B5DD1000AF77F /* TransactionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8D42A0B5DD1000AF77F /* TransactionRequest.swift */; };
 		70D7C8D72A0B5E7E000AF77F /* TransactionConfirmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D7C8D62A0B5E7E000AF77F /* TransactionConfirmResponse.swift */; };
+		70E2E2A82A0DFCB600134F0B /* FaqController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2A72A0DFCB600134F0B /* FaqController.swift */; };
+		70E2E2AA2A0DFCEA00134F0B /* FaqCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2A92A0DFCEA00134F0B /* FaqCoordinator.swift */; };
+		70E2E2B02A0DFFF600134F0B /* FaqController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2AF2A0DFFF600134F0B /* FaqController+TableView.swift */; };
+		70E2E2B22A0E022500134F0B /* FaqController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2B12A0E022500134F0B /* FaqController+TextField.swift */; };
+		70E2E2B42A0E055200134F0B /* QuestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2B32A0E055200134F0B /* QuestionViewCell.swift */; };
+		70E2E2B62A0E05F400134F0B /* QuestionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2B52A0E05F400134F0B /* QuestionViewCellViewModel.swift */; };
+		70E2E2BB2A0E085100134F0B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2BA2A0E085100134F0B /* QuestionModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -243,6 +251,8 @@
 		70208B2529FEAAC50044500E /* RemittanceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceCoordinator.swift; sourceTree = "<group>"; };
 		70208B2729FEAB220044500E /* RemittanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemittanceController.swift; sourceTree = "<group>"; };
 		7036D09B29D19B7C00E62230 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		705044522A0CB93D00D96BE6 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		705044562A0CBA2900D96BE6 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		709790FB29FFE49F006FBC4E /* OrganizationController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrganizationController+TableView.swift"; sourceTree = "<group>"; };
 		709790FD29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrganizaitonConrtroller+Section.swift"; sourceTree = "<group>"; };
 		7097910029FFE630006FBC4E /* OrgsImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgsImageViewCell.swift; sourceTree = "<group>"; };
@@ -305,6 +315,13 @@
 		70D7C8D12A0B52A2000AF77F /* TransConfirmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransConfirmViewModel.swift; sourceTree = "<group>"; };
 		70D7C8D42A0B5DD1000AF77F /* TransactionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRequest.swift; sourceTree = "<group>"; };
 		70D7C8D62A0B5E7E000AF77F /* TransactionConfirmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionConfirmResponse.swift; sourceTree = "<group>"; };
+		70E2E2A72A0DFCB600134F0B /* FaqController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqController.swift; sourceTree = "<group>"; };
+		70E2E2A92A0DFCEA00134F0B /* FaqCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqCoordinator.swift; sourceTree = "<group>"; };
+		70E2E2AF2A0DFFF600134F0B /* FaqController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaqController+TableView.swift"; sourceTree = "<group>"; };
+		70E2E2B12A0E022500134F0B /* FaqController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FaqController+TextField.swift"; sourceTree = "<group>"; };
+		70E2E2B32A0E055200134F0B /* QuestionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCell.swift; sourceTree = "<group>"; };
+		70E2E2B52A0E05F400134F0B /* QuestionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCellViewModel.swift; sourceTree = "<group>"; };
+		70E2E2BA2A0E085100134F0B /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +560,7 @@
 				70208ADE29EF42B20044500E /* String.swift */,
 				70208AE029EF497D0044500E /* View.swift */,
 				7097910229FFEACA006FBC4E /* UIImageView.swift */,
+				705044522A0CB93D00D96BE6 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -692,7 +710,7 @@
 		1D7BA3E929FBF18400B6F3E2 /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
-				7097917A2A0B3896006FBC4E /* Model */,
+				705044552A0CBA0800D96BE6 /* Models */,
 				1DA47E9C2A0A34B600479AE5 /* ViewModel */,
 				1DF909A82A02FC8B00FC2E2F /* Custom */,
 				1D1121E32A000B0400D278DF /* View */,
@@ -1009,10 +1027,19 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		705044552A0CBA0800D96BE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				705044562A0CBA2900D96BE6 /* TransactionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		709790FA29FFB339006FBC4E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				70208B1829FBF9890044500E /* ProfileCoordinator.swift */,
+				1DA47EA62A0A883000479AE5 /* Date.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -1147,6 +1174,10 @@
 		7097912C2A090310006FBC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70E2E2B92A0E084600134F0B /* Model */,
+				70E2E2AD2A0DFFE200134F0B /* ViewModel */,
+				70E2E2AC2A0DFFDD00134F0B /* View */,
+				70E2E2AB2A0DFFD700134F0B /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1154,6 +1185,7 @@
 		7097912D2A090314006FBC4E /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				70E2E2A92A0DFCEA00134F0B /* FaqCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1620,6 +1652,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		70E2E2AB2A0DFFD700134F0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2A72A0DFCB600134F0B /* FaqController.swift */,
+				70E2E2AF2A0DFFF600134F0B /* FaqController+TableView.swift */,
+				70E2E2B12A0E022500134F0B /* FaqController+TextField.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70E2E2AC2A0DFFDD00134F0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2B32A0E055200134F0B /* QuestionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70E2E2AD2A0DFFE200134F0B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2B52A0E05F400134F0B /* QuestionViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70E2E2B92A0E084600134F0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2BA2A0E085100134F0B /* QuestionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1705,6 +1771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705044542A0CB9EB00D96BE6 /* WalletCoordinator.swift in Sources */,
 				7097915F2A0A30A8006FBC4E /* CreditDetailCellViewModel.swift in Sources */,
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				709791612A0A30E0006FBC4E /* CreditDetailController+Section.swift in Sources */,
@@ -1714,8 +1781,8 @@
 				7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */,
 				70A1F71829EB5019002FDC29 /* ENTabBarController.swift in Sources */,
 				1D0037272A01206400735E53 /* EditCoordinator.swift in Sources */,
+				70E2E2A82A0DFCB600134F0B /* FaqController.swift in Sources */,
 				70208B2629FEAAC50044500E /* RemittanceCoordinator.swift in Sources */,
-				1DA47EA72A0A883000479AE5 /* Date.swift in Sources */,
 				1D39B5F129C0F1C800D441B6 /* OnboardingViewController + Section.swift in Sources */,
 				1D7BA3F229FE899C00B6F3E2 /* ProfileCoordinator.swift in Sources */,
 				1D7BA3C229F58A0700B6F3E2 /* Authorization.swift in Sources */,
@@ -1724,6 +1791,8 @@
 				1D28D7FA29F12D66002D6A4B /* TwoStateButton.swift in Sources */,
 				709791772A0A9BAB006FBC4E /* ConfirmViewModel.swift in Sources */,
 				1DC0504229D18F6A00581D6B /* OnboardingCoordinator.swift in Sources */,
+				705044532A0CB93D00D96BE6 /* Date.swift in Sources */,
+				70E2E2B42A0E055200134F0B /* QuestionViewCell.swift in Sources */,
 				70208B1B29FC1A340044500E /* OrgsGradientView.swift in Sources */,
 				709790FE29FFE4E4006FBC4E /* OrganizaitonConrtroller+Section.swift in Sources */,
 				70A1F73029EB88D6002FDC29 /* ActionsViewCellViewModel.swift in Sources */,
@@ -1737,6 +1806,7 @@
 				1D28D7FE29F1A5B6002D6A4B /* EmailResetViewController.swift in Sources */,
 				70A1F74D29EEBA3F002FDC29 /* OrganizationHeaderView.swift in Sources */,
 				70A1F71E29EB529C002FDC29 /* MainViewController.swift in Sources */,
+				70E2E2B02A0DFFF600134F0B /* FaqController+TableView.swift in Sources */,
 				70A1F72B29EB84F3002FDC29 /* ActionsViewCell.swift in Sources */,
 				1D7BA3DE29FBA44400B6F3E2 /* ProfileViewModel.swift in Sources */,
 				7097910129FFE630006FBC4E /* OrgsImageViewCell.swift in Sources */,
@@ -1759,12 +1829,12 @@
 				70208B1D29FC1EE00044500E /* OrgsTitleViewCell.swift in Sources */,
 				70A1F72D29EB863A002FDC29 /* MainViewController+CollectionView.swift in Sources */,
 				7097916E2A0A7ADA006FBC4E /* PaymentController+TextField.swift in Sources */,
+				70E2E2B22A0E022500134F0B /* FaqController+TextField.swift in Sources */,
 				7097916C2A0A743E006FBC4E /* PaymentTextField.swift in Sources */,
 				1D28D80C29F2B9EB002D6A4B /* Dynamic.swift in Sources */,
 				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
 				70208ACD29EECB320044500E /* OTPStackView.swift in Sources */,
 				1D7BA3DA29FB9C0100B6F3E2 /* ButtonTableViewCell.swift in Sources */,
-				7097917C2A0B38A4006FBC4E /* TransactionModel.swift in Sources */,
 				70208AD529EECB800044500E /* OTPViewController.swift in Sources */,
 				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
 				70A1F74629EDF4FA002FDC29 /* ENOrganizationModel.swift in Sources */,
@@ -1772,6 +1842,7 @@
 				70208AF129F550210044500E /* MainCoordinator.swift in Sources */,
 				1D39B5CF29C0E9E100D441B6 /* AppDelegate.swift in Sources */,
 				1D42C83129D1A8AE00D6610B /* SignInViewController.swift in Sources */,
+				705044572A0CBA2900D96BE6 /* TransactionModel.swift in Sources */,
 				7097910529FFEDEA006FBC4E /* OrgsLoactionViewCell.swift in Sources */,
 				1D39B5EA29C0EE4D00D441B6 /* OnboardingCollectionView.swift in Sources */,
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
@@ -1794,6 +1865,7 @@
 				70208AE129EF497D0044500E /* View.swift in Sources */,
 				709791752A0A9B08006FBC4E /* ConfirmCoordinator.swift in Sources */,
 				70208ADB29EF26E80044500E /* TableView.swift in Sources */,
+				70E2E2AA2A0DFCEA00134F0B /* FaqCoordinator.swift in Sources */,
 				1DC0503E29D18EC200581D6B /* Coordinator.swift in Sources */,
 				1D7BA3F829FE8F2600B6F3E2 /* EditProfileViewController.swift in Sources */,
 				709791172A03A613006FBC4E /* ShopController+TableView.swift in Sources */,
@@ -1804,7 +1876,6 @@
 				70D7C8C72A0B4B51000AF77F /* RemittanceController+TextField.swift in Sources */,
 				70208ADF29EF42B20044500E /* String.swift in Sources */,
 				709791522A0A1F81006FBC4E /* CreditDetailController.swift in Sources */,
-				1D7BA3F629FE8C9000B6F3E2 /* NotificationsCoordinator.swift in Sources */,
 				70A1F74829EDF6C6002FDC29 /* MainViewModel.swift in Sources */,
 				70D7C8D52A0B5DD1000AF77F /* TransactionRequest.swift in Sources */,
 				1D7BA3E129FBBAF100B6F3E2 /* ProfileModel.swift in Sources */,
@@ -1819,11 +1890,13 @@
 				70208AEC29F2742C0044500E /* OrganizationController.swift in Sources */,
 				1DEA247429C1D7970043126A /* Colors + Extension.swift in Sources */,
 				1D28D80629F29B6A002D6A4B /* LoginViewModel.swift in Sources */,
+				70E2E2BB2A0E085100134F0B /* QuestionModel.swift in Sources */,
 				709791312A090369006FBC4E /* CreditController.swift in Sources */,
 				70A1F73229EB89A1002FDC29 /* MainViewController+ActionSection.swift in Sources */,
 				1D7BA3E329FBC0E000B6F3E2 /* ProfileTableViewViewModel.swift in Sources */,
 				70A1F73429EBEBB8002FDC29 /* ReminderView.swift in Sources */,
 				1D7BA3FF29FEA63D00B6F3E2 /* EditCellView.swift in Sources */,
+				70E2E2B62A0E05F400134F0B /* QuestionViewCellViewModel.swift in Sources */,
 				1D7BA3C629F680C000B6F3E2 /* EmailResetViewModel.swift in Sources */,
 				709790FC29FFE49F006FBC4E /* OrganizationController+TableView.swift in Sources */,
 				7097916A2A0A7003006FBC4E /* PaymentView.swift in Sources */,

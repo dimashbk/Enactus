@@ -6,47 +6,8 @@ final class OrganizationController: UIViewController {
     public weak var coordinator: BaseCoordinator?
     public var orgsViewModel: OrgsViewModelProtocol?
     
-    private lazy var titleView = OrgsTitleView()
-    
-    private lazy var filterView: OrgsGradientView = {
-        let label = OrgsGradientView()
-        label.titleLabel.text = "Волонтеры"
-        label.titleLabel.textAlignment = .center
-        return label
-    }()
-    
-    private lazy var secondFilterView: OrgsGradientView = {
-        let label = OrgsGradientView()
-        label.titleLabel.text = "Быстро"
-        label.titleLabel.textAlignment = .center
-        return label
-    }()
-    
-    private lazy var locationImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "location")
-        return imageView
-    }()
-    
-    private lazy var locationLabel: UILabel = {
-        let label = UILabel()
-        label.text = "dsjlk 123"
-        label.textColor = .enTextDarkBlue
-        label.font = UIFont(name: "Mulish-Medium", size: 12)
-        return label
-    }()
-    
-    private lazy var separatorView: UIView = {
-        let view = UIView()
-        view.backgroundColor = .enGray.withAlphaComponent(0.3)
-        return view
-    }()
     let sections: [Section] = [.init(section: .details, rows: [.image, .title, .location, .description])]
     
-    private lazy var scrollView: UIScrollView = {
-        let view = UIScrollView()
-        view.showsVerticalScrollIndicator = true
-        view.backgroundColor = .green
     //MARK: - View
     private lazy var orgsView: UITableView = {
         let view = UITableView()

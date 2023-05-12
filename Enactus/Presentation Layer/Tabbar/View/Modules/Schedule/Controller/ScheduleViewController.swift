@@ -25,7 +25,7 @@ final class ScheduleViewController: UIViewController {
         tableView.dataSource = self
         tableView.layer.cornerRadius = 8
         tableView.separatorStyle = .none
-        tableView.regiter(cellClass: ScheduleTableViewCell.self)
+        tableView.register(cellClass: ScheduleTableViewCell.self)
         return tableView
     }()
     

@@ -6,6 +6,10 @@ extension String {
         return self + "₸"
     }
     
+    func addCredit() -> String {
+        return self + "C"
+    }
+    
     func addStrike() -> NSMutableAttributedString {
         let myMutableString = NSMutableAttributedString(
             string: self,

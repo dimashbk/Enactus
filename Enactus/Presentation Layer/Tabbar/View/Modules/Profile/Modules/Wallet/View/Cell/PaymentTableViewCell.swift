@@ -101,9 +101,9 @@ final class PaymentTableViewCell: UITableViewCell {
     
     public func configure(with model: TransactionModel) {
         if model.fromUser == profileInfo.id {
-            sumLabel.text = "-\(model.amount)".addTenge()
+            sumLabel.text = "-\(model.amount)".addCredit()
         }else if model.toUser == profileInfo.id {
-            sumLabel.text = "\(model.amount)".addTenge()
+            sumLabel.text = "\(model.amount)".addCredit()
         }
         
         configureDateText(dateText: model.createdAt)
