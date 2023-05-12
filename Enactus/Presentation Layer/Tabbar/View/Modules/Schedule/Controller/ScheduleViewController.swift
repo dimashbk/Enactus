@@ -98,7 +98,7 @@ extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource {
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         viewModel?.filterByWeekday(weekday: date.weekday)
-        viewModel?.nextStep()
+        viewModel?.updateStatusText()
     }
 }
 

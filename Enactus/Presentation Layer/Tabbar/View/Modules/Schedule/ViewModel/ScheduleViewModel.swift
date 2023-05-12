@@ -15,7 +15,7 @@ final class ScheduleViewModel {
     var updateViewData: (() -> ())?
     var statusText = Dynamic("")
     
-    func nextStep() {
+    func updateStatusText() {
         if filteredArray.isEmpty {
             statusText.value = "У вас в этот день нет уроков"
         } else {
