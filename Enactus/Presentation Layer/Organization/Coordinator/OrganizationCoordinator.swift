@@ -10,8 +10,8 @@ final class OrganizationCoordinator: BaseCoordinator {
     
     func start(model: ENOrganizationModel) {
         let orgsViewModel = OrgsViewModel(model: model)
+        orgsViewModel.coordinatorDelegate = self
         let organizationController = OrganizationController(viewModel: orgsViewModel)
-        organizationController.coordinator = self
         navigationController.pushViewController(organizationController, animated: true)
     }
 }

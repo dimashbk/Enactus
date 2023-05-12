@@ -29,6 +29,7 @@ extension FaqController: UITableViewDataSource {
         view.backgroundColor = .clear
         return view
     }
+    
 }
 
 //MARK: - UITableViewDelegate

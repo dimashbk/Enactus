@@ -3,7 +3,6 @@ import SnapKit
 
 final class OrganizationController: UIViewController {
     
-    public weak var coordinator: BaseCoordinator?
     public var orgsViewModel: OrgsViewModelProtocol?
     
     let sections: [Section] = [.init(section: .details, rows: [.image, .title, .location, .description])]
@@ -28,6 +27,7 @@ final class OrganizationController: UIViewController {
         button.backgroundColor = .enBlue
         button.layer.cornerRadius = 12
         button.setTitle("Подать заявку", for: .normal)
+        button.addTarget(self, action: #selector(applytToPayment), for: .touchUpInside)
         return button
     }()
     
@@ -87,11 +87,16 @@ final class OrganizationController: UIViewController {
         }
     }
     
+    private func setupNavbar() {
+        navigationItem.title = orgsViewModel?.organizationModel.title
+    }
+    
     private func fetchDetailModel() {
         orgsViewModel?.fetchOrganizationDetails()
     }
     
-    private func setupNavbar() {
-        navigationItem.title = orgsViewModel?.organizationModel.title
+    @objc
+    private func applytToPayment() {
+        orgsViewModel?.applyToPayment()
     }
 }

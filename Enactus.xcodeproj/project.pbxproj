@@ -156,6 +156,9 @@
 		70E2E2B42A0E055200134F0B /* QuestionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2B32A0E055200134F0B /* QuestionViewCell.swift */; };
 		70E2E2B62A0E05F400134F0B /* QuestionViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2B52A0E05F400134F0B /* QuestionViewCellViewModel.swift */; };
 		70E2E2BB2A0E085100134F0B /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2BA2A0E085100134F0B /* QuestionModel.swift */; };
+		70E2E2C32A0E22D200134F0B /* ENSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2C22A0E22D200134F0B /* ENSuccessController.swift */; };
+		70E2E2C52A0E268200134F0B /* ENSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2C42A0E268200134F0B /* ENSuccessCoordinator.swift */; };
+		70E2E2C72A0E27D100134F0B /* ENSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E2E2C62A0E27D100134F0B /* ENSuccessViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -322,6 +325,9 @@
 		70E2E2B32A0E055200134F0B /* QuestionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCell.swift; sourceTree = "<group>"; };
 		70E2E2B52A0E05F400134F0B /* QuestionViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewCellViewModel.swift; sourceTree = "<group>"; };
 		70E2E2BA2A0E085100134F0B /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		70E2E2C22A0E22D200134F0B /* ENSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENSuccessController.swift; sourceTree = "<group>"; };
+		70E2E2C42A0E268200134F0B /* ENSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENSuccessCoordinator.swift; sourceTree = "<group>"; };
+		70E2E2C62A0E27D100134F0B /* ENSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ENSuccessViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -493,6 +499,7 @@
 		1D39B5E329C0E9F400D441B6 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				70E2E2BD2A0E22A300134F0B /* Success */,
 				70208B2029FEAA940044500E /* Action */,
 				70208AE529F273F70044500E /* Organization */,
 				70A1F71229EB4F9C002FDC29 /* Tabbar */,
@@ -1686,6 +1693,48 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		70E2E2BD2A0E22A300134F0B /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2BE2A0E22AB00134F0B /* Coordinator */,
+				70E2E2BF2A0E22B300134F0B /* View */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		70E2E2BE2A0E22AB00134F0B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2C42A0E268200134F0B /* ENSuccessCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		70E2E2BF2A0E22B300134F0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2C12A0E22BF00134F0B /* ViewModel */,
+				70E2E2C02A0E22BB00134F0B /* Controller */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70E2E2C02A0E22BB00134F0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2C22A0E22D200134F0B /* ENSuccessController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		70E2E2C12A0E22BF00134F0B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70E2E2C62A0E27D100134F0B /* ENSuccessViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1832,8 +1881,10 @@
 				70E2E2B22A0E022500134F0B /* FaqController+TextField.swift in Sources */,
 				7097916C2A0A743E006FBC4E /* PaymentTextField.swift in Sources */,
 				1D28D80C29F2B9EB002D6A4B /* Dynamic.swift in Sources */,
+				70E2E2C52A0E268200134F0B /* ENSuccessCoordinator.swift in Sources */,
 				70A1F72029EB52A3002FDC29 /* ScheduleViewController.swift in Sources */,
 				70208ACD29EECB320044500E /* OTPStackView.swift in Sources */,
+				70E2E2C72A0E27D100134F0B /* ENSuccessViewModel.swift in Sources */,
 				1D7BA3DA29FB9C0100B6F3E2 /* ButtonTableViewCell.swift in Sources */,
 				70208AD529EECB800044500E /* OTPViewController.swift in Sources */,
 				70208AD729EF224B0044500E /* MainViewController+TableView.swift in Sources */,
@@ -1848,6 +1899,7 @@
 				1D42C83929D1B41200D6610B /* LogInCoordinator.swift in Sources */,
 				70A1F72229EB52E5002FDC29 /* ProfileViewController.swift in Sources */,
 				1D39B5F729C0F27400D441B6 /* OnboardingViewModel.swift in Sources */,
+				70E2E2C32A0E22D200134F0B /* ENSuccessController.swift in Sources */,
 				7097913E2A090D35006FBC4E /* CreditHeaderViewViewModel.swift in Sources */,
 				1D28D7F429EFF642002D6A4B /* CreatePasswordViewController.swift in Sources */,
 				70208AD929EF259D0044500E /* OrganizationTableViewCell.swift in Sources */,
