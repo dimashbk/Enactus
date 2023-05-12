@@ -5,6 +5,7 @@ final class ShopController: UIViewController {
     
     //MARK: - Properties
     public var viewModel: ShopViewModelProtocol?
+    
     //MARK: - View
     private lazy var productSearchBar: SearchTextField = {
         let textField = SearchTextField()
@@ -37,6 +38,7 @@ final class ShopController: UIViewController {
     }
     //MARK: - Methods
     private func setup() {
+        showAlert()
         setupViews()
         makeConstraints()
     }
@@ -59,6 +61,10 @@ final class ShopController: UIViewController {
             make.leading.trailing.equalToSuperview().inset(16)
             make.bottom.equalToSuperview()
         }
+    }
+    
+    private func showAlert() {
+        self.viewModel?.showAlertView()
     }
 }
 
