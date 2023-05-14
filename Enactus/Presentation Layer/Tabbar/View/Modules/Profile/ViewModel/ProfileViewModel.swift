@@ -29,7 +29,7 @@ final class ProfileViewModel {
                               patronymic: "",
                               birthday: "",
                               group: "",
-                              walletAddress: "")
+                              walletAddress: "", amount: 0)
     }
 
 }

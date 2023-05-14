@@ -13,9 +13,10 @@ struct Profile: Codable {
     var name, surname, patronymic, birthday: String
     var group: String
     var walletAddress: String
+    var amount: Int
 
     enum CodingKeys: String, CodingKey {
-        case id, name, surname, patronymic, birthday, group
+        case id, name, surname, patronymic, birthday, group, amount
         case walletAddress = "wallet_address"
     }
 }
