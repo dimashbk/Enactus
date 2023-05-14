@@ -27,6 +27,7 @@ final class AppCoordinator: BaseCoordinator {
             coordinate(to: mainCoordinator)
         } else {
             AuthorizationService.shared.refreshToken()
+//            AuthorizationService.shared.getRetakes()
             let mainCoordinator = ENTabBarCoordinator(navigationController: navigationController)
             coordinate(to: mainCoordinator)
         }

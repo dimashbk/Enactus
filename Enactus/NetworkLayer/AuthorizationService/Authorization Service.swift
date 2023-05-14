@@ -14,6 +14,35 @@ enum AuthorizationPath {
     case none
 }
 
+import Foundation
+
+// MARK: - Retake
+struct Retake: Codable {
+    let retakes: [RetakeElement]
+}
+
+// MARK: - RetakeElement
+struct RetakeElement: Codable {
+    let id, userID: Int
+    let title: String
+    let paymentAmount: Int
+    let status: Int
+    let expirationDate: String
+    let createdAt, updatedAt: String
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case userID = "user_id"
+        case title
+        case expirationDate = "expiration_date"
+        case status
+        case paymentAmount = "payment_amount"
+        
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+    }
+}
+
 final class AuthorizationService {
     
     static let shared = AuthorizationService()
@@ -33,6 +62,7 @@ final class AuthorizationService {
         }
         set{
                 UserDefaults.standard.set(newValue, forKey: "accessToken")
+                self.getRetakes()
         }
     }
     
@@ -64,7 +94,7 @@ final class AuthorizationService {
     }
     func register() {
         networkService.postRegister(param: authorizationModel) { [weak self] result in
-
+            
         }
     }
     func refreshToken() {
@@ -98,6 +128,22 @@ final class AuthorizationService {
             case .success(let data):
                 profileInfo = data
                 print(profileInfo)
+            case .failure(let error):
+                print("Error:", error.localizedDescription)
+            }
+        }
+    }
+    func getRetakes() {
+        guard let url = URL(string: "http://studc-api.kz/api/retakes") else { return }
+        
+        let token = AuthorizationService.shared.accessToken
+        
+        let headers = ["Authorization": "Bearer \(token)"]
+        
+        networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<Retake,Error>) in
+            switch result {
+            case .success(let data):
+                print(data.retakes)
             case .failure(let error):
                 print("Error:", error.localizedDescription)
             }
