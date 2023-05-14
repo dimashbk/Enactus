@@ -12,15 +12,15 @@ extension CreditController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = sections[indexPath.section].rows[indexPath.row]
+        let retake = retakes[indexPath.row]
         
         switch row {
         case .overall, .disc:
             let cell: CreditCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.configure(with: CreditCellViewModel(row: row))
+            cell.configure(with: CreditCellViewModel(retake: retake, row: row))
             cell.selectionStyle = .none
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

@@ -22,7 +22,7 @@ struct Retake: Codable {
 }
 
 // MARK: - RetakeElement
-struct RetakeElement: Codable {
+struct RetakeElement: Codable, Equatable {
     let id, userID: Int
     let title: String
     let paymentAmount: Int
@@ -50,6 +50,8 @@ final class AuthorizationService {
     let networkService = ENNetworkService()
     
     var authorizationPath: AuthorizationPath = .none
+    
+    var onCredditTapped: (()->())?
     
     var accessToken: String {
         get{
@@ -133,7 +135,11 @@ final class AuthorizationService {
             }
         }
     }
+    
+    var retakes: [RetakeElement] = []
+    
     func getRetakes() {
+        
         guard let url = URL(string: "http://studc-api.kz/api/retakes") else { return }
         
         let token = AuthorizationService.shared.accessToken
@@ -143,7 +149,8 @@ final class AuthorizationService {
         networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<Retake,Error>) in
             switch result {
             case .success(let data):
-                print(data.retakes)
+                self.retakes = data.retakes
+                self.onCredditTapped?()
             case .failure(let error):
                 print("Error:", error.localizedDescription)
             }
