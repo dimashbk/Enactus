@@ -13,8 +13,8 @@ final class CreditCoordinator: BaseCoordinator {
         navigationController.pushViewController(creditController, animated: true)
     }
     
-    public func showDetailFlow() {
+    public func showDetailFlow(retake: RetakeElement) {
         let detailCoordinator = CreditDetailCoordinator(navigationController: navigationController)
-        coordinate(to: detailCoordinator)
+        detailCoordinator.start(retake: retake)
     }
 }

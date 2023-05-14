@@ -38,11 +38,13 @@ extension CreditDetailController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let retake = retake else { return }
+        
         let section = sections[indexPath.section].section
         
         switch section {
         case .payment:
-            coordinator?.showPaymentFlow()
+            coordinator?.showConfirmFlow(retake: retake)
         case .calendar:
             print("calendar")
         }

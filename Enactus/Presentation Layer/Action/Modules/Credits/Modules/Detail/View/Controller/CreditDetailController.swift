@@ -5,6 +5,7 @@ final class CreditDetailController: UIViewController {
     
     //MARK: - Properties
     var coordinator: CreditDetailCoordinator?
+    var retake: RetakeElement?
     
     let sections: [Section] = [.init(section: .payment, rows: []), .init(section: .calendar, rows: [])]
     
@@ -14,6 +15,9 @@ final class CreditDetailController: UIViewController {
         view.image = UIImage(named: "mainPageImage")
         view.layer.cornerRadius = 18
         view.contentMode = .scaleToFill
+        guard let retake = retake else {return DetailImageView()}
+        
+        view.configure(with: retake)
         return view
     }()
     

@@ -1,10 +1,8 @@
 struct TransactionConfirmResponse: Codable {
     var message: String
-    var receipt: TransactionReceiptResponse
-    
+
     enum CodingKeys: String, CodingKey {
         case message
-        case receipt
     }
 }
 

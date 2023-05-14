@@ -3,7 +3,23 @@ import SnapKit
 
 final class CustomAlertController: UIViewController {
     
-    private lazy var alertView = CustomAlertView()
+    var alertTitle: String
+    
+    private lazy var alertView: CustomAlertView = {
+        let view = CustomAlertView()
+        view.configure(title: alertTitle)
+        return view
+    }()
+    
+    internal init(alertTitle: String) {
+        self.alertTitle = alertTitle
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
