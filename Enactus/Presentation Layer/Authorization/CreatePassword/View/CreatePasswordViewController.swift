@@ -138,5 +138,9 @@ final class CreatePasswordViewController: UIViewController {
         viewModel?.checkIdentity(first: firstTextField.text ?? "",
                                  second: secondTextField.text ?? "")
     }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 
 }

@@ -104,4 +104,8 @@ final class OTPViewController: UIViewController {
         AuthorizationService.shared.authorizationModel.code = otpStackView.getOTP()
         viewModel?.nextStep()
     }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 }

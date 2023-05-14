@@ -107,4 +107,7 @@ final class EmailResetViewController: UIViewController {
     @objc func moveToOTP() {
         viewModel?.moveToOTP(email: emailTextField.text ?? "")
     }
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 }
