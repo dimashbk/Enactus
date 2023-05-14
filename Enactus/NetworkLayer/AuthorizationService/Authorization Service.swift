@@ -46,6 +46,7 @@ final class AuthorizationService {
         networkService.postLogin(param: authorizationModel) { [weak self] result in
             self?.accessToken = result?.token.original.accessToken ?? ""
             self?.getProfileInfo()
+            print(self?.accessToken)
 
         }
     }
@@ -67,24 +68,24 @@ final class AuthorizationService {
         }
     }
     func refreshToken() {
+
         guard let url = URL(string: "http://studc-api.kz/api/auth/refresh-token") else { return }
         
-        var token = AuthorizationService.shared.accessToken
+        let token = AuthorizationService.shared.accessToken
         
         let headers = ["Authorization": "Bearer \(token)"]
-        
-        print(token)
         
         networkService.sendRequest(url: url, method: "GET", headers: headers, body: nil) { (result: Result<Login,Error>) in
             switch result {
             case .success(let data):
-                print(data.message)
-                print(token)
+                self.accessToken = data.token.original.accessToken
+                print(self.accessToken)
             case .failure(let error):
                 print("Error:", error.localizedDescription)
             }
         }
     }
+    
     func getProfileInfo() {
         guard let url = URL(string: "http://studc-api.kz/api/auth/profile/get") else { return }
         

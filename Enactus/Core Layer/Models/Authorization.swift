@@ -40,7 +40,7 @@ struct Login: Codable {
 
 // MARK: - Token
 struct Token: Codable {
-    let headers: Headers
+//    let headers: Headers
     let original: Original
 }
 
