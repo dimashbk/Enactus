@@ -64,6 +64,8 @@
 		1DEA247929C1E3590043126A /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DEA247829C1E3590043126A /* Mulish-Regular.ttf */; };
 		1DF909AA2A02FD0A00FC2E2F /* CardGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */; };
 		1DF909AE2A039A8D00FC2E2F /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */; };
+		700D6A352A0E3AE2001AD1D8 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D6A342A0E3AE2001AD1D8 /* CustomAlertView.swift */; };
+		700D6A392A0E3F16001AD1D8 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700D6A382A0E3F16001AD1D8 /* CustomAlertController.swift */; };
 		70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208AC929EECB320044500E /* AuthorizationTextField.swift */; };
 		70208ACD29EECB320044500E /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACA29EECB320044500E /* OTPStackView.swift */; };
 		70208ACE29EECB320044500E /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70208ACB29EECB320044500E /* OTPTextField.swift */; };
@@ -234,6 +236,8 @@
 		1DEA247829C1E3590043126A /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		1DF909A92A02FD0A00FC2E2F /* CardGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGradientView.swift; sourceTree = "<group>"; };
 		1DF909AD2A039A8D00FC2E2F /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		700D6A342A0E3AE2001AD1D8 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		700D6A382A0E3F16001AD1D8 /* CustomAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
 		70208AC929EECB320044500E /* AuthorizationTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationTextField.swift; sourceTree = "<group>"; };
 		70208ACA29EECB320044500E /* OTPStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
 		70208ACB29EECB320044500E /* OTPTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -867,6 +871,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		700D6A362A0E3EFF001AD1D8 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				700D6A372A0E3F05001AD1D8 /* Controller */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		700D6A372A0E3F05001AD1D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				700D6A382A0E3F16001AD1D8 /* CustomAlertController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		70208AC829EECB320044500E /* Custom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1082,6 +1102,7 @@
 		7097910C2A016478006FBC4E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				700D6A362A0E3EFF001AD1D8 /* Alert */,
 				709791252A08EC09006FBC4E /* Model */,
 				709791142A03A079006FBC4E /* ViewModels */,
 				709791132A03A075006FBC4E /* Views */,
@@ -1105,6 +1126,7 @@
 			children = (
 				7097911C2A03EC36006FBC4E /* TextField */,
 				709791152A03A07E006FBC4E /* Cell */,
+				700D6A342A0E3AE2001AD1D8 /* CustomAlertView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1825,6 +1847,7 @@
 				1DC0503B29D18E8A00581D6B /* AppCoordinator.swift in Sources */,
 				709791612A0A30E0006FBC4E /* CreditDetailController+Section.swift in Sources */,
 				709791792A0AA0F5006FBC4E /* ConfirmView.swift in Sources */,
+				700D6A392A0E3F16001AD1D8 /* CustomAlertController.swift in Sources */,
 				70208AEE29F2744E0044500E /* OrganizationCoordinator.swift in Sources */,
 				70208ACC29EECB320044500E /* AuthorizationTextField.swift in Sources */,
 				7097912F2A09034D006FBC4E /* CreditCoordinator.swift in Sources */,
@@ -1850,6 +1873,7 @@
 				1D7BA3CA29F683C800B6F3E2 /* OTPViewModel.swift in Sources */,
 				1D28D7F029EFDA9C002D6A4B /* BaseCoordinator.swift in Sources */,
 				709791502A0A1F70006FBC4E /* CreditDetailCoordinator.swift in Sources */,
+				700D6A352A0E3AE2001AD1D8 /* CustomAlertView.swift in Sources */,
 				7097915B2A0A2FD7006FBC4E /* CreditDetailCell.swift in Sources */,
 				70A1F72929EB64BE002FDC29 /* MainImageView.swift in Sources */,
 				1D28D7FE29F1A5B6002D6A4B /* EmailResetViewController.swift in Sources */,

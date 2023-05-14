@@ -7,10 +7,12 @@ struct ProductResponse: Codable {
 protocol ShopViewModelInput {
     var products: [ENProductModel] { get set }
     var updateViewData: (() -> ())? {get set}
+    var coordinator: ShopCoordinator? {get set}
 }
 
 protocol ShopViewModelOutput {
     func fetchProducts()
+    func showAlertView()
 }
 
 typealias ShopViewModelProtocol = ShopViewModelInput & ShopViewModelOutput
@@ -22,7 +24,7 @@ final class ShopViewModel: ShopViewModelProtocol {
     
     private let networkService: ENNetworkService
     
-    weak var coordinator: OrganizationCoordinator?
+    var coordinator: ShopCoordinator?
     
     init(networkService: ENNetworkService = ENNetworkService()) {
         self.networkService = networkService
@@ -46,6 +48,10 @@ extension ShopViewModel {
                 print("Error:", error.localizedDescription)
             }
         }
+    }
+    
+    func showAlertView() {
+        coordinator?.showAlert()
     }
 }
 
