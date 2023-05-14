@@ -29,6 +29,13 @@ final class ScheduleViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var emptySchedule: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Mulish", size: 16)
+        label.textColor = .enFirstGradient
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -40,10 +47,11 @@ final class ScheduleViewController: UIViewController {
         setupConstraints()
         viewModel?.getAllLessons()
         bindViewModel()
+        bindStatusText()
     }
     
     private func setupSubviews() {
-        [calendar, tableView].forEach{
+        [calendar, tableView, emptySchedule].forEach{
             view.addSubview($0)
         }
     }
@@ -60,6 +68,9 @@ final class ScheduleViewController: UIViewController {
             make.left.right.equalToSuperview().inset(24)
             make.bottom.equalToSuperview()
         }
+        emptySchedule.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
     
     func bindViewModel(){
@@ -68,6 +79,13 @@ final class ScheduleViewController: UIViewController {
                    self.tableView.reloadData()
                }
            }
+    }
+    func bindStatusText() {
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.emptySchedule.text = statusText
+            }
+        })
     }
     
     
@@ -80,6 +98,7 @@ extension ScheduleViewController: FSCalendarDelegate, FSCalendarDataSource {
     }
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         viewModel?.filterByWeekday(weekday: date.weekday)
+        viewModel?.updateStatusText()
     }
 }
 

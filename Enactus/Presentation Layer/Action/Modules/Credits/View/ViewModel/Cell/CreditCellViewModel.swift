@@ -11,6 +11,8 @@ struct CreditCellViewModel: CreditCellViewModelProtocol {
     //MARK: - Properties
     typealias Row = CreditController.Section.Row
     
+    var retake: RetakeElement
+    
     var row: Row
     
     //MARK: - CreditCellViewModelProtocol
@@ -19,7 +21,7 @@ struct CreditCellViewModel: CreditCellViewModelProtocol {
         case .overall:
             return "До 11 апреля"
         case .disc:
-            return "IT Foundation"
+            return retake.title
         }
     }
     
@@ -35,7 +37,7 @@ struct CreditCellViewModel: CreditCellViewModelProtocol {
         case .overall:
             return "1 638 014.15"
         case .disc:
-            return "38 014.15"
+            return "\(retake.paymentAmount)"
         }
     }
 }

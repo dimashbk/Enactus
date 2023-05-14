@@ -22,6 +22,7 @@ final class ProfileViewModel {
     }
     func signOut() {
         coordinatorDelegate?.showSigninFlow()
+        AuthorizationService.shared.accessToken = ""
         profileInfo = Profile(id: 0,
                               name: "",
                               surname: "",

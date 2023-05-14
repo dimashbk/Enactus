@@ -13,6 +13,15 @@ final class ScheduleViewModel {
     var filteredArray = [LessonElement]()
     let networkService = ENNetworkService()
     var updateViewData: (() -> ())?
+    var statusText = Dynamic("")
+    
+    func updateStatusText() {
+        if filteredArray.isEmpty {
+            statusText.value = "У вас в этот день нет уроков"
+        } else {
+            statusText.value = ""
+        }
+    }
 
     
     func getAllLessons() {

@@ -9,7 +9,12 @@ protocol WalletViewModelOutput {
     func getTransactions()
 }
 
-typealias WalletViewModelProtocol = WalletViewModelInput & WalletViewModelOutput
+protocol PaymentHistoryProtocol{
+    func updateStatusText()
+    var statusText: Dynamic<Any> { get set }
+}
+
+typealias WalletViewModelProtocol = WalletViewModelInput & WalletViewModelOutput & PaymentHistoryProtocol
 
 final class WalletViewModel: WalletViewModelProtocol {
     
@@ -19,8 +24,18 @@ final class WalletViewModel: WalletViewModelProtocol {
     
     var updateViewData: (() -> ())?
     
+    var statusText: Dynamic<Any> = Dynamic("")
+    
     init(networkService: ENNetworkService = ENNetworkService()) {
         self.networkService = networkService
+    }
+    
+    func updateStatusText() {
+        if transactions.count == 0 {
+            statusText.value = "Ваша история платежей пуста"
+        } else {
+            statusText.value = ""
+        }
     }
     
 }
@@ -43,6 +58,7 @@ extension WalletViewModel {
                     self.transactions.append($0)
                 }
                 self.updateViewData?()
+                self.updateStatusText()
                 print("All transactions: \(self.transactions)")
             case .failure(let error):
                 print("Error:", error.localizedDescription)

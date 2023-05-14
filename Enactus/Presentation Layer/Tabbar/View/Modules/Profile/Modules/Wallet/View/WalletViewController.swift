@@ -34,10 +34,17 @@ final class WalletViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var emptyHistory: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Mulish", size: 16)
+        label.textColor = .enFirstGradient
+        return label
+    }()
+    
     override func loadView() {
         super.loadView()
-        
         fetchTransactions()
+        bindStatusText()
     }
 
     override func viewDidLoad() {
@@ -52,11 +59,13 @@ final class WalletViewController: UIViewController {
         setupSubviews()
         setupConstraints()
     }
+    
     private func setupSubviews() {
-        [gradientCard, paymentsLabel, tableView].forEach {
+        [gradientCard, paymentsLabel, tableView, emptyHistory].forEach {
             view.addSubview($0)
         }
     }
+    
     private func setupConstraints() {
         gradientCard.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(16)
@@ -73,6 +82,10 @@ final class WalletViewController: UIViewController {
             make.left.right.equalToSuperview().inset(16)
             make.bottom.equalToSuperview()
         }
+        emptyHistory.snp.makeConstraints { make in
+            make.top.equalTo(paymentsLabel.snp.bottom).offset(46)
+            make.centerX.equalToSuperview()
+        }
     }
     
     private func fetchTransactions() {
@@ -82,6 +95,13 @@ final class WalletViewController: UIViewController {
                 self?.tableView.reloadData()
             }
         }
+    }
+    func bindStatusText() {
+        viewModel?.statusText.bind({ (statusText) in
+            DispatchQueue.main.async {
+                self.emptyHistory.text = statusText as? String
+            }
+        })
     }
 }
 

@@ -4,9 +4,17 @@ import SnapKit
 final class CreditCell: UITableViewCell {
     
     //MARK: - View
+    private lazy var mainView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .enPreWhite
+        view.layer.cornerRadius = 18
+        return view
+    }()
+    
     private lazy var iconImageView: UIImageView = {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleToFill
+        view.layer.masksToBounds = true
         view.image = UIImage(named: "farmers")
         return view
     }()
@@ -52,19 +60,31 @@ final class CreditCell: UITableViewCell {
         setupViews()
         makeConstraints()
         setupLayer()
+        contentView.backgroundColor = .white
+        
     }
     
     private func setupViews() {
-        [iconImageView, titleLabel, subtitleLabel, priceLabel, button].forEach {
+        [mainView].forEach {
             contentView.addSubview($0)
+        }
+        
+        [iconImageView, titleLabel, subtitleLabel, priceLabel, button].forEach {
+            mainView.addSubview($0)
         }
     }
     
     private func makeConstraints() {
+        mainView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview().inset(4)
+            make.leading.trailing.equalToSuperview()
+        }
+        
         iconImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(8)
+            make.centerY.equalToSuperview()
             make.leading.equalToSuperview().inset(12)
-            make.height.equalTo(66)
+            make.height.equalTo(55)
+            make.width.equalTo(55)
         }
         
         titleLabel.snp.makeConstraints { make in
@@ -89,8 +109,7 @@ final class CreditCell: UITableViewCell {
     }
     
     private func setupLayer() {
-        layer.cornerRadius = 18
-        backgroundColor = UIColor.enPreWhite
+        
     }
     
     public func configure(with viewModel: CreditCellViewModelProtocol) {

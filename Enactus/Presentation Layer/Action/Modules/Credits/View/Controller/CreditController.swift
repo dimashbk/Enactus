@@ -6,7 +6,9 @@ final class CreditController: UIViewController {
     //MARK: - Properties
     public var mainCoordinator: CreditCoordinator?
     
-    let sections: [Section] = [.init(section: .education, rows: [.overall]), .init(section: .credit, rows: [.disc])]
+    let sections: [Section] = [.init(section: .education, rows: [.overall]), .init(section: .credit, rows: [.disc, .disc])]
+    
+    var retakes: [RetakeElement] = []
     
     //MARK: - View
     private lazy var mainView: UITableView = {
@@ -19,6 +21,12 @@ final class CreditController: UIViewController {
         view.register(aClass: CreditHeaderView.self)
         return view
     }()
+    
+    override func loadView() {
+        super.loadView()
+        
+        getRetakes()
+    }
     
     //MARK: - View
     override func viewDidLoad() {
@@ -51,5 +59,9 @@ final class CreditController: UIViewController {
     
     private func setupNavbar() {
         navigationItem.title = "Кредиты" 
+    }
+    
+    private func getRetakes() {
+        retakes = AuthorizationService.shared.retakes
     }
 }
