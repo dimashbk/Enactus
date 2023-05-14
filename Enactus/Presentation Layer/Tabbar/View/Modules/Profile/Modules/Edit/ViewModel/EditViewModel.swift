@@ -13,7 +13,7 @@ var profileInfo: Profile {
             return try! PropertyListDecoder().decode(Profile.self, from: data)
         }
         else{
-            return .init(id: 0, name: "", surname: "", patronymic: "", birthday: "", group: "", walletAddress: "")
+            return .init(id: 0, name: "", surname: "", patronymic: "", birthday: "", group: "", walletAddress: "", amount: 0)
         }
     }
     set{

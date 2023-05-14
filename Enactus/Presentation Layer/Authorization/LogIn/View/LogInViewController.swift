@@ -193,4 +193,8 @@ final class LogInViewController: UIViewController {
     @objc func showSignin() {
         viewModel?.moveToSignIn()
     }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 }

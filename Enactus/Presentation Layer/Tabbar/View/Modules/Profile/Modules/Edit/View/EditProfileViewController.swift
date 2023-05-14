@@ -158,4 +158,9 @@ final class EditProfileViewController: UIViewController {
         
         navigationController?.popViewController(animated: true)
     }
+    
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
+    
 }
