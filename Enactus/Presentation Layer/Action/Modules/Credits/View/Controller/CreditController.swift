@@ -6,7 +6,7 @@ final class CreditController: UIViewController {
     //MARK: - Properties
     public var mainCoordinator: CreditCoordinator?
     
-    let sections: [Section] = [.init(section: .education, rows: [.overall]), .init(section: .credit, rows: [.disc, .disc])]
+    var sections: [Section] = []
     
     var retakes: [RetakeElement] = []
     
@@ -63,5 +63,13 @@ final class CreditController: UIViewController {
     
     private func getRetakes() {
         retakes = AuthorizationService.shared.retakes
+        
+        var rows: [CreditController.Section.Row] = []
+        
+        for _ in retakes {
+            rows.append(.disc)
+        }
+        
+        sections.append(.init(section: .credit, rows: rows))
     }
 }
