@@ -18,7 +18,7 @@ final class RemittanceController: UIViewController {
         let view = PaymentView()
         view.titleLabel.text = "Тек.счет"
         view.subtitleLabel.text = "Накопленные бонусы"
-        view.priceLabel.text = "1 638 014.15"
+        view.priceLabel.text = "\(profileInfo.amount)"
         return view
     }()
     

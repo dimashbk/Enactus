@@ -3,6 +3,7 @@ import Foundation
 protocol TransConfirmViewModelInput {
     var walletId: String {get}
     var amount: Int {get}
+    var coordinator: TransConfirmCoordinator? {get set}
 }
 
 protocol TransConfirmViewModelOutput {
@@ -13,6 +14,8 @@ typealias TransConfirmViewModelProtocol = TransConfirmViewModelInput & TransConf
 
 final class TransConfirmViewModel: TransConfirmViewModelProtocol {
     private let networkService: ENNetworkService
+    
+    var coordinator: TransConfirmCoordinator?
     
     var walletId: String
     
@@ -39,18 +42,22 @@ extension TransConfirmViewModel {
             let encoder = JSONEncoder()
             let body = try encoder.encode(patchBody)
             
-            networkService.sendRequest(url: url, method: "POST", headers: headers, body: body) { (result: Result<TransactionConfirmResponse,Error>) in
+            networkService.sendRequestCredit(url: url, method: "POST", headers: headers, body: body) { (result: Result<TransactionConfirmResponse,Error>) in
                 switch result {
                 case .success(let data):
                     print("Response: \(data)")
+                    DispatchQueue.main.async {
+                        self.coordinator?.showSuccessPage()
+                    }
                 case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.coordinator?.showAlert()
+                    }
                     print("Error:", error.localizedDescription)
                 }
             }
         } catch {
             print("error")
         }
-        
-        
     }
 }

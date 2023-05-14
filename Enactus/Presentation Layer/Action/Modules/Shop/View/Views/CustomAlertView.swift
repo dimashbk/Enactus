@@ -5,11 +5,10 @@ class CustomAlertView: UIView {
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Все эти товары Вы сможете приобрести в IITU магазине"
         label.textColor = .white
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.font = UIFont(name: "Mulish-Regular", size: 16)
+        label.font = UIFont(name: "Mulish-Regular", size: 14)
         return label
     }()
     
@@ -58,5 +57,9 @@ class CustomAlertView: UIView {
             make.width.equalTo(207)
             make.height.equalTo(54)
         }
+    }
+    
+    public func configure(title: String) {
+        titleLabel.text = title
     }
 }
