@@ -18,5 +18,8 @@ final class ShopCoordinator: BaseCoordinator {
     func showAlert() {
         let alert = CustomAlertController()
         navigationController.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            self.navigationController.dismiss(animated: true)
+        })
     }
 }
