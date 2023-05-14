@@ -17,7 +17,7 @@ struct Profile: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id, name, surname, patronymic, birthday, group
-        case amount = "payment_amount"
+        case amount = "amount"
         case walletAddress = "wallet_address"
     }
 }
