@@ -30,7 +30,7 @@ final class CreatePasswordViewModel {
         case .signUp:
             AuthorizationService.shared.authorizationModel.password = password
             AuthorizationService.shared.register()
-            coordinatorDelegate?.showRootFlow()
+            coordinatorDelegate?.showSigninFlow()
         case .signIn:
             print("")
         case .none:
