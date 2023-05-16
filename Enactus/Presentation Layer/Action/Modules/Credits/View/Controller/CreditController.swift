@@ -22,6 +22,24 @@ final class CreditController: UIViewController {
         return view
     }()
     
+    private lazy var emptyView: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "good")
+        view.isHidden = !sections.isEmpty
+        return view
+    }()
+    
+    private lazy var emptyTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "У вас нет действующих кредитов"
+        label.font = UIFont.systemFont(ofSize: 24)
+        label.textColor = .enBlue
+        label.isHidden = !sections.isEmpty
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     override func loadView() {
         super.loadView()
         
@@ -44,7 +62,7 @@ final class CreditController: UIViewController {
     }
     
     private func setupViews() {
-        [mainView].forEach {
+        [mainView, emptyView, emptyTitleLabel].forEach {
             view.addSubview($0)
         }
     }
@@ -54,6 +72,14 @@ final class CreditController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(16)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(500)
+        }
+        emptyView.snp.makeConstraints { make in
+            make.bottom.equalTo(emptyTitleLabel.snp.top).offset(-18)
+            make.centerX.equalToSuperview()
+        }
+        emptyTitleLabel.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(56)
         }
     }
     
@@ -70,6 +96,8 @@ final class CreditController: UIViewController {
             rows.append(.disc)
         }
         
-        sections.append(.init(section: .credit, rows: rows))
+        if !rows.isEmpty {
+            sections.append(.init(section: .credit, rows: rows))
+        }
     }
 }
