@@ -16,10 +16,7 @@ final class ShopCoordinator: BaseCoordinator {
     }
     
     func showAlert() {
-        let alert = CustomAlertController()
+        let alert = CustomAlertController(alertTitle: "Все эти товары Вы сможете приобрести в IITU магазине")
         navigationController.present(alert, animated: true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.navigationController.dismiss(animated: true)
-        })
     }
 }

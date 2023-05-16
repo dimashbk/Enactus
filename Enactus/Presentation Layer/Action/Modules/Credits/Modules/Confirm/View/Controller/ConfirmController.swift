@@ -12,7 +12,7 @@ final class ConfirmController: UIViewController {
         let view = PaymentView()
         view.titleLabel.text = "Тек.счет"
         view.subtitleLabel.text = "Накопленные бонусы"
-        view.priceLabel.text = "1 638 014.15"
+        view.priceLabel.text = "\(profileInfo.amount)"
         return view
     }()
     
@@ -24,9 +24,6 @@ final class ConfirmController: UIViewController {
     
     private lazy var secondView: PaymentView = {
         let view = PaymentView()
-        view.titleLabel.text = "За обучение"
-        view.subtitleLabel.text = "до 11 апреля"
-        view.priceLabel.text = "0.00"
         return view
     }()
     
@@ -72,7 +69,7 @@ final class ConfirmController: UIViewController {
     //MARK: - Methdos
     @objc
     private func buttonDidTap() {
-        coordinator?.goToCreditsController()
+        viewModel?.payRetake()
     }
     
     private func setup() {
@@ -134,7 +131,10 @@ final class ConfirmController: UIViewController {
     private func configure() {
         guard let viewModel = viewModel else {return}
         
-        firstConfirmView.priceLabel.text = viewModel.text
-        thirdConfirmView.priceLabel.text = viewModel.text
+        firstConfirmView.priceLabel.text = "\(viewModel.retake.paymentAmount)"
+        thirdConfirmView.priceLabel.text = "\(viewModel.retake.paymentAmount)"
+        secondView.titleLabel.text = viewModel.retake.title
+        secondView.subtitleLabel.text = "до 11 апреля"
+        secondView.priceLabel.text = "\(viewModel.retake.paymentAmount)"
     }
 }

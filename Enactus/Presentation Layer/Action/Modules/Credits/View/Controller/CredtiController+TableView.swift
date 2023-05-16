@@ -44,12 +44,13 @@ extension CreditController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = sections[indexPath.section].rows[indexPath.row]
+        let retake = retakes[indexPath.row]
         
         switch row {
         case .overall:
-            mainCoordinator?.showDetailFlow()
+            mainCoordinator?.showDetailFlow(retake: retake)
         case .disc:
-            print(2)
+            mainCoordinator?.showDetailFlow(retake: retake)
         }
     }
 }

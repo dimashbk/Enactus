@@ -4,7 +4,6 @@ import SnapKit
 final class TransConfirmController: UIViewController {
     
     //MARK: - Properties
-    var coordinator: TransConfirmCoordinator?
     var viewModel: TransConfirmViewModelProtocol?
     
     //MARK: - View
@@ -12,7 +11,7 @@ final class TransConfirmController: UIViewController {
         let view = PaymentView()
         view.titleLabel.text = "Тек.счет"
         view.subtitleLabel.text = "Накопленные бонусы"
-        view.priceLabel.text = "1 638 014.15"
+        view.priceLabel.text = "\(profileInfo.amount)"
         return view
     }()
     
@@ -25,7 +24,7 @@ final class TransConfirmController: UIViewController {
     private lazy var secondView: PaymentView = {
         let view = PaymentView()
   
-        view.subtitleLabel.text = "Kalmurza N."
+        view.subtitleLabel.text = "Перевод"
         return view
     }()
     

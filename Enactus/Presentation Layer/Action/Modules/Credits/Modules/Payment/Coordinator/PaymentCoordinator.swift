@@ -16,6 +16,5 @@ final class PaymentCoordinator: BaseCoordinator {
     func showConfirmFlow(text: String) {
         let confirmCoordinator = ConfirmCoordinator(navigationController: navigationController)
         confirmCoordinator.start(text: text)
-        print(text)
     }
 }
