@@ -185,6 +185,47 @@ final class ENNetworkService: ENNetworkServiceProtocol {
                 completion(.failure(error))
                 return
             }
+            
+            guard let data = data else {
+                completion(.failure(NSError(domain: "NetworkManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
+                return
+            }
+            do {
+                let decodableData = try self.decoder.decode(T.self, from: data)
+                completion(.success(decodableData))
+            }
+            catch let error {
+                completion(.failure(error))
+            }
+           
+        }
+        
+        task.resume()
+    }
+    
+    func sendRequestCredit<T: Decodable>(url: URL, method: String, headers: [String: String], body: Data? = nil, completion: @escaping (Result<T, Error>) -> Void) {
+        var request = URLRequest(url: url)
+
+        request.httpMethod = method
+        
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+        
+        request.httpBody = body
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                completion(.failure(NSError(domain: "Invalid response", code: 0, userInfo: nil)))
+                return
+            }
+            
             guard let data = data else {
                 completion(.failure(NSError(domain: "NetworkManager", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])))
                 return

@@ -7,7 +7,6 @@ final class DetailImageView: UIImageView {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont(name: "Mulish-Bold", size: 16)
-        label.text = "Оплатить до 11 апреля"
         return label
     }()
     
@@ -52,5 +51,18 @@ final class DetailImageView: UIImageView {
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
             make.centerX.equalToSuperview()
         }
+    }
+    
+    public func configure(with model: RetakeElement) {
+        let inputDateFormatter = DateFormatter()
+        inputDateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = inputDateFormatter.date(from: model.expirationDate)
+
+        guard let date = date else {return}
+        
+        let outputDateFormatter = DateFormatter()
+        outputDateFormatter.dateFormat = "dd.MM.yyyy"
+        titleLabel.text = "до " + outputDateFormatter.string(from: date)
+        subtitleLabel.text = "\(model.paymentAmount)"
     }
 }
