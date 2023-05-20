@@ -37,6 +37,25 @@ final class MainViewController: UIViewController {
     
     private lazy var loaderView = ENCustomLoaderView()
     
+    private lazy var showProfileAlert: UIAlertController = {
+        
+        let alertController = UIAlertController(title: "Профиль",
+                                                message: "Для того чтобы переводить средства и оплачивать кредиты Вам необходимо заполнить Профиль",
+                                                preferredStyle: .alert)
+       //alert action
+        let yesAction = UIAlertAction(title: "Перейти", style: .default) { (action) in
+            self.tabBarController?.selectedIndex = 2
+        }
+        let noAction = UIAlertAction(title: "Отменить", style: .default) { (action) in
+
+        }
+       
+       alertController.addAction(yesAction)
+       alertController.addAction(noAction)
+
+        return alertController
+    }()
+    
     init(viewModel: MainViewModelProtocol) {
         self.mainViewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -57,6 +76,22 @@ final class MainViewController: UIViewController {
         
         view.backgroundColor = .white
         setup()
+        showAlertForProfile()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mainImageView.coinsFIrstLabel.text = "\(profileInfo.amount)"
+    }
+    
+    func showAlertForProfile() {
+        AuthorizationService.shared.checkProfile = {
+            DispatchQueue.main.async {
+                if profileInfo.name == "" && profileInfo.surname == "" {
+                    self.present(self.showProfileAlert, animated: true)
+                }
+            }
+        }
     }
     
     //MARK: - Methods
