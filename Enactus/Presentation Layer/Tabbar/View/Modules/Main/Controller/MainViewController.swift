@@ -87,7 +87,7 @@ final class MainViewController: UIViewController {
     func showAlertForProfile() {
         AuthorizationService.shared.checkProfile = {
             DispatchQueue.main.async {
-                if profileInfo.amount == 0 {
+                if profileInfo.name == "" && profileInfo.surname == "" {
                     self.present(self.showProfileAlert, animated: true)
                 }
             }
