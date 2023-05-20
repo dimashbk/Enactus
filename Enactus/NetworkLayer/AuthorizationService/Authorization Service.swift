@@ -53,6 +53,8 @@ final class AuthorizationService {
     
     var onCredditTapped: (()->())?
     
+    var checkProfile: (() -> ())?
+    
     var accessToken: String {
         get{
             if UserDefaults.standard.value(forKey: "accessToken") == nil {
@@ -89,11 +91,13 @@ final class AuthorizationService {
             print(self?.correctCode)
         }
     }
+    
     func resetPassword() {
         networkService.resetPassword(param: authorizationModel) { [weak self] result in
 
         }
     }
+    
     func register() {
         networkService.postRegister(param: authorizationModel) { [weak self] result in
             
@@ -111,6 +115,7 @@ final class AuthorizationService {
             switch result {
             case .success(let data):
                 self.accessToken = data.token.original.accessToken
+                self.getProfileInfo()
                 print(self.accessToken)
             case .failure(let error):
                 print("Error:", error.localizedDescription)
@@ -129,9 +134,10 @@ final class AuthorizationService {
             switch result {
             case .success(let data):
                 profileInfo = data
-                print(profileInfo)
+                self.checkProfile?()
             case .failure(let error):
                 print("Error:", error.localizedDescription)
+                self.checkProfile?()
             }
         }
     }

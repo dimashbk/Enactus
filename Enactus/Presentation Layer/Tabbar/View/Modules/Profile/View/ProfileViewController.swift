@@ -2,7 +2,7 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
     
-    let sections: [Profile] = [.init(section: .info , rows: [.first,.second,.third]), .init(section: .button, rows: [.first,.second,.third])]
+    let sections: [Profile] = [.init(section: .info , rows: [.first,.second,.third]), .init(section: .button, rows: [.first,.third])]
     
     var viewModel: ProfileViewModel?
     
@@ -129,9 +129,9 @@ final class ProfileViewController: UIViewController {
         case 0:
             viewModel?.moveToWallet()
         case 1:
-            print("Otmena 667")
-        case 2:
             present(signOutAlert, animated: true)
+        case 2:
+            print("Otmena 667") 
         default:
             return
         }

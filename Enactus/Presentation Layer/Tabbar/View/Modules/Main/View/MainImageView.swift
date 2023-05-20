@@ -33,9 +33,9 @@ final class MainImageView: UIImageView {
         return label
     }()
     
-    private lazy var coinsFIrstLabel: UILabel = {
+    lazy var coinsFIrstLabel: UILabel = {
         let label = UILabel()
-        label.text = "1 638 014"
+        label.text = "\(profileInfo.amount)"
         label.font = UIFont(name: "Mulish-Regular", size: 40)
         label.textColor = .white
         return label
@@ -43,7 +43,7 @@ final class MainImageView: UIImageView {
     
     private lazy var coinsSecondLabel: UILabel = {
         let label = UILabel()
-        label.text = ".15"
+        label.text = ""
         label.font = UIFont(name: "Mulish-Regular", size: 22)
         label.textColor = .enTextGray
         return label
