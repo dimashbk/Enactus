@@ -27,7 +27,7 @@ final class EditProfileViewController: UIViewController {
     
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
-        textField.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
+        textField.text = "\(profileInfo.name ) \(profileInfo.surname )"
         textField.font = UIFont(name: "Mulish", size: 24)
         textField.placeholder = "Name Surname"
         textField.textAlignment = .center
