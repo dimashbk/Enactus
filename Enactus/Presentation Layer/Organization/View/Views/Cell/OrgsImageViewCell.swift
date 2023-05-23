@@ -65,6 +65,6 @@ final class OrgsImageViewCell: UITableViewCell {
     }
     
     public func configure(with model: ENOrganizationModel) {
-//        mainImageView.load(from: model.photo)
+        mainImageView.downloaded(from: model.photo)
     }
 }

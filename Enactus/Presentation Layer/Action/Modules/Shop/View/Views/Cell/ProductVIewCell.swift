@@ -118,6 +118,6 @@ final class ProductViewCell: UITableViewCell {
     
     public func configure(with model: ENProductModel) {
         titleLabel.text = model.title
-        productImageView.load(from: model.photo)
+        productImageView.downloaded(from: model.photo)
     }
 }
