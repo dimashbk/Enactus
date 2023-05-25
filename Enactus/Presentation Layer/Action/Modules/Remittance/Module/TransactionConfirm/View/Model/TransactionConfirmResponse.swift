@@ -1,13 +1,16 @@
 struct TransactionConfirmResponse: Codable {
     var message: String
-
+//    var receipt: TransactionReceiptResponse
+    
     enum CodingKeys: String, CodingKey {
         case message
+//        case receipt
     }
 }
 
 struct TransactionReceiptResponse: Codable {
     var amount: Int
+    var messageText: String
     var toUser: Int
     var fromUser: Int
     var updatedAt: String
@@ -17,6 +20,7 @@ struct TransactionReceiptResponse: Codable {
     
     enum CodingKeys: String, CodingKey {
         case amount
+        case messageText = "message_text"
         case toUser = "to_user_id"
         case fromUser = "from_user_id"
         case updatedAt = "updated_at"

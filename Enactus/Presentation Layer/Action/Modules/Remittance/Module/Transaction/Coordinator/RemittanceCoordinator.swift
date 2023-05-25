@@ -13,9 +13,9 @@ final class RemittanceCoordinator: BaseCoordinator {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    public func showTransactionConfirmFlow(walletId: String, amount: Int) {
+    public func showTransactionConfirmFlow(messageText: String, walletId: String, amount: Int) {
         let transConfirmCoordinator = TransConfirmCoordinator(navigationController: navigationController)
         store(coordinator: transConfirmCoordinator)
-        transConfirmCoordinator.start(walletId: walletId, amount: amount)
+        transConfirmCoordinator.start(messageText: messageText,walletId: walletId, amount: amount)
     }
 }

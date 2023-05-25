@@ -7,8 +7,8 @@ final class TransConfirmCoordinator: BaseCoordinator {
         self.navigationController = navigationController
     }
     
-    func start(walletId: String, amount: Int) {
-        let viewModel = TransConfirmViewModel(walletID: walletId, amount: amount)
+    func start(messageText: String ,walletId: String, amount: Int) {
+        let viewModel = TransConfirmViewModel(messageText: messageText, walletID: walletId, amount: amount)
         let controller = TransConfirmController()
         controller.viewModel = viewModel
         controller.viewModel?.coordinator = self

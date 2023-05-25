@@ -17,7 +17,7 @@ final class PaymentTableViewCell: UITableViewCell {
     
     private lazy var logisticsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Logistics"
+        label.text = "Перевод"
         label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()

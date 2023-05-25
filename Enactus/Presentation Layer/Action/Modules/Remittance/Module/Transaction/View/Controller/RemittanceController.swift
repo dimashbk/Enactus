@@ -41,6 +41,13 @@ final class RemittanceController: UIViewController {
         return textField
     }()
     
+    private lazy var messageTextField: PaymentTextField = {
+        let textField = PaymentTextField()
+        textField.attributedPlaceholder = NSAttributedString(string: "Сообщение получателю", attributes: [.foregroundColor: UIColor.gray])
+        textField.delegate = self
+        return textField
+    }()
+    
     private lazy var fixedButton: UIButton = {
         let button = UIButton()
         button.autoresizingMask = [.flexibleRightMargin, .flexibleBottomMargin]
@@ -72,13 +79,15 @@ final class RemittanceController: UIViewController {
     @objc
     private func buttonDidTap() {
         guard
+            let messageText = messageTextField.text,
             let text = paymentTextField.text,
             let intValue = Int(text),
             let walletId = walletTextField.text,
+            
             isEnable == true
         else { return }
 
-        coordinator?.showTransactionConfirmFlow(walletId: walletId, amount: intValue)
+        coordinator?.showTransactionConfirmFlow(messageText: messageText, walletId: walletId, amount: intValue)
     }
     
     private func setup() {
@@ -87,7 +96,7 @@ final class RemittanceController: UIViewController {
     }
     
     private func setupViews() {
-        [firstView, walletTextField, iconImageView, paymentTextField, fixedButton, textLabel].forEach {
+        [firstView, walletTextField, iconImageView, paymentTextField, messageTextField, fixedButton, textLabel].forEach {
             view.addSubview($0)
         }
     }
@@ -116,6 +125,12 @@ final class RemittanceController: UIViewController {
             make.height.equalTo(66)
         }
         
+        messageTextField.snp.makeConstraints { make in
+            make.top.equalTo(paymentTextField.snp.bottom).offset(12)
+            make.leading.trailing.equalToSuperview().inset(16)
+            make.height.equalTo(66)
+        }
+        
         fixedButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(24)
             make.leading.trailing.equalToSuperview().inset(24)
@@ -130,7 +145,7 @@ final class RemittanceController: UIViewController {
     }
     
     public func setupButtonColor() {
-        if walletTextField.text?.isEmpty == false, paymentTextField.text?.isEmpty == false {
+        if walletTextField.text?.isEmpty == false, paymentTextField.text?.isEmpty == false, messageTextField.text?.isEmpty == false {
             isEnable = true
         } else {
             isEnable = false
