@@ -13,6 +13,7 @@ protocol OTPFlow: AnyObject {
 
 protocol SigninFlow: AnyObject {
     func showSigninFlow()
+    func showAlert()
 }
 
 typealias LoginCoordinatorProtocol = OTPFlow & SigninFlow
@@ -45,4 +46,12 @@ extension LogInCoordinator: LoginCoordinatorProtocol {
         coordinate(to: signinCoordinator)
     }
     
+    func showAlert() {
+        let alert = CustomAlertController(alertTitle: "Вы успешно зарегистрированы!", alertIconString: "alertgood")
+        alert.view.backgroundColor = .enDark
+        navigationController.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showSigninFlow()
+        }
+    }
 }

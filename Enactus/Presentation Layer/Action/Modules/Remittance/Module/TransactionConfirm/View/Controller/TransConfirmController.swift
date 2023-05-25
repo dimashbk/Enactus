@@ -67,6 +67,11 @@ final class TransConfirmController: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        firstView.priceLabel.text = "\(profileInfo.amount)"
+    }
+    
     //MARK: - Methdos
     @objc
     private func buttonDidTap() {

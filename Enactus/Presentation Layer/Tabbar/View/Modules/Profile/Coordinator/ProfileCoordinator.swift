@@ -36,6 +36,10 @@ final class ProfileCoordinator: BaseCoordinator{
 }
 
 extension ProfileCoordinator: ProfileCoordinatorProtocol {
+    func showAlert() {
+        
+    }
+    
     
     // MARK: - FlowMethods
     func showEditFlow() {

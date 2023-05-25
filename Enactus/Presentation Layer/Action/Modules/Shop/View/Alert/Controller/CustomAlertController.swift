@@ -4,15 +4,17 @@ import SnapKit
 final class CustomAlertController: UIViewController {
     
     var alertTitle: String
+    var alertIconString: String
     
     private lazy var alertView: CustomAlertView = {
         let view = CustomAlertView()
-        view.configure(title: alertTitle)
+        view.configure(title: alertTitle, imageString: alertIconString)
         return view
     }()
     
-    internal init(alertTitle: String) {
+    internal init(alertTitle: String, alertIconString: String = "alert") {
         self.alertTitle = alertTitle
+        self.alertIconString = alertIconString
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,7 +26,7 @@ final class CustomAlertController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .clear
+        view.backgroundColor = .none
         setup()
     }
     

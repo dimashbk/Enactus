@@ -17,6 +17,6 @@ final class LoginViewModel{
         self.coordinatorDelegate?.showOTPFlow()
     }
     func moveToSignIn() {
-        coordinatorDelegate?.showSigninFlow()
+        coordinatorDelegate?.showAlert()
     }
 }

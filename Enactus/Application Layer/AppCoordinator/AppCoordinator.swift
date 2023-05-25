@@ -19,8 +19,8 @@ final class AppCoordinator: BaseCoordinator {
     override func start() {
         let navigationController = UINavigationController()
         window?.rootViewController = navigationController
+        window?.backgroundColor = .enBlack
         window?.makeKeyAndVisible()
-        window?.backgroundColor = .white
 
         if AuthorizationService.shared.accessToken.count < 1 {
             let mainCoordinator = SignInCoordinator(navigationController: navigationController)

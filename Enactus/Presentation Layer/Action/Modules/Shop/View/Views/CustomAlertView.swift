@@ -14,7 +14,6 @@ class CustomAlertView: UIView {
     
     private lazy var iconImageView: UIImageView = {
         let view = UIImageView()
-        view.image = UIImage(named: "alert")
         return view
     }()
 
@@ -59,7 +58,8 @@ class CustomAlertView: UIView {
         }
     }
     
-    public func configure(title: String) {
+    public func configure(title: String, imageString: String = "alert") {
         titleLabel.text = title
+        iconImageView.image = UIImage(named: imageString)
     }
 }

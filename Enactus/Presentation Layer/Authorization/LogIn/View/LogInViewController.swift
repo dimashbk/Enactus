@@ -106,7 +106,7 @@ final class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .enDark
         setup()
     }
     override func viewDidAppear(_ animated: Bool) {

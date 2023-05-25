@@ -58,6 +58,7 @@ final class EmailResetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .enDark
         setup()
     }
     override func viewDidAppear(_ animated: Bool) {

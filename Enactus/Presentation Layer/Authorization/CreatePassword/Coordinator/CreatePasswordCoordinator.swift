@@ -30,6 +30,15 @@ final class CreatePasswordCoordinator: BaseCoordinator {
 }
 
 extension CreatePasswordCoordinator: CreatePasswordCoordinatorProtocol {
+    func showAlert() {
+        let alert = CustomAlertController(alertTitle: "Вы успешно зарегистрированы!", alertIconString: "alertgood")
+        navigationController.present(alert, animated: true)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.navigationController.dismiss(animated: true)
+            self.showSigninFlow()
+        }
+    }
+    
     func showRootFlow() {
         navigationController.popToRootViewController(animated: true)
     }

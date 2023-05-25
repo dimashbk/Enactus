@@ -71,8 +71,8 @@ final class CreatePasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .enDark
         setup()
-        
     }
     
     private func setup() {

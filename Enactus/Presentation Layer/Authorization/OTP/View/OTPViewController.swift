@@ -50,6 +50,7 @@ final class OTPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .enDark
         setup()
     }
     

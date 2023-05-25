@@ -18,7 +18,6 @@ final class RemittanceController: UIViewController {
         let view = PaymentView()
         view.titleLabel.text = "Тек.счет"
         view.subtitleLabel.text = "Накопленные бонусы"
-        view.priceLabel.text = "\(profileInfo.amount)"
         return view
     }()
     
@@ -73,6 +72,11 @@ final class RemittanceController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        firstView.priceLabel.text = "\(profileInfo.amount)"
     }
     
     //MARK: - Methdos
