@@ -27,7 +27,7 @@ final class EditProfileViewController: UIViewController {
     
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
-        textField.text = (profileInfo.name ?? "") + " " + (profileInfo.surname ?? "")
+        textField.text = "\(profileInfo.name ) \(profileInfo.surname )"
         textField.font = UIFont(name: "Mulish", size: 24)
         textField.placeholder = "Name Surname"
         textField.textAlignment = .center
@@ -118,10 +118,10 @@ final class EditProfileViewController: UIViewController {
             make.top.equalTo(dateOfBirth.snp.bottom).offset(4)
             make.left.right.equalToSuperview().inset(24)
         }
-        patronymic.snp.makeConstraints { make in
-            make.top.equalTo(groupId.snp.bottom).offset(4)
-            make.left.right.equalToSuperview().inset(24)
-        }
+//        patronymic.snp.makeConstraints { make in
+//            make.top.equalTo(groupId.snp.bottom).offset(4)
+//            make.left.right.equalToSuperview().inset(24)
+//        }
     }
     
     private func setupNavController() {
@@ -134,7 +134,7 @@ final class EditProfileViewController: UIViewController {
         var separated = nameTextField.text?.split(separator: " ")
         
         var name =  {
-            if  separated?.count ?? 0 > 0{
+            if  separated?.count ?? 0 > 0 {
                 return String(separated?[0] ?? "")
             } else {
                 return ""
@@ -151,7 +151,7 @@ final class EditProfileViewController: UIViewController {
         
         self.viewModel?.updateInfo(name: name(),
                               surname: surname(),
-                                       patronymic: self.patronymic.textField.text,
+                                       patronymic: "ZharaZhara" ,
                                        birthday: self.dateOfBirth.textField.text,
                                        group: self.groupId.textField.text)
         
