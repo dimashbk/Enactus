@@ -6,7 +6,7 @@ class ActionsViewCell: UICollectionViewCell {
     //MARK: - View
     private lazy var iconImageVIew: UIImageView = {
         let view = UIImageView()
-        view.layer.cornerRadius = 30
+        view.layer.cornerRadius = UIScreen.main.bounds.height / 29
         view.layer.masksToBounds = true
         view.contentMode = .center
         return view
