@@ -77,6 +77,7 @@ final class MainViewController: UIViewController {
         view.backgroundColor = .white
         setup()
         showAlertForProfile()
+        updateProfileAmount()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +91,13 @@ final class MainViewController: UIViewController {
                 if profileInfo.name == "" && profileInfo.surname == "" {
                     self.present(self.showProfileAlert, animated: true)
                 }
+            }
+        }
+    }
+    func updateProfileAmount() {
+        AuthorizationService.shared.checkProfile = {
+            DispatchQueue.main.async {
+                self.mainImageView.coinsFIrstLabel.text = "\(profileInfo.amount)"
             }
         }
     }
