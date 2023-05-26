@@ -57,13 +57,13 @@ final class EditProfileViewController: UIViewController {
         return editCell
     }()
     
-    private lazy var patronymic: EditCellView = {
-        let editCell = EditCellView()
-        editCell.label.text = "Отчество"
-        editCell.textField.text = profileInfo.patronymic
-        editCell.textField.placeholder = "Patronymic"
-        return editCell
-    }()
+//    private lazy var patronymic: EditCellView = {
+//        let editCell = EditCellView()
+//        editCell.label.text = "Отчество"
+//        editCell.textField.text = profileInfo.patronymic
+//        editCell.textField.placeholder = "Patronymic"
+//        return editCell
+//    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +87,7 @@ final class EditProfileViewController: UIViewController {
     
     private func setupSubviews() {
         [backgroundImage, avatarImageView, emailLabel,
-         nameTextField, dateOfBirth, groupId, patronymic].forEach {
+         nameTextField, dateOfBirth, groupId].forEach {
             view.addSubview($0)
         }
     }
