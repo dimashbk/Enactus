@@ -35,6 +35,7 @@ final class ConfirmViewModel: ConfirmViewModelProtocol {
             case .success(let data):
                 print("Response: \(data)")
                 DispatchQueue.main.async {
+                    AuthorizationService.shared.getProfileInfo()
                     self.coordinator?.showSuccessPage()
                 }
             case .failure(let error):
