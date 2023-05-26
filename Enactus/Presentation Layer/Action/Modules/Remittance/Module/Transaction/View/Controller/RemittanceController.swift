@@ -155,4 +155,7 @@ final class RemittanceController: UIViewController {
             isEnable = false
         }
     }
+    override func touchesBegan(_ touches:Set<UITouch>, with event: UIEvent?) {
+            self.view.endEditing(true)
+        }
 }
